@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Near Misses</title>
+<meta name="description" content="Interaktive Landkarten des Knapp-daneben: Buddhismus, Christentum, Islam und Nondualität. / Interactive maps of near misses.">
+<link rel="icon" href="assets/thumb-nonduality.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#FBF8F3; --bg2:#F3EEE6; --card:#FFFFFF; --fg:#1C1828; --muted:#5F5970; --line:#E6DFD3;
+  --buddha:#E8642C; --christ:#3B5BDB; --islam:#12937A; --nondual:#C9348A; --editor:#0E7490;
+  --shadow:0 1px 2px rgba(28,24,40,.06),0 8px 28px rgba(28,24,40,.08);
+  --shadow-hi:0 2px 4px rgba(28,24,40,.08),0 18px 48px rgba(28,24,40,.16);
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#110F19; --bg2:#18151F; --card:#1D1A27; --fg:#F2EFF8; --muted:#A9A3B8; --line:#2E2A3A;
+  --buddha:#FF8A4C; --christ:#7D9BFF; --islam:#3CCBA6; --nondual:#F06AB4; --editor:#38BDF8;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35);
+  --shadow-hi:0 2px 4px rgba(0,0,0,.35),0 18px 48px rgba(0,0,0,.5);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#110F19; --bg2:#18151F; --card:#1D1A27; --fg:#F2EFF8; --muted:#A9A3B8; --line:#2E2A3A;
+  --buddha:#FF8A4C; --christ:#7D9BFF; --islam:#3CCBA6; --nondual:#F06AB4; --editor:#38BDF8;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35);
+  --shadow-hi:0 2px 4px rgba(0,0,0,.35),0 18px 48px rgba(0,0,0,.5);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--sans);overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left)) 0 max(16px,env(safe-area-inset-right))}
+@media (min-width:720px){.wrap{padding:0 32px}}
+
+/* ---------- top bar ---------- */
+.top{position:sticky;top:0;z-index:10;backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);
+  background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:600 17px/1 var(--serif);letter-spacing:.01em}
+.brand svg{flex:none}
+.nav{display:flex;align-items:center;gap:22px}
+.nav a.lnk{text-decoration:none;font-size:14px;color:var(--muted);font-weight:500}
+.nav a.lnk:hover{color:var(--fg)}
+@media (max-width:640px){.nav a.lnk{display:none}}
+.lang{display:inline-flex;padding:3px;border-radius:999px;background:var(--bg2);border:1px solid var(--line)}
+.lang button{appearance:none;border:0;background:none;color:var(--muted);font:600 13px/1 var(--sans);letter-spacing:.06em;
+  padding:8px 13px;border-radius:999px;cursor:pointer;min-width:44px}
+.lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.lang button:focus-visible{outline:2px solid var(--christ);outline-offset:2px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:72px 0 64px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-60px 0 0;z-index:-1;pointer-events:none;filter:blur(10px);opacity:.55;
+  background:
+    radial-gradient(38% 50% at 12% 18%,color-mix(in srgb,var(--buddha) 55%,transparent),transparent 70%),
+    radial-gradient(34% 46% at 88% 12%,color-mix(in srgb,var(--christ) 45%,transparent),transparent 70%),
+    radial-gradient(36% 50% at 78% 92%,color-mix(in srgb,var(--islam) 40%,transparent),transparent 70%),
+    radial-gradient(34% 44% at 30% 96%,color-mix(in srgb,var(--nondual) 40%,transparent),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+@media (max-width:880px){.hero .wrap{grid-template-columns:1fr;gap:28px}.hero{padding:40px 0 36px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  background:color-mix(in srgb,var(--card) 70%,transparent);border:1px solid var(--line);padding:8px 12px;border-radius:999px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:conic-gradient(var(--buddha),var(--christ),var(--islam),var(--nondual),var(--buddha))}
+h1{font:800 clamp(40px,7vw,78px)/1.02 var(--serif);letter-spacing:-.025em;margin:20px 0 22px;text-wrap:balance}
+h1 .hl{font-style:italic;font-weight:600;background:linear-gradient(100deg,var(--buddha),var(--nondual) 45%,var(--christ) 75%,var(--islam));
+  -webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.lead{font-size:clamp(17px,2vw,20px);line-height:1.6;color:var(--muted);max-width:40em;margin:0 0 28px}
+.lead strong{color:var(--fg);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font:600 15px/1 var(--sans);padding:14px 20px;border-radius:12px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn.pri{background:var(--fg);color:var(--bg);box-shadow:var(--shadow)}
+.btn.pri:hover{transform:translateY(-1px);box-shadow:var(--shadow-hi)}
+.btn.sec{border:1px solid var(--line);background:color-mix(in srgb,var(--card) 70%,transparent)}
+.btn.sec:hover{background:var(--card)}
+.btn:focus-visible,.card a:focus-visible{outline:3px solid var(--christ);outline-offset:3px}
+
+/* hero target */
+.target{width:100%;max-width:440px;justify-self:center;aspect-ratio:1;filter:drop-shadow(0 24px 40px rgba(28,24,40,.18))}
+.target .ring{fill:var(--card);stroke:var(--line);stroke-width:1.5}
+.target .cap{font:600 13px var(--sans);fill:var(--muted);letter-spacing:.05em}
+.arrow{transform-box:view-box;animation:fly 1s cubic-bezier(.2,.8,.3,1) both}
+.arrow.a2{animation-delay:.45s}.arrow.a3{animation-delay:.9s}.arrow.a4{animation-delay:1.35s}
+@keyframes fly{from{opacity:0;translate:var(--dx) var(--dy)}to{opacity:1;translate:0 0}}
+.miss{animation:pulse 2.6s ease-in-out 2.2s infinite both;transform-box:fill-box;transform-origin:center}
+@keyframes pulse{0%,100%{opacity:.25;scale:1}50%{opacity:.7;scale:1.12}}
+@media (prefers-reduced-motion:reduce){.arrow,.miss{animation:none}html{scroll-behavior:auto}}
+
+/* ---------- sections ---------- */
+section{padding:56px 0}
+@media (max-width:720px){section{padding:40px 0}}
+.kicker{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+h2{font:700 clamp(28px,4vw,42px)/1.12 var(--serif);letter-spacing:-.015em;margin:0 0 14px;text-wrap:balance}
+.sub{color:var(--muted);max-width:44em;margin:0 0 32px;font-size:17px}
+
+/* names for the near miss */
+.names{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:980px){.names{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.names{grid-template-columns:1fr}}
+.name{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px;box-shadow:var(--shadow);overflow:hidden}
+.name::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--c)}
+.name .tr{font:600 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.name h3{font:600 21px/1.25 var(--serif);margin:10px 0 8px}
+.name p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.name cite{display:block;margin-top:10px;font:500 12.5px/1.4 var(--sans);font-style:normal;color:var(--muted);opacity:.85}
+
+/* how to read */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+.step{background:var(--bg2);border-radius:18px;padding:22px 22px 20px;border:1px solid var(--line)}
+.step b{display:flex;align-items:center;gap:10px;font:600 19px/1.3 var(--serif);margin-bottom:8px}
+.step b::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:30px;height:30px;flex:none;border-radius:50%;
+  font:700 14px/1 var(--sans);color:#fff;background:linear-gradient(135deg,var(--buddha),var(--nondual))}
+.step:nth-child(2) b::before{background:linear-gradient(135deg,var(--nondual),var(--christ))}
+.step:nth-child(3) b::before{background:linear-gradient(135deg,var(--christ),var(--islam))}
+.step p{margin:0;color:var(--muted);font-size:15px}
+
+/* ---------- map cards ---------- */
+.maps{background:linear-gradient(180deg,transparent,var(--bg2) 12%,var(--bg2) 88%,transparent)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media (max-width:760px){.grid{grid-template-columns:1fr;gap:18px}}
+.card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;
+  box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hi)}
+.card .img{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--c)}
+.card .img img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.3,1)}
+.card:hover .img img{transform:scale(1.045)}
+.badge{position:absolute;top:14px;left:14px;font:600 12px/1 var(--sans);letter-spacing:.06em;color:#fff;padding:7px 11px;border-radius:999px;
+  background:rgba(15,12,25,.38);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28)}
+.badge.start{left:auto;right:14px;background:rgba(255,255,255,.92);color:#1C1828;border-color:transparent}
+.card .body{display:flex;flex-direction:column;gap:10px;padding:22px 24px 24px;flex:1}
+.card .ey{font:600 12px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.card h3{font:700 clamp(22px,2.6vw,27px)/1.18 var(--serif);margin:0;letter-spacing:-.01em}
+.card h3 a{text-decoration:none}
+.card h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.card p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.6}
+.card .meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 12.5px/1 var(--sans);padding:7px 10px;border-radius:999px;background:color-mix(in srgb,var(--c) 12%,transparent);color:var(--fg)}
+.go{font:600 14px/1 var(--sans);color:var(--c);white-space:nowrap}
+.go span{display:inline-block;transition:transform .2s}
+.card:hover .go span{transform:translateX(4px)}
+
+.card.wide{margin-top:24px;flex-direction:row}
+.card.wide .img{flex:0 0 44%;aspect-ratio:auto;min-height:260px}
+.card.wide .body{padding:28px 32px}
+@media (max-width:760px){.card.wide{flex-direction:column;margin-top:18px}.card.wide .img{aspect-ratio:16/10;min-height:0}.card.wide .body{padding:22px 24px 24px}}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;margin:4px 0 0;padding:0;list-style:none;font-size:14.5px;color:var(--muted)}
+.feat li{display:flex;gap:8px;align-items:baseline}
+.feat li::before{content:"";flex:none;width:6px;height:6px;border-radius:2px;background:var(--c);transform:translateY(-2px)}
+@media (max-width:480px){.feat{grid-template-columns:1fr}}
+
+/* ---------- quote + footer ---------- */
+.quote{text-align:center;padding:72px 0}
+.quote blockquote{margin:0 auto;max-width:28em;font:italic 400 clamp(22px,3.2vw,32px)/1.35 var(--serif);text-wrap:balance}
+.quote p{color:var(--muted);margin:14px 0 0;font-size:15px}
+footer{border-top:1px solid var(--line);padding:28px 0 calc(28px + env(safe-area-inset-bottom));color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+footer a{text-decoration:none}footer a:hover{color:var(--fg)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Near Misses">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+        <defs><linearGradient id="bg-brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F0702C"/><stop offset=".5" stop-color="#C9348A"/><stop offset="1" stop-color="#3B5BDB"/></linearGradient></defs>
+        <circle cx="14" cy="14" r="13" fill="url(#bg-brand)"/><circle cx="14" cy="14" r="8.5" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.5"/>
+        <circle cx="14" cy="14" r="3.2" fill="#fff"/><circle cx="19.4" cy="9.6" r="2.1" fill="#fff" fill-opacity=".9"/>
+      </svg>
+      <span>Near Misses</span>
+    </a>
+    <nav class="nav">
+      <a class="lnk" href="#idea" data-i="navIdea">Die Idee</a>
+      <a class="lnk" href="#maps" data-i="navMaps">Karten</a>
+      <a class="lnk" href="#editor" data-i="navEditor">Editor</a>
+      <div class="lang" role="group" aria-label="Sprache / Language">
+        <button type="button" data-lang="de" lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ---------- hero ---------- -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><i></i><span data-i="eyebrow">Vier interaktive Landkarten</span></span>
+        <h1 data-i="h1" data-html>Knapp daneben ist auch <span class="hl">daneben.</span></h1>
+        <p class="lead" data-i="lead" data-html>Manche Ansichten liegen so dicht an der echten Einsicht, dass man sie kaum unterscheiden kann. Gerade deshalb führen sie in die Irre. Diese Karten zeigen <strong>84 solcher Beinahe-Treffer</strong> aus Buddhismus, Christentum, Islam und heutiger Nondualität, jeden mit dem Echten, das er nachahmt.</p>
+        <div class="cta">
+          <a class="btn pri" href="#maps" data-i="ctaMaps">Karten entdecken <span aria-hidden="true">→</span></a>
+          <a class="btn sec" href="#idea" data-i="ctaIdea">Was ist ein Near Miss?</a>
+        </div>
+      </div>
+
+      <svg class="target" viewBox="0 0 400 400" role="img" aria-labelledby="t-title">
+        <title id="t-title" data-i="targetTitle">Eine Zielscheibe: Die Pfeile landen dicht neben der Mitte.</title>
+        <defs>
+          <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC94A"/><stop offset=".35" stop-color="#F0702C"/><stop offset=".7" stop-color="#C9348A"/><stop offset="1" stop-color="#3B5BDB"/></linearGradient>
+          <radialGradient id="tc"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE7B0"/></radialGradient>
+          <g id="arr"><line x1="0" y1="0" x2="-118" y2="0" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <path d="M-104 0 l-18 -11 h10 l14 11 l-14 11 h-10z" fill="currentColor" opacity=".85"/><path d="M8 0 L-6 -7 L-6 7Z" fill="currentColor"/></g>
+        </defs>
+        <circle cx="200" cy="200" r="190" fill="url(#tg)"/>
+        <circle cx="200" cy="200" r="150" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>
+        <circle cx="200" cy="200" r="110" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+        <circle cx="200" cy="200" r="70" fill="#fff" fill-opacity=".22"/>
+        <circle cx="200" cy="200" r="34" fill="url(#tc)"/>
+        <circle cx="200" cy="200" r="12" fill="#1C1828"/>
+        <circle class="miss" cx="200" cy="200" r="58" fill="none" stroke="#fff" stroke-width="2.5" stroke-dasharray="5 6"/>
+        <!-- arrows: all just beside the centre -->
+        <g class="arrow a1" style="--dx:-60px;--dy:-60px;color:#fff"><use href="#arr" transform="translate(166 160) rotate(42)"/></g>
+        <g class="arrow a2" style="--dx:70px;--dy:-50px;color:#1C1828"><use href="#arr" transform="translate(242 176) rotate(150)"/></g>
+        <g class="arrow a3" style="--dx:60px;--dy:70px;color:#fff"><use href="#arr" transform="translate(226 246) rotate(-128)"/></g>
+        <g class="arrow a4" style="--dx:-70px;--dy:50px;color:#1C1828"><use href="#arr" transform="translate(150 224) rotate(-24)"/></g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ---------- idea ---------- -->
+  <section id="idea">
+    <div class="wrap">
+      <p class="kicker" data-i="ideaKicker">Die Idee</p>
+      <h2 data-i="ideaH">Jede Tradition kennt den Fehler, der wie die Wahrheit aussieht.</h2>
+      <p class="sub" data-i="ideaSub">Ein Near Miss ist kein Gegenteil. Er hat ein Körnchen Wahrheit, und doch landet er knapp daneben. Die großen Traditionen haben dafür eigene Namen gefunden.</p>
+      <div class="names">
+        <article class="name" style="--c:var(--buddha)">
+          <span class="tr" data-i="nBuddhaTr">Buddhismus</span>
+          <h3 data-i="nBuddhaH">Der nahe Feind</h3>
+          <p data-i="nBuddhaP">Gleichgültigkeit sieht aus wie Gleichmut. Buddhaghosa nennt solche Doppelgänger „nahe Feinde“: Sie sind gefährlicher als das offene Gegenteil.</p>
+          <cite>Visuddhimagga IX</cite>
+        </article>
+        <article class="name" style="--c:var(--christ)">
+          <span class="tr" data-i="nChristTr">Christentum</span>
+          <h3 data-i="nChristH">Der Engel des Lichts</h3>
+          <p data-i="nChristP">Der Feind kommt nicht als Finsternis, sondern als Licht. Die Kunst, das Echte vom täuschend Ähnlichen zu trennen, heißt Unterscheidung der Geister.</p>
+          <cite data-i="nChristC">2 Kor 11,14</cite>
+        </article>
+        <article class="name" style="--c:var(--islam)">
+          <span class="tr" data-i="nIslamTr">Islam</span>
+          <h3 data-i="nIslamH">Der verborgene Schirk</h3>
+          <p data-i="nIslamP">Das Beigesellen, das man nicht bemerkt, weil es fromm aussieht: verborgener als eine schwarze Ameise auf schwarzem Stein in dunkler Nacht.</p>
+          <cite data-i="nIslamC">Hadith</cite>
+        </article>
+        <article class="name" style="--c:var(--nondual)">
+          <span class="tr" data-i="nNondualTr">Nondualität heute</span>
+          <h3 data-i="nNondualH">„Ich beobachte das nur“</h3>
+          <p data-i="nNondualP">Mitten im Streit wird aus Achtsamkeit ein innerer Rückzug. Was nach Freiheit klingt, ist manchmal nur ein bequemer Ausweg.</p>
+          <cite data-i="nNondualC">Alltagsbeispiel</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- how to read ---------- -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker" data-i="howKicker">So liest man eine Karte</p>
+      <h2 data-i="howH">Mitte, Abstand, Prüffrage.</h2>
+      <div class="steps">
+        <div class="step"><b data-i="s1H">Die Mitte</b><p data-i="s1P">Jede Karte ist von der Mitte ihrer Tradition aus gezeichnet: dem Pāli-Kanon, dem Evangelium, dem Koran, der eigenen Erfahrung.</p></div>
+        <div class="step"><b data-i="s2H">Der Abstand</b><p data-i="s2P">Um die Mitte liegen die Beinahe-Treffer. Je weiter außen, desto weiter daneben. Ein Klick zeigt, welche Einsicht eine Position nachahmt.</p></div>
+        <div class="step"><b data-i="s3H">Die Prüffrage</b><p data-i="s3P">Sieben Klassen von Fallstricken, jede mit einer Frage. Damit lässt sich auch ein neuer Text oder Gedanke selbst einordnen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- maps ---------- -->
+  <section id="maps" class="maps">
+    <div class="wrap">
+      <p class="kicker" data-i="mapsKicker">Die Karten</p>
+      <h2 data-i="mapsH">Vier Landkarten des Knapp-daneben</h2>
+      <p class="sub" data-i="mapsSub">Jede Karte steht für sich. Zusammen zeigen sie, wie ähnlich die Fallen sind, und wie verschieden die Mitte, von der aus man sie sieht.</p>
+
+      <div class="grid">
+        <article class="card" style="--c:var(--buddha)">
+          <div class="img"><img src="assets/thumb-buddha.svg" alt="" width="640" height="400" loading="lazy"><span class="badge" data-i="tagBuddha">Buddhismus</span></div>
+          <div class="body">
+            <span class="ey" data-i="buddhaEy">Pāli-Kanon · Advaita</span>
+            <h3><a href="map-buddha.html" data-map data-i="buddhaT">Landkarte der Fehlformen</a></h3>
+            <p data-i="buddhaP">Weltanschauungen, die sich auf den Buddha oder auf Advaita berufen und knapp daneben liegen. Verortet auf zwei Achsen, die der Buddha selbst gezogen hat: Ewigkeitsansicht und Vernichtungsansicht.</p>
+            <div class="meta"><div class="chips"><span class="chip" data-i="c22">22 Positionen</span><span class="chip" data-i="c7">7 Klassen</span></div><span class="go" data-i="go" data-html>Karte öffnen <span>→</span></span></div>
+          </div>
+        </article>
+
+        <article class="card" style="--c:var(--christ)">
+          <div class="img"><img src="assets/thumb-christ.svg" alt="" width="640" height="400" loading="lazy"><span class="badge" data-i="tagChrist">Christentum</span></div>
+          <div class="body">
+            <span class="ey" data-i="christEy">Paulus · Thomas · Eckhart</span>
+            <h3><a href="map-christ.html" data-map data-i="christT">Unterscheidung der Geister</a></h3>
+            <p data-i="christP">Zwanzig Fehlformen von den Gemeinden des Paulus über das Thomas-Evangelium und Meister Eckhart bis heute, jede mit der Frage, woran man das Echte erkennt.</p>
+            <div class="meta"><div class="chips"><span class="chip" data-i="c20">20 Positionen</span><span class="chip" data-i="c7">7 Klassen</span></div><span class="go" data-i="go" data-html>Karte öffnen <span>→</span></span></div>
+          </div>
+        </article>
+
+        <article class="card" style="--c:var(--islam)">
+          <div class="img"><img src="assets/thumb-islam.svg" alt="" width="640" height="400" loading="lazy"><span class="badge" data-i="tagIslam">Islam</span></div>
+          <div class="body">
+            <span class="ey" data-i="islamEy">Koran · Sufis · al-Ghazālī · Rumi</span>
+            <h3><a href="map-islam.html" data-map data-i="islamT">Der verborgene Götze</a></h3>
+            <p data-i="islamP">Das fromme Beigesellen, das man nicht bemerkt: vom Koran über die frühen Sufis und al-Ghazālī bis zu Rumi und seinen heutigen Lesern.</p>
+            <div class="meta"><div class="chips"><span class="chip" data-i="c21">21 Positionen</span><span class="chip" data-i="c7">7 Klassen</span></div><span class="go" data-i="go" data-html>Karte öffnen <span>→</span></span></div>
+          </div>
+        </article>
+
+        <article class="card" style="--c:var(--nondual)">
+          <div class="img"><img src="assets/thumb-nonduality.svg" alt="" width="640" height="400" loading="lazy"><span class="badge" data-i="tagNondual">Nondualität</span><span class="badge start" data-i="start">Einstieg</span></div>
+          <div class="body">
+            <span class="ey" data-i="nondualEy">Eine Landkarte für Neugierige</span>
+            <h3><a href="map-nonduality.html" data-map data-i="nondualT">Knapp daneben ist auch daneben</a></h3>
+            <p data-i="nondualP">Heutige Lehren über Erwachen, Einssein und Achtsamkeit, in Alltagssprache. Sie lädt zum Nachsehen ein, nicht zum Glauben: Prüfe jeden Satz an dem, was du selbst erlebst.</p>
+            <div class="meta"><div class="chips"><span class="chip" data-i="c21">21 Positionen</span><span class="chip" data-i="c7">7 Klassen</span></div><span class="go" data-i="go" data-html>Karte öffnen <span>→</span></span></div>
+          </div>
+        </article>
+      </div>
+
+      <article class="card wide" id="editor" style="--c:var(--editor)">
+        <div class="img"><img src="assets/thumb-editor.svg" alt="" width="640" height="400" loading="lazy"><span class="badge" data-i="tagEditor">Werkzeug</span></div>
+        <div class="body">
+          <span class="ey" data-i="editorEy">Für Autorinnen und Autoren</span>
+          <h3><a href="map-editor/index.html" data-editor data-i="editorT">Karten-Editor</a></h3>
+          <p data-i="editorP">Alle vier Karten in einem Werkzeug: ansehen, Einträge direkt bearbeiten, eigene Karten als JSON laden und speichern.</p>
+          <ul class="feat">
+            <li data-i="f1">Alle Karten an einem Ort</li>
+            <li data-i="f2">Texte direkt im Bild bearbeiten</li>
+            <li data-i="f3">Deutsch und Englisch parallel</li>
+            <li data-i="f4">Eigene Karten als JSON</li>
+          </ul>
+          <div class="meta"><span></span><span class="go" data-i="goEditor" data-html>Editor öffnen <span>→</span></span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ---------- closing ---------- -->
+  <section class="quote">
+    <div class="wrap">
+      <blockquote data-i="quote">Die Karte lädt zum Nachsehen ein, nicht zum Glauben.</blockquote>
+      <p data-i="quoteSub">Prüfe jeden Satz an dem, was du selbst erlebst.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Near Misses · <span data-i="foot">Interaktive Landkarten des Knapp-daneben</span></span>
+    <span><a href="LICENSE">MIT License</a> · © 2026 Manfred Kaul</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var T={
+  en:{
+    navIdea:"The idea",navMaps:"Maps",navEditor:"Editor",
+    eyebrow:"Four interactive maps",
+    h1:'A near miss is still <span class="hl">a miss.</span>',
+    lead:'Some views lie so close to real insight that you can hardly tell them apart. That is exactly why they lead astray. These maps show <strong>84 such near misses</strong> from Buddhism, Christianity, Islam and today’s nonduality, each with the real thing it imitates.',
+    ctaMaps:"Explore the maps →",ctaIdea:"What is a near miss?",
+    targetTitle:"A target: the arrows land just beside the centre.",
+    ideaKicker:"The idea",
+    ideaH:"Every tradition knows the mistake that looks like the truth.",
+    ideaSub:"A near miss is not an opposite. It holds a grain of truth and still lands just beside the mark. The great traditions have found their own names for it.",
+    nBuddhaTr:"Buddhism",nBuddhaH:"The near enemy",
+    nBuddhaP:"Indifference looks like equanimity. Buddhaghosa calls such look-alikes “near enemies”: they are more dangerous than the open opposite.",
+    nChristTr:"Christianity",nChristH:"The angel of light",
+    nChristP:"The enemy does not come as darkness but as light. The art of telling the real thing from its deceptive likeness is called the discernment of spirits.",
+    nChristC:"2 Cor 11:14",
+    nIslamTr:"Islam",nIslamH:"Hidden shirk",
+    nIslamP:"Associating something with God without noticing, because it looks pious: more hidden than a black ant on a black stone on a dark night.",
+    nIslamC:"Hadith",
+    nNondualTr:"Nonduality today",nNondualH:"“I’m just observing this”",
+    nNondualP:"In the middle of an argument, mindfulness turns into inner withdrawal. What sounds like freedom is sometimes just a comfortable way out.",
+    nNondualC:"Everyday example",
+    howKicker:"How to read a map",howH:"Centre, distance, test question.",
+    s1H:"The centre",s1P:"Each map is drawn from the centre of its tradition: the Pāli Canon, the Gospel, the Qur’an, your own experience.",
+    s2H:"The distance",s2P:"The near misses lie around the centre. The further out, the further off. One click shows which insight a position imitates.",
+    s3H:"The test question",s3P:"Seven classes of pitfall, each with a question. With it you can place a new text or thought yourself.",
+    mapsKicker:"The maps",mapsH:"Four maps of the near miss",
+    mapsSub:"Each map stands on its own. Together they show how similar the traps are, and how different the centre from which you see them.",
+    tagBuddha:"Buddhism",buddhaEy:"Pāli Canon · Advaita",buddhaT:"Map of Near Misses",
+    buddhaP:"Worldviews that invoke the Buddha or Advaita and land just beside the mark. Placed on two axes the Buddha drew himself: eternalism and annihilationism.",
+    tagChrist:"Christianity",christEy:"Paul · Thomas · Eckhart",christT:"Discernment of Spirits",
+    christP:"Twenty near misses from Paul’s congregations through the Gospel of Thomas and Meister Eckhart to the present, each with the question of how to recognise the real thing.",
+    tagIslam:"Islam",islamEy:"Qur’an · Sufis · al-Ghazali · Rumi",islamT:"The Hidden Idol",
+    islamP:"The pious association you do not notice: from the Qur’an through the early Sufis and al-Ghazali to Rumi and his readers today.",
+    tagNondual:"Nonduality",start:"Start here",nondualEy:"A map for the curious",nondualT:"A Near Miss Is Still a Miss",
+    nondualP:"Today’s teachings on awakening, oneness and mindfulness, in everyday language. It invites you to look, not to believe: check every sentence against what you yourself experience.",
+    c22:"22 positions",c20:"20 positions",c21:"21 positions",c7:"7 classes",
+    go:"Open map <span>→</span>",
+    tagEditor:"Tool",editorEy:"For authors",editorT:"Map Editor",
+    editorP:"All four maps in one tool: view them, edit entries in place, load and save your own maps as JSON.",
+    f1:"All maps in one place",f2:"Edit text right in the map",f3:"German and English side by side",f4:"Your own maps as JSON",
+    goEditor:"Open editor <span>→</span>",
+    quote:"The map invites you to look, not to believe.",quoteSub:"Check every sentence against what you yourself experience.",
+    foot:"Interactive maps of near misses"
+  }
+};
+var nodes=[].slice.call(document.querySelectorAll("[data-i]"));
+T.de={};nodes.forEach(function(n){T.de[n.dataset.i]=n.hasAttribute("data-html")?n.innerHTML:n.textContent});
+
+function get(k){try{return localStorage.getItem(k)}catch(_){return null}}
+function put(k,v){try{localStorage.setItem(k,v)}catch(_){}}
+var lang=(function(){
+  var q=null;try{q=new URLSearchParams(location.search).get("lang")}catch(_){}
+  var s=q||get("lang");if(s==="de"||s==="en")return s;
+  return /^de\b/i.test(navigator.language||"")?"de":"en";
+})();
+
+function apply(l){
+  lang=l;document.documentElement.lang=l;put("lang",l);
+  var d=T[l];
+  nodes.forEach(function(n){var v=d[n.dataset.i];if(v==null)return;if(n.hasAttribute("data-html"))n.innerHTML=v;else n.textContent=v});
+  document.title=l==="en"?"Near Misses · Maps of the near miss":"Near Misses · Landkarten des Knapp-daneben";
+  document.querySelectorAll("a[data-map]").forEach(function(a){a.href=a.getAttribute("href").split("?")[0]+"?lang="+l});
+  document.querySelectorAll("a[data-editor]").forEach(function(a){a.href=a.getAttribute("href").split("?")[0]+"?lang="+l+"&mode=edit"});
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===l?"true":"false")});
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){if(b.dataset.lang!==lang)apply(b.dataset.lang)})});
+apply(lang);
+})();
+</script>
+</body>
+</html>

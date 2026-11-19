@@ -1,0 +1,568 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Der verborgene Götze</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a field map around the shahada ("no god but God"); horizontal = tashbih without tanzih (fused) vs. tanzih without tashbih (separated), vertical = trust without tying the camel vs. tying without trust; panel beside, seven classes and catalogue below. */
+:root{
+  --bg:#F3F4F1; --surface:#FFFFFF; --fg:#1B201E; --muted:#5B645F; --line:#D5D9D3; --accent:#2F3A8F; --halo:#F3F4F1;
+  --cA:#C2410C; --cB:#526070; --cC:#7C3AED; --cD:#0E7490; --cE:#BE185D; --cF:#15803D; --cG:#9A6A06;
+  --display:"Gentium Book Plus","Gentium Plus",Georgia,serif;
+  --body:"Source Serif 4","Source Serif Pro",Georgia,serif;
+  --ui:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121614; --surface:#1A1F1C; --fg:#E6EAE6; --muted:#9AA49E; --line:#2E3632; --accent:#A3AEF5; --halo:#121614;
+  --cA:#FB8A4C; --cB:#A3B0C0; --cC:#B79CFB; --cD:#3CCFE6; --cE:#F47CB4; --cF:#5ADB8A; --cG:#EAC24A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121614; --surface:#1A1F1C; --fg:#E6EAE6; --muted:#9AA49E; --line:#2E3632; --accent:#A3AEF5; --halo:#121614;
+  --cA:#FB8A4C; --cB:#A3B0C0; --cC:#B79CFB; --cD:#3CCFE6; --cE:#F47CB4; --cF:#5ADB8A; --cG:#EAC24A; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16.5px;line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px;display:grid;gap:48px}
+h1,h2,h3{font-family:var(--display);font-weight:700;text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.01em}
+h2{font-size:1.6rem}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-family:var(--ui);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.lede{max-width:68ch;display:grid;gap:14px}
+.lede p{font-size:1.08rem}
+em,i{font-style:italic}
+.pali{font-style:italic}
+.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 28px;max-width:100%}
+.src{display:grid;gap:2px;border-top:1px solid var(--line);padding-top:10px}
+.src b{font-family:var(--ui);font-size:.8rem;font-weight:600;letter-spacing:.02em}
+.src span{font-size:.95rem;color:var(--muted)}
+
+/* map + panel */
+.atlas{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:900px){.atlas{grid-template-columns:1fr}}
+.mapbox{overflow-x:auto;border:1px solid var(--line);background:var(--surface);border-radius:4px}
+.mapbox svg{display:block;width:100%;min-width:640px;height:auto}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{font-family:var(--ui);font-size:.82rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:5px 11px 5px 9px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block;font-style:normal}
+.chip[aria-pressed="true"]{border-color:var(--fg);box-shadow:inset 0 0 0 1px var(--fg)}
+.chip:focus-visible,.node:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+svg text{font-family:var(--ui)}
+.node{cursor:pointer}
+.node text{font-size:15px;fill:var(--fg);paint-order:stroke;stroke:var(--surface);stroke-width:5px;stroke-linejoin:round}
+.node.dim{opacity:.18}
+.node.sel circle{stroke:var(--fg);stroke-width:3}
+.node.sel text{font-weight:600}
+.axis{stroke:var(--line);stroke-width:1.5}
+.ring{fill:none;stroke:var(--line)}
+.axislbl{font-size:13px;fill:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.axissub{font-size:12px;fill:var(--muted);font-style:italic}
+.trad{font-size:12.5px;fill:var(--muted);paint-order:stroke;stroke:var(--surface);stroke-width:4px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px 22px 24px;display:grid;gap:14px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}
+@media (max-width:900px){.panel{position:static}}
+.panel .cls{font-family:var(--ui);font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.dl{display:grid;gap:10px}
+.dl div{display:grid;gap:1px}
+.dl dt{font-family:var(--ui);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.dl dd{margin:0}
+.hint{font-family:var(--ui);font-size:.82rem;color:var(--muted)}
+
+/* classes */
+.classes{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.klass{border-top:3px solid var(--c);padding-top:12px;display:grid;gap:8px;align-content:start}
+.klass .tag{font-family:var(--ui);font-size:.78rem;font-weight:600;color:var(--c);letter-spacing:.05em}
+.klass .q{font-style:italic}
+.klass .meta{font-size:.92rem;color:var(--muted)}
+
+/* catalogue */
+.catalog{display:grid;gap:34px}
+.group{display:grid;gap:14px}
+.group h3{display:flex;align-items:center;gap:10px}
+.group h3 i{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px 18px;display:grid;gap:9px;align-content:start;min-width:0}
+.item h4{font-family:var(--display);font-size:1.08rem;margin:0;line-height:1.3}
+.item .dl dd{font-size:.95rem}
+.item button{justify-self:start;font-family:var(--ui);font-size:.8rem;background:none;border:none;color:var(--accent);padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+.tension{max-width:70ch;display:grid;gap:14px;border-left:2px solid var(--accent);padding-left:20px}
+.foot{font-family:var(--ui);font-size:.84rem;color:var(--muted);max-width:80ch;display:grid;gap:6px}
+@media (prefers-reduced-motion:no-preference){.node circle{transition:r .15s}}
+.wrap a{color:var(--accent);text-underline-offset:2px;text-decoration-thickness:1px}
+.term{border-bottom:1px dotted var(--muted);cursor:help}
+.term:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+#tip{position:absolute;z-index:20;max-width:min(320px,calc(100vw - 32px));background:var(--fg);color:var(--bg);font-family:var(--ui);font-size:.85rem;line-height:1.45;padding:8px 11px;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.panel{top:calc(env(safe-area-inset-top,0px) + 60px)}
+.lang{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:calc(env(safe-area-inset-right,0px) + 12px);z-index:30;display:flex;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px;box-shadow:0 2px 10px rgba(0,0,0,.10)}
+.lang button{border:0;background:none;color:var(--muted);font-family:var(--ui);font-weight:600;font-size:.78rem;letter-spacing:.06em;padding:5px 11px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.lang button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap>header .eyebrow{padding-right:96px}
+.say{font-family:var(--display);font-style:italic;font-size:1.08rem;line-height:1.4;margin:0}
+.centre{max-width:70ch;display:grid;gap:14px;border-left:2px solid var(--accent);padding-left:20px}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.links li{font-size:.93rem;min-width:0;overflow-wrap:anywhere}
+.gq{font-style:italic;max-width:70ch}
+</style>
+
+<div class="lang" role="group" aria-label="Sprache / Language">
+  <button type="button" id="lang-de" data-lang="de" lang="de">DE</button>
+  <button type="button" id="lang-en" data-lang="en" lang="en">EN</button>
+</div>
+
+<div class="wrap">
+  <header class="lede">
+    <div class="eyebrow" id="s-eyebrow"></div>
+    <h1 id="s-h1"></h1>
+    <p id="s-intro1"></p>
+    <p id="s-intro2"></p>
+  </header>
+
+  <section class="centre" aria-labelledby="h-mitte">
+    <h2 id="h-mitte"></h2>
+    <p id="s-m1"></p>
+    <p id="s-m2"></p>
+    <p id="s-m3"></p>
+  </section>
+
+  <section class="lede" aria-labelledby="h-basis">
+    <h2 id="h-basis"></h2>
+    <div class="sources" id="s-sources"></div>
+    <p class="hint" id="s-basishint"></p>
+  </section>
+
+  <section aria-labelledby="h-karte">
+    <h2 id="h-karte" style="margin-bottom:14px"></h2>
+    <div class="filters" id="filters" role="group"></div>
+    <div class="atlas">
+      <div class="mapbox"><svg id="map" viewBox="0 0 1000 1000" role="img"></svg></div>
+      <aside class="panel" id="panel" aria-live="polite"></aside>
+    </div>
+    <p class="hint" style="margin-top:10px" id="s-maphint"></p>
+  </section>
+
+  <section aria-labelledby="h-klassen" style="display:grid;gap:18px">
+    <h2 id="h-klassen"></h2>
+    <p style="max-width:68ch" id="s-kl1"></p>
+    <div class="classes" id="classes"></div>
+  </section>
+
+  <section aria-labelledby="h-katalog" style="display:grid;gap:18px">
+    <h2 id="h-katalog"></h2>
+    <div class="catalog" id="catalog"></div>
+  </section>
+
+  <section class="tension" aria-labelledby="h-spannung">
+    <h2 id="h-spannung"></h2>
+    <p id="s-t1"></p>
+    <p id="s-t2"></p>
+    <p id="s-t3"></p>
+  </section>
+
+  <footer class="foot">
+    <p id="s-foot1"></p>
+    <p id="s-foot2"></p>
+  </footer>
+</div>
+
+<script>
+const MAP1="https://claude.ai/artifact/9iBHqJCZp7KQV4TNhzZYUt", MAP2="https://claude.ai/artifact/KMN8ZQ2RtwZcHjD2WTTEqZ", MAP3="https://claude.ai/artifact/Kj2LwmjUYB6BLgdAYjyD6d";
+const A=(u,t)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
+/* ---------- static text ---------- */
+const STR={
+de:{
+ title:"Der verborgene Götze",
+ eyebrow:"Die islamische Karte des Knapp-daneben",
+ h1:"Der verborgene Götze",
+ intro1:"Auch der Islam kennt das „Knapp daneben“, und er gibt ihm einen Namen: den verborgenen Schirk. Gemeint ist das Beigesellen, das man nicht bemerkt, weil es fromm aussieht. Ein Hadith sagt, es sei verborgener als eine schwarze Ameise auf schwarzem Stein in dunkler Nacht. Diese Karte ordnet 21 solche Fehlformen, vom Koran über die frühen Sufis und al-Ghazālī bis zu Rumi und seinen heutigen Lesern.",
+ intro2:"Die Karte ist von der islamischen Mitte aus gezeichnet. Was hier am Rand liegt, kann auf den drei anderen Karten näher an der Mitte stehen, und umgekehrt.",
+ hMitte:"Die Mitte: Kein Gott außer Gott",
+ m1:"Die Schahāda, „Es gibt keinen Gott außer Gott“, ist das Glaubensbekenntnis. Die Sufis lesen sie als Weg in zwei Schritten. Die Verneinung „kein Gott“ räumt alles weg, was sich an Gottes Stelle setzt, zuletzt das eigene Ich. Die Bejahung „außer Gott“ lässt übrig, was immer schon war. Wer nur verneint, landet in der Leere. Wer bejaht, ohne verneint zu haben, behält seine Götzen.",
+ m2:"Die beiden Achsen stehen in der Tradition selbst. Waagrecht: tanzīh, Gott ist allem unvergleichlich, und tashbīh, Gott ist den Dingen nah und ähnlich. Ibn ʿArabī liest beides in einem Vers: „Nichts ist ihm gleich, und er ist der Hörende, der Sehende“ (42:11). Links fehlt die Unvergleichlichkeit, und Gott wird zum Bild, zur Welt oder zum eigenen Ich. Rechts fehlt die Nähe, und Gott wird leer und fern, die Welt wertlos. Senkrecht geht es um den Weg, nach dem Hadith „Binde dein Kamel an und vertraue auf Gott“. Oben steht Vertrauen ohne Anbinden, unten Anbinden ohne Vertrauen.",
+ m3:"Woran man die Mitte erkennt: an der Rückkehr. Wer wirklich entworden ist (fanāʾ), kehrt als Diener zurück (baqāʾ), nüchtern, im Gesetz, den Menschen zugewandt. Und an der Barmherzigkeit, mit der fast jede Sure beginnt. Geprüft wird das traditionell nicht allein, sondern beim Scheich.",
+ hBasis:"Die Tradition hat diese Karte selbst gezeichnet",
+ sources:[
+  ["1:6–7 · Fātiḥa","Jedes Gebet bittet um den geraden Weg zwischen zwei Abwegen. Spätere Ausleger lasen sie als Wissen ohne Tun und Tun ohne Wissen."],
+  ["42:11 · Ibn ʿArabī","„Nichts ist ihm gleich, und er ist der Hörende, der Sehende“: Unvergleichlichkeit und Nähe in einem Vers. Daraus die waagrechte Achse."],
+  ["Tirmidhī 2517","„Binde es an und vertraue auf Gott“: Mühe und Vertrauen in einem Satz. Daraus die senkrechte Achse."],
+  ["Hadith vom kleinen Schirk","Die Augendienerei ist der kleine Schirk, verborgener als eine schwarze Ameise auf schwarzem Stein in dunkler Nacht."],
+  ["Junayd (gest. 910)","Nüchternheit steht über dem Rausch. Auf die Entwerdung folgt das Bleiben."],
+  ["Qushayrī · Hujwīrī (11. Jh.)","Handbücher gegen den Verfall: gegen Sufis jenseits des Gesetzes und gegen die Lehre vom Einwohnen Gottes."],
+  ["al-Ghazālī, Iḥyāʾ","Das Buch über die Selbsttäuschung (ghurūr): wie sich Gelehrte, Fromme, Sufis und Reiche jeweils täuschen."],
+  ["Rumi, Masnavi","Mose und der Hirte, der Elefant im Dunkeln, das Falschgeld: das Knapp-daneben als Geschichte."]],
+ basisHint:"Anders als auf der christlichen Karte sind die beiden Achsen diesmal nicht meine Übertragung. Die Zuordnung der Einträge ist mein Urteil.",
+ hKarte:"Die Karte",
+ filterLabel:"Nach Klasse filtern",
+ mapLabel:"Karte von 21 Fehlformen rund um die Mitte „Kein Gott außer Gott“",
+ mapHint:"Punkt antippen, um Details zu sehen. Abstand von der Mitte heißt: deutlichere Schlagseite. Die Platzierungen sind Urteile, keine Messungen.",
+ hKlassen:"Sieben Klassen von Fehlformen",
+ kl1:"Die sieben Klassen sind dieselben wie auf den anderen Karten, hier in islamischer Sprache. Zu jeder gehören eine Prüffrage, das, was übersehen wird, und eine Bewegung zur Mitte. Die Bewegung führt zur Mitte, nicht zum Gegenpol: Wer aus dem Fatalismus in die Werkfrömmigkeit springt, hat nur die Hälfte gewechselt.",
+ hKatalog:"Katalog",
+ hSpannung:"Die Spannung, die ich stehen lassen will",
+ t1:"Auch diese Karte hatte ein Tribunal, und es hatte zwei Seiten. Ḥallāj wurde 922 in Bagdad hingerichtet, nachdem sich Junayd von ihm distanziert hatte. Rumi verteidigt ihn drei Jahrhunderte später. Ob „Ich bin die Wahrheit“ Gipfel oder Absturz ist, hat die Tradition nie einheitlich entschieden.",
+ t2:"Heute steht der Sufismus zwischen zwei Gerichten. Strenge Strömungen erklären ihn als Ganzes zur unerlaubten Neuerung, also zum Knapp-daneben des Islam. Westliche Leser lösen ihn aus dem Islam, dann wäre der Islam das Knapp-daneben des Sufismus. Beide Urteile verfehlen dieselbe Mitte, von entgegengesetzten Seiten.",
+ t3:"Die vier Karten haben vier Mitten. „Ich bin Gott“ ist auf der christlichen Karte der äußerste Rand, in Advaita das Ziel. Hier steht der Satz an beiden Orten zugleich: bei Pharao ganz außen, bei Ḥallāj vielleicht in der Mitte. Was entscheidet, ist nicht der Satz, sondern ob noch jemand da ist, der ihn sagt.",
+ foot1:"Koranstellen (Sure:Vers) verlinken auf "+A("https://quran.com/1?translations=27","quran.com")+", auf Deutsch in der Übersetzung von Bubenheim und Elyas. Hadithe verlinken auf "+A("https://sunnah.com/","sunnah.com")+" (englisch). Personen und Werke verlinken auf eine Wikipedia-Suche, die bei eindeutigem Treffer direkt zum Artikel führt. Koran, Hadith, Sufis und Rumi gebe ich sinngemäß und aus dem Gedächtnis wieder, nicht gegen eine Edition geprüft.",
+ foot2:"Die drei anderen Karten: "+A(MAP1,"Landkarte der Fehlformen")+" (Mitte: Pāli-Kanon), "+A(MAP2,"Knapp daneben ist auch daneben")+" (Alltagssprache) und "+A(MAP3,"Unterscheidung der Geister")+" (christlich).",
+ dt:{wahr:"Was daran stimmt",kippt:"Wo es kippt",stellen:"Gegenstellen",bsp:"Beispiele",q:"Prüffrage",erk:"Was übersehen wird",bew:"Bewegung zur Mitte",vert:"Senkrechte Komponente",links:"Zum Nachlesen"},
+ own:"eigen",cls:"Klasse",all:"Alle",canon:"Stellen",entries:"Einträge",show:"Auf der Karte zeigen",
+ vert:["Außerdem das Kamel anbinden: beten, sich mühen und handeln, statt nur zu vertrauen.","Außerdem vertrauen lernen: das Tun tun und das Ergebnis Gott überlassen.","Senkrecht etwa im Gleichgewicht; die Bewegung ist vor allem waagrecht."],
+ axis:{l:"← Vermischt",ls:"Nähe ohne Unvergleichlichkeit",r:"Getrennt →",rs:"Unvergleichlichkeit ohne Nähe",t:"↑ Vertrauen ohne Anbinden",ts:"Fatalismus · Rausch",b:"↓ Anbinden ohne Vertrauen",bs:"Eigene Kraft · Buchstabe",c:["Kein Gott","außer Gott"],cs:"Schahāda"}
+},
+en:{
+ title:"The Hidden Idol",
+ eyebrow:"The Islamic map of near misses",
+ h1:"The Hidden Idol",
+ intro1:"Islam knows the near miss too, and it gives it a name: hidden shirk. It means associating something with God without noticing, because it looks pious. A hadith says it is more hidden than a black ant on a black stone on a dark night. This map orders 21 such near misses, from the Qur’an through the early Sufis and al-Ghazali to Rumi and his readers today.",
+ intro2:"The map is drawn from the Islamic centre. What lies at the edge here may stand closer to the middle on the three other maps, and the other way round.",
+ hMitte:"The middle: no god but God",
+ m1:"The shahada, “There is no god but God”, is the profession of faith. The Sufis read it as a path in two steps. The negation “no god” clears away everything that puts itself in God’s place, finally one’s own self. The affirmation “but God” leaves what was always there. Whoever only negates ends in emptiness. Whoever affirms without having negated keeps their idols.",
+ m2:"Both axes come from the tradition itself. Horizontally: tanzih, God is incomparable to everything, and tashbih, God is near and like things. Ibn Arabi reads both in one verse: “There is nothing like Him, and He is the All-Hearing, the All-Seeing” (42:11). On the left incomparability is missing, and God becomes an image, the world or one’s own self. On the right nearness is missing, and God becomes empty and distant, the world worthless. Vertically it is about the path, after the hadith “Tie your camel and trust in God”. At the top stands trust without tying, at the bottom tying without trust.",
+ m3:"How to recognise the middle: by the return. Whoever has truly passed away (fana) comes back as a servant (baqa): sober, within the law, turned towards people. And by the mercy with which almost every sura begins. Traditionally this is not tested alone but with the shaykh.",
+ hBasis:"The tradition drew this map itself",
+ sources:[
+  ["1:6–7 · Fatiha","Every prayer asks for the straight path between two ways of going astray. Later commentators read them as knowledge without action and action without knowledge."],
+  ["42:11 · Ibn Arabi","“There is nothing like Him, and He is the All-Hearing, the All-Seeing”: incomparability and nearness in one verse. Hence the horizontal axis."],
+  ["Tirmidhī 2517","“Tie it and trust in God”: effort and trust in one sentence. Hence the vertical axis."],
+  ["Hadith of the lesser shirk","Showing off is the lesser shirk, more hidden than a black ant on a black stone on a dark night."],
+  ["Junayd (d. 910)","Sobriety ranks above intoxication. Passing away is followed by remaining."],
+  ["Qushayri · Hujwiri (11th c.)","Handbooks against decline: against Sufis beyond the law and against the doctrine of God’s indwelling."],
+  ["al-Ghazali, Ihya","The book on self-deception (ghurur): how scholars, the devout, Sufis and the rich each deceive themselves."],
+  ["Rumi, Masnavi","Moses and the shepherd, the elephant in the dark, counterfeit coin: the near miss told as a story."]],
+ basisHint:"Unlike on the Christian map, both axes are not my extrapolation this time. Placing the entries is my judgement.",
+ hKarte:"The map",
+ filterLabel:"Filter by class",
+ mapLabel:"Map of 21 near misses around the middle “no god but God”",
+ mapHint:"Tap a point for details. Distance from the middle means a stronger tilt. Placements are judgements, not measurements.",
+ hKlassen:"Seven classes of near miss",
+ kl1:"The seven classes are the same as on the other maps, here in Islamic language. Each has a test question, what gets overlooked, and a movement to the middle. The movement leads to the middle, not to the opposite pole: whoever jumps from fatalism into works-piety has only swapped halves.",
+ hKatalog:"Catalogue",
+ hSpannung:"The tension I want to leave standing",
+ t1:"This map had a tribunal too, and it had two sides. Hallaj was executed in Baghdad in 922, after Junayd had distanced himself from him. Rumi defends him three centuries later. Whether “I am the Truth” is summit or fall, the tradition never decided with one voice.",
+ t2:"Today Sufism stands between two courts. Strict currents declare it as a whole a forbidden innovation, the near miss of Islam. Western readers detach it from Islam, which would make Islam the near miss of Sufism. Both verdicts miss the same middle, from opposite sides.",
+ t3:"The four maps have four centres. “I am God” is the outermost edge on the Christian map and the goal in Advaita. Here the sentence stands in both places at once: with Pharaoh at the far edge, with Hallaj perhaps in the middle. What decides is not the sentence but whether someone is still there to say it.",
+ foot1:"Qur’an references (sura:verse) link to "+A("https://quran.com/1","quran.com")+" (The Clear Quran). Hadith references link to "+A("https://sunnah.com/","sunnah.com")+". People and works link to a Wikipedia search that goes straight to the article when there is a clear match. Qur’an, hadith, Sufis and Rumi are given in paraphrase and from memory, not checked against an edition.",
+ foot2:"The three other maps: "+A(MAP1,"Map of Near Misses")+" (centre: the Pāli Canon), "+A(MAP2,"A Near Miss Is Still a Miss")+" (everyday language) and "+A(MAP3,"Discernment of Spirits")+" (Christian).",
+ dt:{wahr:"What’s right about it",kippt:"Where it tips over",stellen:"Counter-passages",bsp:"Examples",q:"Test question",erk:"What gets overlooked",bew:"Movement to the middle",vert:"Vertical component",links:"Further reading"},
+ own:"own",cls:"Class",all:"All",canon:"Passages",entries:"entries",show:"Show on map",
+ vert:["Also tie the camel: pray, strive and act instead of only trusting.","Also learn to trust: do the work and leave the outcome to God.","Roughly balanced vertically; the movement is mainly horizontal."],
+ axis:{l:"← Fused",ls:"nearness without incomparability",r:"Separated →",rs:"incomparability without nearness",t:"↑ Trust without tying",ts:"fatalism · intoxication",b:"↓ Tying without trust",bs:"own strength · the letter",c:["No god","but God"],cs:"Shahada"}
+}};
+
+/* ---------- glossary per language ---------- */
+const GL={
+de:{
+ "Schahāda":"das islamische Glaubensbekenntnis: „Es gibt keinen Gott außer Gott, und Muḥammad ist sein Gesandter“",
+ "Schirk":"„Beigesellung“: Gott etwas an die Seite stellen; die Grundsünde des Islam",
+ "tawḥīd":"Bekenntnis zur Einheit und Einzigkeit Gottes; die Mitte des Islam",
+ "tanzīh":"Gott von allem Geschaffenen unterscheiden: Er ist unvergleichlich",
+ "tashbīh":"Gott mit Geschaffenem vergleichen: Er ist nah, hört und sieht",
+ "taʿṭīl":"„Entleerung“: Gott alle Eigenschaften absprechen, bis nichts bleibt",
+ "fanāʾ":"„Entwerden“: das Vergehen des Ich in Gott",
+ "baqāʾ":"„Bleiben“: die Rückkehr nach der Entwerdung, als Diener in der Welt",
+ "ḥāl":"„Zustand“: ein geschenkter, vorübergehender innerer Zustand",
+ "maqām":"„Station“: eine erarbeitete, bleibende Stufe des Weges",
+ "ḥaqīqa":"„Wirklichkeit, Wahrheit“: das innere Ziel des Weges",
+ "Scharia":"das religiöse Gesetz; bei den Sufis die Schale, die den Kern schützt",
+ "Scheich":"Lehrer und Führer auf dem Sufi-Weg",
+ "ibāḥa":"„Erlaubtsein“: die Meinung, für Fortgeschrittene gelte das Gesetz nicht mehr",
+ "ḥulūl":"„Einwohnen“: die Lehre, Gott wohne im Menschen; von den Sufi-Handbüchern verworfen",
+ "karāmāt":"Wunder der Gottesfreunde",
+ "tawakkul":"Gottvertrauen",
+ "riyāʾ":"„Gesehen-werden-Wollen“: Frömmigkeit fürs Publikum",
+ "ʿujb":"Selbstgefälligkeit über die eigenen guten Taten",
+ "ghurūr":"Selbsttäuschung, Verblendung",
+ "zuhd":"Weltverzicht, Askese",
+ "Dhikr":"„Gedenken“: Wiederholung von Gottesnamen oder Formeln",
+ "Sunna":"die Lebenspraxis des Propheten als Vorbild",
+ "Hadith":"überliefertes Wort oder Tun des Propheten",
+ "Fātiḥa":"„die Eröffnende“: erste Sure, Teil jedes Pflichtgebets",
+ "Masnavi":"Rumis Lehrgedicht in sechs Büchern, rund 25.000 Doppelverse",
+ "Iḥyāʾ":"al-Ghazālīs Hauptwerk „Die Wiederbelebung der Religionswissenschaften“",
+ "Malāmatiyya":"„Leute des Tadels“: Sufis, die ihre Frömmigkeit verbargen und Tadel suchten",
+ "Iblīs":"der Teufel im Koran, der sich weigerte, sich vor Adam niederzuwerfen",
+ "Jabriyya":"frühe Schule, die alles Handeln Gottes Zwang zuschrieb",
+ "Qadariyya":"frühe Schule, die den freien Willen des Menschen betonte",
+ "Charidschiten":"Gruppe des 7. Jh., die andere Muslime zu Ungläubigen erklärte",
+ "takfīr":"jemanden zum Ungläubigen erklären",
+ "waḥdat al-wujūd":"„Einheit des Seins“: Ibn ʿArabīs Lehre, wie sie später genannt wurde",
+ "Einheit des Schauens":"Sirhindīs Gegenbegriff (waḥdat ash-shuhūd): Die Einheit ist eine Erfahrung, kein Satz über die Dinge",
+ "bi-lā kayf":"„ohne Wie“: die Worte über Gott bejahen, ohne nach ihrer Art zu fragen",
+ "ghuluww":"„Übertreibung“ in der Religion"
+},
+en:{
+ "shahada":"the Islamic profession of faith: “There is no god but God, and Muhammad is His messenger”",
+ "shirk":"“association”: putting something beside God; the root sin in Islam",
+ "tawhid":"affirming the oneness and uniqueness of God; the centre of Islam",
+ "tanzih":"distinguishing God from everything created: He is incomparable",
+ "tashbih":"likening God to created things: He is near, hears and sees",
+ "taʿtil":"“emptying”: denying God every attribute until nothing remains",
+ "fana":"“passing away”: the self’s vanishing in God",
+ "baqa":"“remaining”: the return after passing away, as a servant in the world",
+ "hal":"“state”: a given, passing inner condition",
+ "maqam":"“station”: an acquired, lasting stage of the path",
+ "haqiqa":"“reality, truth”: the inner goal of the path",
+ "sharia":"the religious law; for the Sufis the shell that protects the kernel",
+ "shaykh":"teacher and guide on the Sufi path",
+ "ibaha":"“permissibility”: the view that the law no longer applies to the advanced",
+ "hulul":"“indwelling”: the doctrine that God dwells in a human; rejected by the Sufi handbooks",
+ "karamat":"miracles of the friends of God",
+ "tawakkul":"trust in God",
+ "riyaʾ":"“wanting to be seen”: piety for an audience",
+ "ʿujb":"self-satisfaction with one’s own good deeds",
+ "ghurur":"self-deception, delusion",
+ "zuhd":"renunciation of the world, asceticism",
+ "dhikr":"“remembrance”: repetition of divine names or formulas",
+ "sunna":"the Prophet’s way of life as a model",
+ "hadith":"a transmitted saying or deed of the Prophet",
+ "Fatiha":"“the Opening”: first sura, part of every ritual prayer",
+ "Masnavi":"Rumi’s didactic poem in six books, about 25,000 couplets",
+ "Ihya":"al-Ghazali’s main work, “The Revival of the Religious Sciences”",
+ "Malamatiyya":"“people of blame”: Sufis who hid their piety and sought reproach",
+ "Iblis":"the devil in the Qur’an, who refused to bow before Adam",
+ "Jabriyya":"early school that ascribed all action to God’s compulsion",
+ "Qadariyya":"early school that stressed human free will",
+ "Kharijites":"7th-century group that declared other Muslims unbelievers",
+ "takfir":"declaring someone an unbeliever",
+ "wahdat al-wujud":"“unity of being”: Ibn Arabi’s teaching, as it was later called",
+ "unity of witnessing":"Sirhindi’s counter-term (wahdat al-shuhud): unity is an experience, not a statement about things",
+ "bi-la kayf":"“without how”: affirming what is said of God without asking about its manner",
+ "ghuluww":"“exaggeration” in religion"
+}};
+const esc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+const GX={};
+for(const l of ["de","en"]){const keys=Object.keys(GL[l]).sort((a,b)=>b.length-a.length);GX[l]={rx:new RegExp("(?<![\\p{L}ʿʾ])("+keys.map(esc).join("|")+")(?![\\p{L}ʿʾ])","giu"),map:new Map(keys.map(k=>[k.toLowerCase(),GL[l][k]]))}}
+let lang=(()=>{try{const q=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");return q==="en"?"en":"de"}catch(_){return"de"}})();
+
+/* ---------- links ---------- */
+const WPde=t=>"https://de.wikipedia.org/w/index.php?search="+encodeURIComponent(t)+"&go=Go";
+const WPen=t=>"https://en.wikipedia.org/w/index.php?search="+encodeURIComponent(t)+"&go=Go";
+const wp=(d,e)=>({de:["Wikipedia: "+d,WPde(d)],en:["Wikipedia: "+e,WPen(e)]});
+const wpEn=e=>({de:["Wikipedia (englisch): "+e,WPen(e)],en:["Wikipedia: "+e,WPen(e)]});
+const same=(t,u)=>({de:[t,u],en:[t,u]});
+const W={
+ rumi:wp("Dschalāl ad-Dīn Rūmī","Rumi"),masnavi:wp("Masnawi","Masnavi"),hallaj:wp("al-Halladsch","Mansur al-Hallaj"),junayd:wp("Dschunaid","Junayd of Baghdad"),
+ ghazali:wp("al-Ghazālī","Al-Ghazali"),ibnarabi:wp("Ibn Arabi","Ibn Arabi"),hujwiri:wpEn("Ali Hujwiri"),qushayri:wpEn("Al-Qushayri")
+};
+const BOOK={"Bukhārī":"bukhari","Muslim":"muslim","Tirmidhī":"tirmidhi"};
+const LRX=new RegExp("(?<![\\p{L}\\d:,.])(\\d{1,3}):(\\d{1,3})(?:[–-](\\d{1,3}))?(?![\\d:])|(Bukhārī|Muslim|Tirmidhī) (\\d{3,5})(?!\\d)","gu");
+function refURL(m){
+  if(m[4])return "https://sunnah.com/"+BOOK[m[4]]+":"+m[5];
+  if(+m[1]<1||+m[1]>114)return null;
+  return "https://quran.com/"+m[1]+"/"+m[2]+(m[3]?"-"+m[3]:"")+(lang==="de"?"?translations=27":"");
+}
+function linkify(root){
+  const rx=LRX;
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){const p=n.parentElement;if(!p||p.closest("a,script,style,svg,button,dt,h1,h2"))return NodeFilter.FILTER_REJECT;rx.lastIndex=0;return rx.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}});
+  const nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+  nodes.forEach(n=>{const s=n.nodeValue,frag=document.createDocumentFragment();let last=0,m;rx.lastIndex=0;
+    while((m=rx.exec(s))){const u=refURL(m);if(!u)continue;frag.append(s.slice(last,m.index));const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";a.textContent=m[0];frag.append(a);last=m.index+m[0].length}
+    frag.append(s.slice(last));n.replaceWith(frag)});
+}
+function annotate(root){
+  const {rx,map}=GX[lang];
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){const p=n.parentElement;if(!p||p.closest(".term,a,script,style,svg,button,dt,h1"))return NodeFilter.FILTER_REJECT;rx.lastIndex=0;return rx.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}});
+  const nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+  nodes.forEach(n=>{const s=n.nodeValue,frag=document.createDocumentFragment();let last=0,m;rx.lastIndex=0;
+    while((m=rx.exec(s))){frag.append(s.slice(last,m.index));const sp=document.createElement("span");sp.className="term";sp.title=map.get(m[0].toLowerCase());sp.tabIndex=0;sp.textContent=m[0];frag.append(sp);last=m.index+m[0].length}
+    frag.append(s.slice(last));n.replaceWith(frag)});
+}
+function enrich(root){linkify(root);annotate(root)}
+function svgTitles(){const {rx,map}=GX[lang];document.querySelectorAll("#map text").forEach(t=>{rx.lastIndex=0;const m=rx.exec(t.textContent);if(m){const ti=document.createElementNS("http://www.w3.org/2000/svg","title");ti.textContent=m[0]+": "+map.get(m[0].toLowerCase());t.appendChild(ti)}})}
+const tip=document.createElement("div");tip.id="tip";tip.hidden=true;tip.setAttribute("role","tooltip");
+function showTip(sp){tip.textContent=sp.textContent+": "+sp.title;tip.hidden=false;const r=sp.getBoundingClientRect();const tw=tip.offsetWidth;let left=r.left+window.scrollX;left=Math.max(16,Math.min(left,document.documentElement.clientWidth-tw-16));tip.style.left=left+"px";tip.style.top=(r.bottom+window.scrollY+6)+"px"}
+document.addEventListener("click",ev=>{const sp=ev.target.closest(".term");if(sp&&!ev.target.closest("a")){showTip(sp)}else{tip.hidden=true}});
+document.addEventListener("keydown",ev=>{const sp=document.activeElement;if(ev.key==="Escape")tip.hidden=true;else if(ev.key==="Enter"&&sp&&sp.classList&&sp.classList.contains("term"))showTip(sp)});
+
+/* ---------- seven classes ---------- */
+const CLASSES={
+ A:{de:{name:"Gott festlegen",sub:"Nähe ohne Unvergleichlichkeit",q:"Halte ich mein Bild von Gott, die Welt oder mich selbst für Gott?",mech:"Gottes Nähe wird zu einem Gegenstand: ein Bild, ein Körper, die Summe aller Dinge.",erk:"„Nichts ist ihm gleich“ (42:11). Ein überliefertes Sufi-Wort sagt: Was immer du dir vorstellst, Gott ist anders.",bew:"Erst verneinen, dann bejahen: das Bild lassen, ohne die Nähe zu verlieren.",kanon:"42:11 · 112:4 · 6:103"},
+    en:{name:"Pinning God down",sub:"nearness without incomparability",q:"Do I take my image of God, the world or myself for God?",mech:"God’s nearness is turned into an object: an image, a body, the sum of all things.",erk:"“There is nothing like Him” (42:11). A transmitted Sufi saying: whatever you imagine, God is other than that.",bew:"Negate first, then affirm: let go of the image without losing the nearness.",kanon:"42:11 · 112:4 · 6:103"}},
+ B:{de:{name:"Welt und Nähe verneinen",sub:"Unvergleichlichkeit ohne Nähe",q:"Wird aus „Gott ist unvergleichlich“ ein „Gott ist nicht da“ oder „die Welt ist wertlos“?",mech:"Die Verneinung bleibt stehen: Gott wird leer, die Welt ein Gefängnis, der Leib ein Feind.",erk:"„Wohin ihr euch wendet, dort ist Gottes Angesicht“ (2:115). Die Welt ist voller Zeichen (41:53).",bew:"Die Zeichen sehen: in der Welt, im Leib, im Nächsten. „Vergiss nicht deinen Anteil an der Welt“ (28:77).",kanon:"2:115 · 41:53 · 28:77"},
+    en:{name:"Denying world and nearness",sub:"incomparability without nearness",q:"Does “God is incomparable” turn into “God is not here” or “the world is worthless”?",mech:"The negation is left standing: God becomes empty, the world a prison, the body an enemy.",erk:"“Wherever you turn, there is the Face of God” (2:115). The world is full of signs (41:53).",bew:"See the signs: in the world, in the body, in your neighbour. “Do not forget your share of this world” (28:77).",kanon:"2:115 · 41:53 · 28:77"}},
+ C:{de:{name:"Den Weg überspringen",sub:"Wahrheit ohne Gesetz",q:"Benutze ich Erfahrung, Erkenntnis oder Gottes Willen, um mich von Gebot, Mühe oder Prüfung freizusprechen?",mech:"Was am Ende des Weges steht, soll den Weg schon jetzt überflüssig machen.",erk:"Auf die Entwerdung folgt das Bleiben. Die Gottesfreunde halten das Gesetz am genauesten (Junayd, Qushayrī).",bew:"Nüchtern werden und zurückkehren. Die höchste Station ist die Dienerschaft.",kanon:"15:99 · Junayd · Qushayrī"},
+    en:{name:"Skipping the path",sub:"truth without law",q:"Am I using experience, insight or God’s will to excuse myself from commandment, effort or testing?",mech:"What stands at the end of the path is supposed to make the path unnecessary already now.",erk:"Passing away is followed by remaining. The friends of God keep the law most exactly (Junayd, Qushayri).",bew:"Become sober and return. The highest station is servanthood.",kanon:"15:99 · Junayd · Qushayri"}},
+ D:{de:{name:"Die Schale statt des Kerns",sub:"Mittel als Ziel",q:"Suche ich Gott, oder den Zustand, das Wunder, die richtige Form, den Lohn?",mech:"Ein Weg zu Gott wird selbst zum Ziel, oder Gott wird zum Mittel für meine Zwecke.",erk:"Rābiʿa wollte Gott um seiner selbst willen. Die Schale schützt den Kern, sie ersetzt ihn nicht.",bew:"Fragen, wem es dient. Rumi: Gott schaut auf das Herz, nicht auf die Worte.",kanon:"22:11 · 22:37 · Rābiʿa"},
+    en:{name:"The shell instead of the kernel",sub:"means as end",q:"Am I seeking God, or the state, the miracle, the correct form, the reward?",mech:"A way to God becomes the goal itself, or God becomes a means to my ends.",erk:"Rabiʿa wanted God for His own sake. The shell protects the kernel; it does not replace it.",bew:"Ask what it serves. Rumi: God looks at the heart, not at the words.",kanon:"22:11 · 22:37 · Rabiʿa"}},
+ E:{de:{name:"Das Ich im frommen Gewand",sub:"der verborgene Schirk",q:"Wer wird hier gesehen? Wem schreibe ich es zu?",mech:"Das Ich stellt sich neben Gott, gerade durch die Frömmigkeit.",erk:"Iblīs’ Satz „Ich bin besser als er“ (7:12) ist der erste Hochmut. Der kleine Schirk ist so verborgen wie die schwarze Ameise auf schwarzem Stein.",bew:"Sich vom Scheich prüfen lassen. Das Gute verbergen, ohne aus dem Verbergen eine Pose zu machen.",kanon:"7:12 · 107:4–6 · 2:11–12"},
+    en:{name:"The self in pious clothing",sub:"hidden shirk",q:"Who is being seen here? To whom do I credit it?",mech:"The self places itself beside God, precisely through piety.",erk:"Iblis’ sentence “I am better than he” (7:12) is the first pride. The lesser shirk is as hidden as the black ant on the black stone.",bew:"Let the shaykh test you. Hide the good without making a pose of hiding.",kanon:"7:12 · 107:4–6 · 2:11–12"}},
+ F:{de:{name:"Ohne Barmherzigkeit",sub:"Wahrheit ohne Erbarmen",q:"Macht es mich barmherziger, oder nur strenger, sicherer, überlegener?",mech:"Wissen, Gottesfurcht oder Rechtgläubigkeit treten ohne Erbarmen auf und sehen aus wie das Echte.",erk:"Fast jede Sure beginnt mit „Im Namen Gottes, des Allerbarmers, des Barmherzigen“. „Meine Barmherzigkeit übertrifft meinen Zorn“ (Bukhārī 3194).",bew:"Furcht und Hoffnung als zwei Flügel. Zum Menschen gehen, nicht über ihn urteilen.",kanon:"1:1 · 7:156 · 39:53"},
+    en:{name:"Without mercy",sub:"truth without compassion",q:"Does it make me more merciful, or only stricter, surer, more superior?",mech:"Knowledge, fear of God or orthodoxy appear without mercy and look like the real thing.",erk:"Almost every sura begins with “In the name of God, the Most Compassionate, the Most Merciful”. “My mercy prevails over my wrath” (Bukhārī 3194).",bew:"Fear and hope as two wings. Go to the person instead of judging them.",kanon:"1:1 · 7:156 · 39:53"}},
+ G:{de:{name:"Die halbe Wahrheit",sub:"der Elefant im Dunkeln",q:"Welche Hälfte fehlt: Vertrauen oder Anbinden, Unvergleichlichkeit oder Nähe, Gesetz oder Herz?",mech:"Ein Teil wird ertastet und für das Ganze gehalten, wie in Rumis Geschichte vom Elefanten im Dunkeln.",erk:"Die Mitte ist fast immer ein Paar: „Binde es an und vertraue“ (Tirmidhī 2517). „Nichts ist ihm gleich, und er hört“ (42:11).",bew:"Die fehlende Hälfte suchen und wieder dazunehmen.",kanon:"Tirmidhī 2517 · 42:11 · Masnavi III"},
+    en:{name:"The half truth",sub:"the elephant in the dark",q:"Which half is missing: trust or tying, incomparability or nearness, law or heart?",mech:"One part is felt and taken for the whole, as in Rumi’s story of the elephant in the dark.",erk:"The middle is almost always a pair: “Tie it and trust” (Tirmidhī 2517). “There is nothing like Him, and He hears” (42:11).",bew:"Look for the missing half and put it back.",kanon:"Tirmidhī 2517 · 42:11 · Masnavi III"}}
+};
+const C=k=>CLASSES[k][lang];
+
+/* ---------- 21 entries ---------- */
+const E=[
+ {id:"wahrheit",k:"E",x:-.7,y:-.72,links:[W.hallaj,wp("Bayezid Bistami","Bayazid Bastami"),W.junayd],
+  de:{label:"Ich bin die Wahrheit",say:"„Ich bin in Gott aufgegangen. Was ich sage, sagt Gott.“",wahr:"Die Entwerdung ist echt. Ḥallājs „Ich bin die Wahrheit“ und Bāyazīds „Gepriesen sei ich“ gelten vielen Sufis als Worte aus der Entwerdung, in der nichts als Gott bleibt.",kippt:"Wer den Satz als Aussage über sich behält, ist nicht entworden. Dann ist es Pharaos „Ich bin euer höchster Herr“ (79:24). Rumi: Dasselbe „Ich“ ist bei Pharao Fluch und bei Ḥallāj Gnade. Junayd: Der Satz kam aus dem Rausch und hätte verschwiegen werden müssen.",stellen:"79:24; 28:38; Junayd über Nüchternheit und Rausch; Rumi, Masnavi II; Hujwīrī, Kashf al-Maḥjūb (gegen die Lehre vom Einwohnen)",bsp:"Ḥallāj, hingerichtet 922: für die einen Märtyrer, für die anderen Grenzüberschreiter. Heute: „Ich bin göttlich“ als Selbstbild.",own:{bew:"Nüchtern werden. Wer wirklich entworden ist, sagt danach eher „Ich bin Diener“."}},
+  en:{label:"I am the Truth",say:"“I have dissolved in God. What I say, God says.”",wahr:"Passing away is real. Hallaj’s “I am the Truth” and Bayazid’s “Glory be to me” count for many Sufis as words spoken from fana, in which nothing but God remains.",kippt:"Whoever keeps the sentence as a statement about themselves has not passed away. Then it is Pharaoh’s “I am your lord most high” (79:24). Rumi: the same “I” is a curse in Pharaoh and a grace in Hallaj. Junayd: the sentence came from intoxication and should have been kept silent.",stellen:"79:24; 28:38; Junayd on sobriety and intoxication; Rumi, Masnavi II; Hujwiri, Kashf al-Mahjub (against the doctrine of indwelling)",bsp:"Hallaj, executed in 922: a martyr for some, a transgressor for others. Today: “I am divine” as a self-image.",own:{bew:"Become sober. Whoever has truly passed away is more likely to say afterwards “I am a servant”."}}},
+ {id:"allesgott",k:"A",x:-.55,y:-.3,links:[wp("Wahdat al-Wudschud","Wahdat al-wujud"),W.ibnarabi,wp("Ahmad Sirhindi","Ahmad Sirhindi")],
+  de:{label:"Alles ist Gott",say:"„Es gibt nur Gott. Also ist alles, was ist, Gott, auch ich.“",wahr:"Ibn ʿArabīs Einheit des Seins (waḥdat al-wujūd): Es gibt kein Sein neben Gottes Sein. „Wohin ihr euch wendet, dort ist Gottes Angesicht“ (2:115).",kippt:"Aus „nichts ist neben Gott“ wird „alles ist Gott“. Ibn ʿArabī selbst sagt von den Dingen: Er und nicht Er. Spätere Lesarten verkürzten das zu „alles ist Er“, und Sirhindī setzte die Einheit des Schauens dagegen.",stellen:"2:115; 42:11; 112:4; Sirhindī, Briefe",bsp:"Volkstümlicher Pantheismus im Sufismus. Heute: Ibn ʿArabī als Advaita in arabischen Worten."},
+  en:{label:"Everything is God",say:"“There is only God. So everything that is, is God, me included.”",wahr:"Ibn Arabi’s unity of being (wahdat al-wujud): there is no being beside God’s being. “Wherever you turn, there is the Face of God” (2:115).",kippt:"“Nothing is beside God” turns into “everything is God”. Ibn Arabi himself says of things: He and not He. Later readings shortened this to “all is He”, and Sirhindi set the unity of witnessing against it.",stellen:"2:115; 42:11; 112:4; Sirhindi, Letters",bsp:"Popular pantheism within Sufism. Today: Ibn Arabi as Advaita in Arabic words."}},
+ {id:"bild",k:"A",x:-.85,y:.2,links:[wp("Abu l-Hasan al-Aschʿarī","Al-Ash'ari"),wpEn("Tashbih")],
+  de:{label:"Gott im Bild",say:"„Gott sitzt auf dem Thron, wie ein König auf seinem Thron sitzt.“",wahr:"Der Koran spricht von Gottes Hand, Angesicht und Thron. Gott ist nah und spricht.",kippt:"Die Nähe wird zur Vorstellung, und Gott wird ein Ding unter Dingen. Die Theologie antwortete: die Worte bejahen, ohne nach dem Wie zu fragen (bi-lā kayf, al-Ashʿarī). „Die Blicke erfassen ihn nicht“ (6:103).",stellen:"42:11; 112:4; 6:103",bsp:"Frühe Gruppen, die Gott einen Körper zuschrieben. Heute: Gott als großer Mann im Himmel, der Strichlisten führt."},
+  en:{label:"God in an image",say:"“God sits on the throne the way a king sits on his throne.”",wahr:"The Qur’an speaks of God’s hand, face and throne. God is near and speaks.",kippt:"Nearness turns into a picture, and God becomes a thing among things. Theology answered: affirm the words without asking how (bi-la kayf, al-Ashʿari). “No vision can grasp Him” (6:103).",stellen:"42:11; 112:4; 6:103",bsp:"Early groups that ascribed a body to God. Today: God as a big man in the sky keeping tally."}},
+ {id:"lieferant",k:"D",x:-.8,y:.5,links:[wp("Rabiʿa al-ʿAdawiyya","Rabia of Basra")],
+  de:{label:"Gott als Lieferant",say:"„Ich bete, damit es mir gut geht. Bleibt der Lohn aus, wozu dann beten?“",wahr:"Bitten ist erwünscht: „Ruft mich an, so erhöre ich euch“ (40:60).",kippt:"Der Koran beschreibt genau diese Haltung: Mancher dient Gott „am Rande“. Trifft ihn Gutes, ist er zufrieden, trifft ihn eine Prüfung, kehrt er um (22:11). Rābiʿa betete: Diene ich dir aus Furcht vor der Hölle, verbrenne mich in ihr; diene ich dir um des Paradieses willen, verschließe es mir.",stellen:"22:11; 40:60; Rābiʿa al-ʿAdawiyya (8. Jh.)",bsp:"Gebet als Tausch, Amulette als Versicherung. Glaube, der am ersten Unglück zerbricht."},
+  en:{label:"God as supplier",say:"“I pray so that things go well for me. If the reward fails to come, why pray?”",wahr:"Asking is welcome: “Call upon Me, I will respond to you” (40:60).",kippt:"The Qur’an describes exactly this stance: some worship God “on the edge”. If good befalls them, they are content; if a trial befalls them, they turn away (22:11). Rabiʿa prayed: if I worship You for fear of hell, burn me in it; if I worship You for hope of paradise, shut me out of it.",stellen:"22:11; 40:60; Rabiʿa al-ʿAdawiyya (8th c.)",bsp:"Prayer as a trade, amulets as insurance. Faith that breaks at the first misfortune."}},
+ {id:"zustaende",k:"D",x:-.5,y:.38,links:[W.qushayri,wpEn("Karamat")],
+  de:{label:"Zustände sammeln",say:"„Beim Dhikr war ich ganz in Gott. Ich will wieder dorthin.“",wahr:"Zustände (ḥāl) sind Geschenke und gehören zum Weg.",kippt:"Ein ḥāl kommt und geht, eine Station (maqām) bleibt. Wer Zustände sammelt, sucht das Geschenk statt des Gebers. Auch Wunder (karāmāt) gelten den Meistern als Prüfung und Schleier, nicht als Beweis.",stellen:"Qushayrī, Risāla (über ḥāl und maqām, über die Wunder)",bsp:"Von Dhikr-Abend zu Dhikr-Abend. Der drehende Derwisch als Bühnenshow."},
+  en:{label:"Collecting states",say:"“During dhikr I was completely in God. I want to go back there.”",wahr:"States (hal) are gifts and belong to the path.",kippt:"A hal comes and goes; a station (maqam) remains. Whoever collects states seeks the gift instead of the Giver. Even miracles (karamat) count for the masters as a test and a veil, not as proof.",stellen:"Qushayri, Risala (on hal and maqam, on miracles)",bsp:"From one dhikr evening to the next. The whirling dervish as a stage show."}},
+ {id:"scheich",k:"E",x:-.5,y:.25,links:[W.masnavi,W.rumi],
+  de:{label:"Der falsche Scheich",say:"„Mein Meister ist jenseits von Gut und Böse. Was er tut, darf man nicht prüfen.“",wahr:"Ohne Meister geht es kaum. Ein Sufi-Wort sagt: Wer keinen Scheich hat, dessen Scheich ist der Teufel.",kippt:"Rumi: Es gibt viele Teufel mit Menschengesicht, also gib nicht jeder Hand die Hand (Masnavi I). Und: Falschgeld gibt es nur, weil es echtes Gold gibt (Masnavi II). Auch der Scheich steht unter dem Gesetz und unter der Barmherzigkeit.",stellen:"Rumi, Masnavi I und II; 2:11–12 („Wir stiften nur Frieden“, doch sie merken nicht, dass sie Unheil stiften)",bsp:"Machtmissbrauch in Orden und neuen Bewegungen. Blinder Gehorsam als Frömmigkeit.",own:{bew:"Den Meister an den Früchten prüfen: Werden die Schüler freier und barmherziger, oder abhängiger?"}},
+  en:{label:"The false shaykh",say:"“My master is beyond good and evil. What he does must not be questioned.”",wahr:"Without a master it hardly works. A Sufi saying: whoever has no shaykh, Satan is his shaykh.",kippt:"Rumi: there are many devils with human faces, so do not give your hand to every hand (Masnavi I). And: counterfeit coin exists only because there is real gold (Masnavi II). The shaykh too stands under the law and under mercy.",stellen:"Rumi, Masnavi I and II; 2:11–12 (“We are only peacemakers”, yet they do not perceive that they spread corruption)",bsp:"Abuse of power in orders and new movements. Blind obedience as piety.",own:{bew:"Test the master by the fruits: do the students become freer and more merciful, or more dependent?"}}},
+ {id:"iblis",k:"E",x:.58,y:.2,links:[wp("Iblis","Iblis"),W.hallaj,wpEn("Ahmad Ghazali")],
+  de:{label:"Iblīs, der Stolze",say:"„Ich werfe mich vor niemandem nieder als vor Gott.“",wahr:"Strenge Einheit: Nur Gott gebührt Anbetung. Ḥallāj und Aḥmad Ghazālī lasen Iblīs darum als tragischen Liebenden.",kippt:"Iblīs begründet seine Weigerung nicht mit Gott, sondern mit sich: „Ich bin besser als er“ (7:12). Er sieht in Adam nur Lehm, nicht den Geist, den Gott ihm eingehaucht hat (15:29). Es ist der erste Hochmut, und er trägt das Gewand der Rechtgläubigkeit.",stellen:"7:11–12; 15:29; 38:75–76; Ḥallāj, Kitāb aṭ-Ṭawāsīn",bsp:"Frömmigkeit, die sich zu gut für die Menschen ist. Wer andere verachtet, um Gott treu zu bleiben.",own:{bew:"Sich vor dem Menschen verneigen: Gottes Geist im Gegenüber sehen, auch wenn es nur nach Lehm aussieht."}},
+  en:{label:"Iblis the proud",say:"“I bow down to no one but God.”",wahr:"Strict oneness: worship is due to God alone. Hallaj and Ahmad Ghazali therefore read Iblis as a tragic lover.",kippt:"Iblis does not ground his refusal in God but in himself: “I am better than he” (7:12). He sees in Adam only clay, not the spirit God breathed into him (15:29). It is the first pride, and it wears the robe of orthodoxy.",stellen:"7:11–12; 15:29; 38:75–76; Hallaj, Kitab al-Tawasin",bsp:"Piety that is too good for people. Despising others in order to stay true to God.",own:{bew:"Bow before the human: see God’s spirit in the other, even if it looks only like clay."}}},
+ {id:"riya",k:"E",x:-.3,y:.62,links:[wpEn("Riya"),wpEn("Malamatiyya")],
+  de:{label:"Augendienerei",say:"„Alle sollen sehen, wie fromm ich bin.“",wahr:"Gute Taten sind gut, auch öffentliche.",kippt:"„Wehe den Betenden, die ihres Gebets nicht achten, die gesehen werden wollen“ (107:4–6). Der Hadith nennt das den kleinen Schirk. Die Malāmatiyya verbargen deshalb ihre guten Taten, und Hujwīrī warnt, dass auch das Verbergen zur Pose werden kann.",stellen:"107:4–6; 2:264; Hujwīrī über die Malāmatiyya; al-Ghazālī, Iḥyāʾ (Buch über Ruhmsucht und Augendienerei)",bsp:"Frömmigkeit für die Gemeinde. Heute: Gebetsfotos und Pilgerbilder in sozialen Medien."},
+  en:{label:"Showing off",say:"“Everyone should see how devout I am.”",wahr:"Good deeds are good, public ones too.",kippt:"“Woe to those who pray yet are heedless of their prayer, those who only show off” (107:4–6). The hadith calls this the lesser shirk. The Malamatiyya therefore hid their good deeds, and Hujwiri warns that hiding can become a pose too.",stellen:"107:4–6; 2:264; Hujwiri on the Malamatiyya; al-Ghazali, Ihya (book on love of fame and showing off)",bsp:"Piety for the congregation. Today: prayer photos and pilgrimage pictures on social media."}},
+ {id:"allewege",k:"G",x:-.68,y:-.1,links:[wp("Religiöser Pluralismus","Religious pluralism"),W.ibnarabi],
+  de:{label:"Alle Wege sind gleich",say:"„Moschee, Kirche, Tempel: alles dasselbe. Rumi hat das doch gesagt.“",wahr:"„Jedem von euch haben wir einen Weg gegeben“ (5:48), und „Es gibt keinen Zwang im Glauben“ (2:256). Rumi und Ibn ʿArabī sprechen weit über Religionsgrenzen hinaus.",kippt:"Die Unterschiede werden eingeebnet, und der eigene Weg wird nicht mehr gegangen. Der berühmte Vers „Komm, komm, wer immer du bist“ lässt sich in Rumis Werken nicht nachweisen. Ibn ʿArabīs „Mein Herz ist fähig jeder Form“ steht in einem Liebesgedicht, das den Weg nicht abschafft.",stellen:"5:48; 2:256; 3:85; Ibn ʿArabī, Tarjumān al-ashwāq",bsp:"„Spiritual but not religious“ mit Rumi-Zitaten. Dialog, der die Unterschiede nicht mehr aushält.",own:{bew:"Erst einen Weg gehen, dann vergleichen."}},
+  en:{label:"All paths are the same",say:"“Mosque, church, temple: all the same. Rumi said so, didn’t he?”",wahr:"“To each of you We have given a way” (5:48), and “There is no compulsion in religion” (2:256). Rumi and Ibn Arabi speak far beyond religious boundaries.",kippt:"The differences are levelled, and one’s own path is no longer walked. The famous line “Come, come, whoever you are” cannot be traced in Rumi’s works. Ibn Arabi’s “My heart has become capable of every form” stands in a love poem that does not abolish the path.",stellen:"5:48; 2:256; 3:85; Ibn Arabi, Tarjuman al-ashwaq",bsp:"“Spiritual but not religious” with Rumi quotes. Dialogue that can no longer bear the differences.",own:{bew:"Walk one path first, then compare."}}},
+ {id:"angekommen",k:"C",x:-.25,y:-.72,links:[wp("Fana (Sufismus)","Fana (Sufism)"),W.junayd],
+  de:{label:"Schon angekommen",say:"„Ich bin entworden. Für mich gibt es nichts mehr zu tun.“",wahr:"Entwerdung (fanāʾ) ist ein echtes Ziel des Weges.",kippt:"Fanāʾ ohne baqāʾ ist ein halber Weg. Junayd stellt Nüchternheit über den Rausch, weil der Nüchterne zurückgekehrt ist. Wer nach dem Rausch die Welt nicht wieder sieht, ist im Zustand stecken geblieben.",stellen:"15:99 („Diene deinem Herrn, bis die Gewissheit zu dir kommt“); Junayd, Briefe; Qushayrī, Risāla",bsp:"Erwachungsgeschichten ohne Alltag. „Ich bin jenseits der Religion.“"},
+  en:{label:"Already arrived",say:"“I have passed away. There is nothing left for me to do.”",wahr:"Passing away (fana) is a real goal of the path.",kippt:"Fana without baqa is half a path. Junayd ranks sobriety above intoxication because the sober one has returned. Whoever does not see the world again after the intoxication has got stuck in a state.",stellen:"15:99 (“Worship your Lord until the certainty comes to you”); Junayd, Letters; Qushayri, Risala",bsp:"Awakening stories without everyday life. “I am beyond religion.”"}},
+ {id:"gesetz",k:"C",x:0,y:-.9,links:[wp("Antinomismus","Antinomianism"),W.hujwiri],
+  de:{label:"Jenseits des Gesetzes",say:"„Wer die Wahrheit erreicht hat, braucht Gebet und Fasten nicht mehr.“",wahr:"Die Wahrheit (ḥaqīqa) ist mehr als das Gesetz (Scharia). Die Schale ist für den Kern da.",kippt:"Der Kern wächst nur in der Schale. Junayd soll gesagt haben, wer die Pflichten für überholt erkläre, stehe schlechter da als ein Dieb. Qushayrī und Hujwīrī schreiben ihre Handbücher ausdrücklich gegen diese Haltung (ibāḥa).",stellen:"15:99; Qushayrī, Risāla (Vorrede); Hujwīrī, Kashf al-Maḥjūb",bsp:"Wanderderwische, die jedes Gesetz verwarfen. Heute: „Ich bin erwacht, Regeln sind für die anderen.“"},
+  en:{label:"Beyond the law",say:"“Whoever has reached the truth no longer needs prayer and fasting.”",wahr:"The truth (haqiqa) is more than the law (sharia). The shell exists for the kernel.",kippt:"The kernel grows only in the shell. Junayd is said to have held that whoever declares the duties obsolete is worse off than a thief. Qushayri and Hujwiri write their handbooks explicitly against this stance (ibaha).",stellen:"15:99; Qushayri, Risala (preface); Hujwiri, Kashf al-Mahjub",bsp:"Wandering dervishes who rejected every law. Today: “I’m awake, rules are for the others.”"}},
+ {id:"geschrieben",k:"G",x:.3,y:-.78,links:[wpEn("Jabriyya"),same("sunnah.com: Tirmidhī 2517","https://sunnah.com/tirmidhi:2517")],
+  de:{label:"Es steht alles geschrieben",say:"„Gott hat alles bestimmt. Was soll ich mich da anstrengen?“",wahr:"Gottvertrauen (tawakkul) gehört zur Mitte. Nichts geschieht ohne Gottes Willen.",kippt:"Ein Beduine fragte, ob er sein Kamel anbinden oder auf Gott vertrauen solle. Die Antwort: Binde es an und vertraue (Tirmidhī 2517). Rumi lässt die Tiere mit dem Löwen über Gottvertrauen und Mühe streiten und gibt dem Löwen recht (Masnavi I).",stellen:"Tirmidhī 2517; 13:11 („Gott ändert nichts an einem Volk, bis sie ändern, was in ihnen ist“); Rumi, Masnavi I",bsp:"Die Jabriyya der frühen Theologie. Heute: „Inschallah“ als Ausrede, Krankheit nicht behandeln, weil Gott es so will.",own:{bew:"Das Kamel anbinden: das Eigene tun und das Ergebnis Gott überlassen."}},
+  en:{label:"It is all written",say:"“God has determined everything. Why should I make an effort?”",wahr:"Trust in God (tawakkul) belongs to the middle. Nothing happens without God’s will.",kippt:"A Bedouin asked whether he should tie his camel or trust in God. The answer: tie it and trust (Tirmidhī 2517). Rumi has the animals argue with the lion about trust and effort, and sides with the lion (Masnavi I).",stellen:"Tirmidhī 2517; 13:11 (“God does not change a people’s condition until they change what is in themselves”); Rumi, Masnavi I",bsp:"The Jabriyya of early theology. Today: “inshallah” as an excuse, not treating illness because God wills it.",own:{bew:"Tie the camel: do your part and leave the outcome to God."}}},
+ {id:"rumilight",k:"G",x:-.32,y:-.5,links:[wp("Coleman Barks","Coleman Barks"),same("Poetry Foundation: The New Yorker Looks at Rejoining Rumi & Islam","https://poetryfoundation.org/poetry-news/76414/the-new-yorker-looks-at-rejoining-rumi-islam"),W.rumi],
+  de:{label:"Rumi ohne Koran",say:"„Rumi war kein Muslim, sondern ein Mystiker der Liebe jenseits aller Religion.“",wahr:"Rumi spricht von Liebe wie kaum ein anderer und überschreitet oft Grenzen.",kippt:"Die Masnavi ist voller Koranverse und wurde „der Koran auf Persisch“ genannt. Rumi lebte als Gelehrter, betete und fastete. Populäre englische Fassungen lassen das weitgehend weg, wie Rozina Ali 2017 im New Yorker gezeigt hat. Übrig bleibt Liebe ohne Hingabe.",stellen:"Rumi, Masnavi I (Prolog der Rohrflöte); Rozina Ali, „The Erasure of Islam from the Poetry of Rumi“ (New Yorker, 2017)",bsp:"Rumi-Zitate auf Hochzeitskarten und Yogamatten. Freie Nachdichtungen von Übersetzern, die kein Persisch lesen.",own:{bew:"Rumi im Zusammenhang lesen, mit dem Koran, den er zitiert."}},
+  en:{label:"Rumi without the Qur’an",say:"“Rumi wasn’t a Muslim but a mystic of love beyond all religion.”",wahr:"Rumi speaks of love like hardly anyone else and often crosses boundaries.",kippt:"The Masnavi is full of Qur’anic verses and was called “the Qur’an in Persian”. Rumi lived as a scholar, prayed and fasted. Popular English versions largely leave this out, as Rozina Ali showed in the New Yorker in 2017. What remains is love without surrender.",stellen:"Rumi, Masnavi I (prologue of the reed); Rozina Ali, “The Erasure of Islam from the Poetry of Rumi” (New Yorker, 2017)",bsp:"Rumi quotes on wedding cards and yoga mats. Free versions by translators who do not read Persian.",own:{bew:"Read Rumi in context, with the Qur’an he quotes."}}},
+ {id:"takfir",k:"F",x:.76,y:.74,links:[wp("Takfir","Takfir"),wp("Charidschiten","Kharijites"),same("sunnah.com: Bukhārī 6104","https://sunnah.com/bukhari:6104")],
+  de:{label:"Die anderen sind Ungläubige",say:"„Wer nicht glaubt wie wir, ist kein Muslim.“",wahr:"Die Wahrheit ist nicht beliebig, und Irrtum darf man benennen.",kippt:"Wer seinen Bruder einen Ungläubigen nennt, auf einen von beiden fällt es zurück (Bukhārī 6104). Das Urteil über den Glauben eines anderen gehört Gott. Aus der Einheit Gottes wird die eigene Gruppe als einzige Wahrheit.",stellen:"Bukhārī 6104; 4:94 („Sagt nicht zu dem, der euch den Frieden entbietet: Du bist kein Gläubiger“); 49:11",bsp:"Die Charidschiten im 7. Jh. Heutige dschihadistische Gruppen. Im Kleinen: Gemeinden, die einander das Muslimsein absprechen (takfīr)."},
+  en:{label:"The others are unbelievers",say:"“Whoever does not believe as we do is no Muslim.”",wahr:"Truth is not arbitrary, and error may be named.",kippt:"Whoever calls his brother an unbeliever, it falls back on one of the two (Bukhārī 6104). Judging another’s faith belongs to God. The oneness of God turns into one’s own group as the only truth.",stellen:"Bukhārī 6104; 4:94 (“Do not say to whoever offers you peace: you are not a believer”); 49:11",bsp:"The Kharijites in the 7th century. Today’s jihadist groups. On a small scale: congregations denying each other’s Islam (takfir)."}},
+ {id:"richter",k:"F",x:.82,y:.4,links:[wpEn("Hadith Qudsi"),same("sunnah.com: Bukhārī 3194","https://sunnah.com/bukhari:3194")],
+  de:{label:"Gott ist nur Richter",say:"„Gott wartet auf meinen Fehler. Ich kann nie genug tun.“",wahr:"Gottesfurcht ist echt. Gott ist auch der Richter.",kippt:"Furcht ohne Hoffnung ist nur ein Flügel. „Meine Barmherzigkeit übertrifft meinen Zorn“ (Bukhārī 3194). „Verzweifelt nicht an Gottes Barmherzigkeit“ (39:53).",stellen:"39:53; 7:156; Bukhārī 3194",bsp:"Angstfrömmigkeit, Zwangsgedanken über die Gültigkeit von Waschung und Gebet. Ein strafendes Gottesbild aus der Kindheit.",own:{bew:"Furcht und Hoffnung als zwei Flügel: Keiner trägt allein."}},
+  en:{label:"God is only a judge",say:"“God is waiting for my mistake. I can never do enough.”",wahr:"Fear of God is real. God is also the judge.",kippt:"Fear without hope is only one wing. “My mercy prevails over my wrath” (Bukhārī 3194). “Do not despair of God’s mercy” (39:53).",stellen:"39:53; 7:156; Bukhārī 3194",bsp:"Fear-driven piety, obsessive doubts about whether ablution and prayer were valid. A punishing image of God from childhood.",own:{bew:"Fear and hope as two wings: neither carries alone."}}},
+ {id:"wissen",k:"F",x:.18,y:.32,links:[W.ghazali,wp("Der Erretter aus dem Irrtum","Deliverance from Error")],
+  de:{label:"Wissen ohne Herz",say:"„Ich kenne die Lehre genau. Die anderen verstehen nichts.“",wahr:"Wissen ist im Islam hoch geachtet, und nach Wissen zu suchen gilt als Pflicht.",kippt:"Der Koran vergleicht die, die die Schrift tragen, ohne nach ihr zu leben, mit einem Esel, der Bücher trägt (62:5). Al-Ghazālī verließ 1095 seinen Lehrstuhl in Bagdad, weil er merkte, dass er für den Ruhm lehrte, und beschreibt das in seiner Lebensbeichte.",stellen:"62:5; 61:2–3; al-Ghazālī, Der Erretter aus dem Irrtum",bsp:"Gelehrtenstreit als Rechthaberei. Wissen über Sufismus statt Weg."},
+  en:{label:"Knowledge without heart",say:"“I know the teaching exactly. The others understand nothing.”",wahr:"Knowledge is highly honoured in Islam, and seeking it counts as a duty.",kippt:"The Qur’an compares those who carry the scripture without living by it to a donkey carrying books (62:5). In 1095 al-Ghazali left his chair in Baghdad because he noticed he was teaching for fame, and describes this in his autobiography.",stellen:"62:5; 61:2–3; al-Ghazali, Deliverance from Error",bsp:"Scholarly dispute as a need to be right. Knowledge about Sufism instead of the path."}},
+ {id:"gefaengnis",k:"B",x:.85,y:-.25,links:[wpEn("Zuhd"),same("sunnah.com: Muslim 2956","https://sunnah.com/muslim:2956")],
+  de:{label:"Die Welt ist ein Gefängnis",say:"„Die Welt ist nichts wert. Ich warte nur auf das Jenseits.“",wahr:"Ein Hadith sagt: Die Welt ist das Gefängnis des Gläubigen (Muslim 2956). Verzicht (zuhd) gehört zum Weg.",kippt:"Gemeint ist die Welt als Anhaften, nicht die Welt als Schöpfung. „Wir werden ihnen unsere Zeichen zeigen an den Horizonten und in ihnen selbst“ (41:53). „Vergiss nicht deinen Anteil an der Welt“ (28:77).",stellen:"41:53; 28:77; 7:32; Muslim 2956",bsp:"Weltflucht, Verachtung von Arbeit, Familie und Freude. Heute: Rückzug ins Private als Frömmigkeit."},
+  en:{label:"The world is a prison",say:"“The world is worth nothing. I am only waiting for the hereafter.”",wahr:"A hadith says: the world is the believer’s prison (Muslim 2956). Renunciation (zuhd) belongs to the path.",kippt:"What is meant is the world as clinging, not the world as creation. “We will show them Our signs on the horizons and within themselves” (41:53). “Do not forget your share of this world” (28:77).",stellen:"41:53; 28:77; 7:32; Muslim 2956",bsp:"Flight from the world, contempt for work, family and joy. Today: retreat into the private as piety."}},
+ {id:"strenger",k:"B",x:.6,y:.9,links:[wp("Askese","Asceticism"),same("sunnah.com: Bukhārī 5063","https://sunnah.com/bukhari:5063")],
+  de:{label:"Strenger als der Prophet",say:"„Ich bete die ganze Nacht, faste jeden Tag und heirate nie.“",wahr:"Fasten, Nachtgebet und Verzicht haben ihren Ort.",kippt:"Drei Männer gelobten genau das. Der Prophet antwortete: Ich bete und schlafe, faste und breche das Fasten, und ich heirate; wer sich von meiner Sunna abwendet, gehört nicht zu mir (Bukhārī 5063). Das Mönchtum haben Menschen erfunden (57:27).",stellen:"Bukhārī 5063; 57:27; 2:185 („Gott will es euch leicht machen“); 4:171",bsp:"Übertreibung (ghuluww) bei Neubekehrten. Selbstkasteiung als Beweis.",own:{bew:"Maß halten: Gott will es euch leicht machen (2:185)."}},
+  en:{label:"Stricter than the Prophet",say:"“I will pray all night, fast every day and never marry.”",wahr:"Fasting, night prayer and renunciation have their place.",kippt:"Three men vowed exactly this. The Prophet answered: I pray and sleep, I fast and break my fast, and I marry; whoever turns away from my sunna is not of me (Bukhārī 5063). Monasticism was invented by people (57:27).",stellen:"Bukhārī 5063; 57:27; 2:185 (“God wants ease for you”); 4:171",bsp:"Exaggeration (ghuluww) among the newly converted. Self-mortification as proof.",own:{bew:"Keep measure: God wants ease for you (2:185)."}}},
+ {id:"leer",k:"B",x:.9,y:-.02,links:[wp("Muʿtazila","Mu'tazila"),W.ibnarabi],
+  de:{label:"Der leere Gott",say:"„Gott ist so erhaben, dass man nichts von ihm sagen kann. Er hört nicht und spricht nicht.“",wahr:"Gott ist allem unvergleichlich (tanzīh).",kippt:"Unvergleichlichkeit ohne Nähe wird Entleerung (taʿṭīl). Ibn ʿArabī: Wer nur tanzīh übt, begrenzt Gott ebenso wie der, der nur tashbīh übt. Derselbe Vers sagt: „Er ist der Hörende, der Sehende“ (42:11), und er ist „näher als die Halsschlagader“ (50:16).",stellen:"42:11; 50:16; 2:186 („Ich bin nahe“); Ibn ʿArabī, Fuṣūṣ al-ḥikam (Kapitel über Noah)",bsp:"Radikale Formen der frühen rationalen Theologie. Heute: ein Gott der Philosophen, zu dem man nicht beten kann."},
+  en:{label:"The empty God",say:"“God is so exalted that nothing can be said of Him. He does not hear and does not speak.”",wahr:"God is incomparable to everything (tanzih).",kippt:"Incomparability without nearness becomes emptying (taʿtil). Ibn Arabi: whoever practises only tanzih limits God just as much as whoever practises only tashbih. The same verse says: “He is the All-Hearing, the All-Seeing” (42:11), and He is “closer than the jugular vein” (50:16).",stellen:"42:11; 50:16; 2:186 (“I am near”); Ibn Arabi, Fusus al-hikam (chapter on Noah)",bsp:"Radical forms of early rational theology. Today: a God of the philosophers to whom one cannot pray."}},
+ {id:"kraft",k:"G",x:.3,y:.82,links:[wpEn("Qadariyya"),same("sunnah.com: Bukhārī 6463","https://sunnah.com/bukhari:6463")],
+  de:{label:"Aus eigener Kraft",say:"„Wenn ich mich nur genug anstrenge, verdiene ich das Paradies.“",wahr:"Mühe ist verlangt: „Der Mensch erhält nur, worum er sich bemüht“ (53:39).",kippt:"Der Prophet sagte: Niemanden rettet sein Tun, auch mich nicht, es sei denn, Gott umhüllt mich mit seiner Barmherzigkeit (Bukhārī 6463). Wer auf die eigene Leistung schaut, verfällt der Selbstgefälligkeit (ʿujb), die al-Ghazālī zu den verderbenden Dingen zählt.",stellen:"53:39; Bukhārī 6463; al-Ghazālī, Iḥyāʾ (Buch über Hochmut und Selbstgefälligkeit)",bsp:"Die Qadariyya der frühen Theologie. Heute: Frömmigkeit als Punktekonto, geistliche Selbstoptimierung.",own:{bew:"Vertrauen lernen: das Tun tun und die Frucht nicht als eigene verbuchen."}},
+  en:{label:"By my own strength",say:"“If I only try hard enough, I will earn paradise.”",wahr:"Effort is required: “A person gets only what they strive for” (53:39).",kippt:"The Prophet said: no one’s deeds will save them, not even mine, unless God covers me with His mercy (Bukhārī 6463). Whoever looks at their own achievement falls into self-satisfaction (ʿujb), which al-Ghazali counts among the destructive things.",stellen:"53:39; Bukhārī 6463; al-Ghazali, Ihya (book on pride and self-satisfaction)",bsp:"The Qadariyya of early theology. Today: piety as a points account, spiritual self-optimisation.",own:{bew:"Learn to trust: do the work and do not book the fruit as your own."}}},
+ {id:"worte",k:"D",x:.36,y:.56,links:[W.masnavi,W.rumi],
+  de:{label:"Die richtigen Worte",say:"„So darf man nicht von Gott sprechen. Nur die korrekte Form zählt.“",wahr:"Form schützt: Das Gebet hat eine Gestalt, die Lehre hat Grenzen.",kippt:"Rumi erzählt von Mose und dem Hirten. Der Hirte will Gott die Haare kämmen und Milch bringen, und Mose weist ihn scharf zurecht. Da tadelt Gott Mose: Du bist gesandt, um zu verbinden, nicht um zu trennen. Ich schaue auf das Innere, nicht auf die Worte (Masnavi II).",stellen:"Rumi, Masnavi II; 22:37 („Weder ihr Fleisch noch ihr Blut erreicht Gott, sondern eure Gottesfurcht“)",bsp:"Streit um die richtige Formel. Kinder und einfache Menschen, die man für ihre Art zu beten beschämt."},
+  en:{label:"The right words",say:"“You must not speak of God like that. Only the correct form counts.”",wahr:"Form protects: prayer has a shape, teaching has limits.",kippt:"Rumi tells of Moses and the shepherd. The shepherd wants to comb God’s hair and bring Him milk, and Moses rebukes him sharply. Then God rebukes Moses: you were sent to unite, not to separate. I look at the inside, not at the words (Masnavi II).",stellen:"Rumi, Masnavi II; 22:37 (“Neither their meat nor their blood reaches God, but your devotion”)",bsp:"Quarrels over the right formula. Children and simple people shamed for their way of praying."}}
+];
+const T=e=>e[lang];
+
+/* ---------- rendering ---------- */
+const NS="http://www.w3.org/2000/svg";
+const svg=document.getElementById("map");
+const P=(x,y)=>[500+x*400,500+y*400];
+let active=null, selected="allesgott";
+const $=id=>document.getElementById(id);
+function el(t,a,txt){const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);if(txt!=null)n.textContent=txt;return n}
+function drawMap(){
+  const S=STR[lang].axis;
+  svg.innerHTML="";svg.setAttribute("aria-label",STR[lang].mapLabel);
+  svg.appendChild(el("rect",{x:0,y:0,width:1000,height:1000,fill:"var(--surface)"}));
+  [200,400].forEach(r=>svg.appendChild(el("circle",{cx:500,cy:500,r,class:"ring","stroke-dasharray":"2 6"})));
+  svg.appendChild(el("line",{x1:40,y1:500,x2:960,y2:500,class:"axis"}));
+  svg.appendChild(el("line",{x1:500,y1:64,x2:500,y2:936,class:"axis"}));
+  svg.appendChild(el("text",{x:22,y:530,class:"axislbl"},S.l));
+  svg.appendChild(el("text",{x:22,y:548,class:"axissub"},S.ls));
+  svg.appendChild(el("text",{x:978,y:530,class:"axislbl","text-anchor":"end"},S.r));
+  svg.appendChild(el("text",{x:978,y:548,class:"axissub","text-anchor":"end"},S.rs));
+  svg.appendChild(el("text",{x:500,y:28,class:"axislbl","text-anchor":"middle"},S.t));
+  svg.appendChild(el("text",{x:500,y:46,class:"axissub","text-anchor":"middle"},S.ts));
+  svg.appendChild(el("text",{x:500,y:972,class:"axislbl","text-anchor":"middle"},S.b));
+  svg.appendChild(el("text",{x:500,y:990,class:"axissub","text-anchor":"middle"},S.bs));
+  svg.appendChild(el("circle",{cx:500,cy:500,r:84,fill:"var(--surface)"}));
+  svg.appendChild(el("circle",{cx:500,cy:500,r:84,fill:"var(--accent)","fill-opacity":".12",stroke:"var(--accent)","stroke-width":"1.5"}));
+  const cs="font-family:var(--display);font-size:20px;font-weight:700;fill:var(--accent)";
+  S.c.forEach((line,i)=>svg.appendChild(el("text",{x:500,y:494+i*25,"text-anchor":"middle",style:cs},line)));
+  svg.appendChild(el("text",{x:500,y:544,"text-anchor":"middle",style:"font-size:12px;fill:var(--accent)"},S.cs));
+  E.forEach(e=>{
+    const [cx,cy]=P(e.x,e.y);const left=cx>760;
+    const g=el("g",{class:"node",tabindex:0,role:"button","data-id":e.id,"aria-label":T(e).label});
+    g.appendChild(el("circle",{cx,cy,r:8,fill:`var(--c${e.k})`,stroke:"var(--surface)","stroke-width":2}));
+    g.appendChild(el("text",{x:left?cx-14:cx+14,y:cy+5,"text-anchor":left?"end":"start"},T(e).label));
+    g.addEventListener("click",()=>select(e.id));
+    g.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();select(e.id)}});
+    svg.appendChild(g);
+  });
+  svgTitles();refresh();
+}
+function refresh(){
+  svg.querySelectorAll(".node").forEach(g=>{const e=E.find(x=>x.id===g.dataset.id);g.classList.toggle("dim",!!active&&e.k!==active);g.classList.toggle("sel",e.id===selected)});
+  document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.k===(active??"")?"true":"false"));
+}
+function vert(e){const v=STR[lang].vert;return e.y<-.35?v[0]:e.y>.35?v[1]:v[2]}
+function linkList(e){return `<ul class="links">${e.links.map(l=>`<li><a href="${l[lang][1]}" target="_blank" rel="noopener">${l[lang][0]}</a></li>`).join("")}</ul>`}
+function body(e,withQ){const t=T(e),c=C(e.k),S=STR[lang],D=S.dt,o=t.own||{},tag=x=>" · "+(x?S.own:S.cls);
+  return `<p class="say">${t.say}</p><dl class="dl">
+  <div><dt>${D.wahr}</dt><dd>${t.wahr}</dd></div>
+  <div><dt>${D.kippt}</dt><dd>${t.kippt}</dd></div>
+  <div><dt>${D.stellen}</dt><dd>${t.stellen}</dd></div>
+  <div><dt>${D.bsp}</dt><dd>${t.bsp}</dd></div>
+  ${withQ?`<div><dt>${D.q}</dt><dd><i>${c.q}</i></dd></div>`:""}
+  <div><dt>${D.bew}${tag(o.bew)}</dt><dd>${o.bew||c.bew}</dd></div>
+  <div><dt>${D.vert}</dt><dd>${vert(e)}</dd></div>
+  <div><dt>${D.links}</dt><dd>${linkList(e)}</dd></div></dl>`}
+function select(id){
+  selected=id;const e=E.find(x=>x.id===id);const c=C(e.k),S=STR[lang];const p=$("panel");
+  p.innerHTML=`<div class="cls" style="color:var(--c${e.k})">${S.cls} ${e.k} · ${c.name}</div><h3>${T(e).label}</h3>${body(e,true)}`;
+  enrich(p);refresh();
+}
+function renderStatic(){
+  const S=STR[lang];
+  document.documentElement.lang=lang;document.title=S.title;
+  $("s-eyebrow").textContent=S.eyebrow;$("s-h1").textContent=S.h1;
+  $("s-intro1").textContent=S.intro1;$("s-intro2").textContent=S.intro2;
+  $("h-mitte").textContent=S.hMitte;$("s-m1").textContent=S.m1;$("s-m2").textContent=S.m2;$("s-m3").textContent=S.m3;
+  $("h-basis").textContent=S.hBasis;
+  $("s-sources").innerHTML=S.sources.map(([b,s])=>`<div class="src"><b>${b}</b><span>${s}</span></div>`).join("");
+  $("s-basishint").textContent=S.basisHint;
+  $("h-karte").textContent=S.hKarte;$("filters").setAttribute("aria-label",S.filterLabel);
+  $("s-maphint").textContent=S.mapHint;
+  $("h-klassen").textContent=S.hKlassen;$("s-kl1").textContent=S.kl1;
+  $("h-katalog").textContent=S.hKatalog;$("h-spannung").textContent=S.hSpannung;
+  $("s-t1").textContent=S.t1;$("s-t2").textContent=S.t2;$("s-t3").textContent=S.t3;
+  $("s-foot1").innerHTML=S.foot1;$("s-foot2").innerHTML=S.foot2;
+}
+function renderLists(){
+  const S=STR[lang],D=S.dt;
+  const f=$("filters");f.innerHTML="";
+  const all=document.createElement("button");all.className="chip";all.dataset.k="";all.textContent=S.all;all.onclick=()=>{active=null;refresh()};f.appendChild(all);
+  Object.keys(CLASSES).forEach(k=>{const b=document.createElement("button");b.className="chip";b.dataset.k=k;b.innerHTML=`<i style="background:var(--c${k})"></i>${k} · ${C(k).name}`;b.onclick=()=>{active=active===k?null:k;refresh()};f.appendChild(b)});
+  const cl=$("classes");cl.innerHTML="";
+  Object.keys(CLASSES).forEach(k=>{const c=C(k);const d=document.createElement("div");d.className="klass";d.style.setProperty("--c",`var(--c${k})`);
+    d.innerHTML=`<div class="tag">${k} · ${c.sub}</div><h3>${c.name}</h3><p>${c.mech}</p><dl class="dl"><div><dt>${D.q}</dt><dd><i>${c.q}</i></dd></div><div><dt>${D.erk}</dt><dd>${c.erk}</dd></div><div><dt>${D.bew}</dt><dd>${c.bew}</dd></div></dl><p class="meta">${S.canon}: ${c.kanon} · ${E.filter(e=>e.k===k).length} ${S.entries}</p>`;cl.appendChild(d)});
+  const cat=$("catalog");cat.innerHTML="";
+  Object.keys(CLASSES).forEach(k=>{
+    const g=document.createElement("div");g.className="group";
+    g.innerHTML=`<h3><i style="background:var(--c${k})"></i>${k} · ${C(k).name}</h3><p class="gq">${C(k).q}</p><div class="items">${E.filter(e=>e.k===k).map(e=>`<article class="item"><h4>${T(e).label}</h4>${body(e,false)}<button type="button" data-id="${e.id}">${S.show}</button></article>`).join("")}</div>`;
+    cat.appendChild(g);
+  });
+}
+function render(){
+  tip.hidden=true;
+  renderStatic();renderLists();drawMap();
+  enrich(document.querySelector(".wrap"));
+  select(selected);
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang?"true":"false"));
+}
+function setLang(l){if(l===lang)return;lang=l;try{localStorage.setItem("lang",l)}catch(_){}render()}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+$("catalog").addEventListener("click",ev=>{const b=ev.target.closest("button[data-id]");if(!b)return;active=null;select(b.dataset.id);$("h-karte").scrollIntoView({behavior:"smooth"})});
+try{const s=localStorage.getItem("lang");if(s==="en"||s==="de")lang=s}catch(_){}
+document.body.appendChild(tip);
+render();
+</script>
+
+</body></html>

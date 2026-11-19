@@ -1,0 +1,1663 @@
+{
+  "format": "landkarte/1",
+  "id": "buddha",
+  "version": 1,
+  "modified": "2026-11-18",
+  "langs": [
+    "de",
+    "en"
+  ],
+  "start": "glas",
+  "page": {
+    "de": {
+      "title": "Landkarte der Fehlformen",
+      "eyebrow": "Knapp daneben ist auch daneben",
+      "h1": "Landkarte der Fehlformen",
+      "intro": [
+        "Weltanschauungen, die sich auf den Buddha oder auf Advaita berufen und knapp daneben liegen. Das Zentrum ist der Pāli-Kanon. Jede Position ist nach zwei Achsen verortet, die der Buddha selbst gezogen hat, und einer von sieben Fallstrick-Klassen zugeordnet. Zu jeder Klasse gehört eine Prüffrage, mit der man einen neuen Text einordnen kann.",
+        "Die meisten dieser Positionen sind keine Gegenpositionen, sondern das, was Buddhaghosa „nahe Feinde“ nennt (<span class=\"pali\">āsanna-paccatthika</span>, Vism IX): Sie sehen der echten Einsicht zum Verwechseln ähnlich. Deshalb ist bei jedem Eintrag vermerkt, welche Einsicht er imitiert."
+      ]
+    },
+    "en": {
+      "title": "Map of Near Misses",
+      "eyebrow": "Near misses are still misses",
+      "h1": "Map of Near Misses",
+      "intro": [
+        "Worldviews that invoke the Buddha or Advaita and land just beside the mark. The centre is the Pāli Canon. Each position is placed on two axes the Buddha drew himself and assigned to one of seven classes of pitfall. Each class comes with a test question for placing a new text.",
+        "Most of these positions are not opposites but what Buddhaghosa calls “near enemies” (<span class=\"pali\">āsanna-paccatthika</span>, Vism IX): they look deceptively like the real insight. That is why each entry notes which insight it imitates."
+      ]
+    }
+  },
+  "sections": [
+    {
+      "type": "sources",
+      "de": {
+        "h": "Der Buddha hat diese Karte selbst begonnen",
+        "items": [
+          {
+            "b": "DN 1 Brahmajāla",
+            "t": "62 Ansichten über Selbst und Welt, geordnet nach Ewigkeits- und Vernichtungsglauben."
+          },
+          {
+            "b": "SN 12.15 Kaccānagotta · SN 44.10 Ānanda",
+            "t": "„Es ist“ und „es ist nicht“ als die zwei Extreme; daraus die waagrechte Achse."
+          },
+          {
+            "b": "SN 12.48 Lokāyatika",
+            "t": "Auch „alles ist Einheit“ und „alles ist Vielheit“ sind Extreme."
+          },
+          {
+            "b": "SN 56.11 Dhammacakkappavattana",
+            "t": "Hingabe an Genuss und Selbstquälerei als die zwei Extreme der Praxis; daraus die senkrechte Achse."
+          },
+          {
+            "b": "AN 3.61 Titthāyatana",
+            "t": "Drei Kausalitätsirrtümer: alles aus früherem Kamma, alles aus Schöpfung, alles ohne Ursache."
+          }
+        ],
+        "hint": "Die senkrechte Achse ist meine Übertragung: Aus Genuss und Askese von SN 56.11 werden die heutigen Formen „Lassen ohne Übung“ und „Übung ohne Lassen“."
+      },
+      "en": {
+        "h": "The Buddha began this map himself",
+        "items": [
+          {
+            "b": "DN 1 Brahmajāla",
+            "t": "62 views on self and world, ordered by eternalism and annihilationism."
+          },
+          {
+            "b": "SN 12.15 Kaccānagotta · SN 44.10 Ānanda",
+            "t": "“It is” and “it is not” as the two extremes; hence the horizontal axis."
+          },
+          {
+            "b": "SN 12.48 Lokāyatika",
+            "t": "“All is a unity” and “all is plurality” are extremes too."
+          },
+          {
+            "b": "SN 56.11 Dhammacakkappavattana",
+            "t": "Devotion to sensual pleasure and self-mortification as the two extremes of practice; hence the vertical axis."
+          },
+          {
+            "b": "AN 3.61 Titthāyatana",
+            "t": "Three errors about causes: all from past kamma, all from a creator, all without cause."
+          }
+        ],
+        "hint": "The vertical axis is my extrapolation: the pleasure and asceticism of SN 56.11 become today’s forms “letting go without practice” and “practice without letting go”."
+      }
+    },
+    {
+      "type": "map",
+      "de": {
+        "h": "Die Karte",
+        "hint": "Punkt antippen, um Details zu sehen. Abstand vom Zentrum heißt: weiter weg vom mittleren Weg. Die Platzierungen sind Urteile, keine Messungen."
+      },
+      "en": {
+        "h": "The map",
+        "hint": "Tap a point for details. Distance from the centre means further from the middle way. Placements are judgements, not measurements."
+      }
+    },
+    {
+      "type": "classes",
+      "de": {
+        "h": "Sieben Klassen von Fallstricken",
+        "p": [
+          "Jede Klasse hat drei Teile. Die Prüffrage erkennt die Haltung. Die fehlende Erkenntnis benennt, was die Haltung übersieht. Die Bewegung führt zur Mitte, nicht zum Gegenpol: Wer aus der Verdinglichung in die Vernichtung springt, hat nur das Extrem gewechselt. Die Bewegung erzeugt die Erkenntnis nicht, sie schafft die Bedingungen dafür.",
+          "Die Bewegung hat zwei Komponenten. Die waagrechte kommt aus der Klasse: Was wird verdinglicht, verneint, vermischt? Die senkrechte kommt aus der Lage auf der Karte. Oben ist die Saite zu locker und braucht Einsatz, unten ist sie zu straff und braucht Entspannung (Soṇa, AN 6.55). Neun Einträge haben eine eigene Fassung („eigen“), weil sie eine bestimmte Lehre missverstehen oder, wie abgeschaltetes Fühlen, ein gesundheitliches Risiko bergen."
+        ]
+      },
+      "en": {
+        "h": "Seven classes of pitfall",
+        "p": [
+          "Each class has three parts. The test question identifies the attitude. The missing insight names what the attitude overlooks. The movement leads to the middle, not to the opposite pole: whoever jumps from reification into annihilation has only swapped extremes. The movement does not produce the insight; it creates the conditions for it.",
+          "The movement has two components. The horizontal one comes from the class: what is reified, negated, conflated? The vertical one comes from the position on the map. At the top the string is too loose and needs effort; at the bottom it is too tight and needs relaxing (Soṇa, AN 6.55). Nine entries have their own version (“own”) because they misread a specific teaching or, like switched-off feeling, carry a health risk."
+        ]
+      }
+    },
+    {
+      "type": "catalog",
+      "de": {
+        "h": "Katalog"
+      },
+      "en": {
+        "h": "Catalogue"
+      }
+    },
+    {
+      "type": "prose",
+      "style": "tension",
+      "de": {
+        "h": "Die Spannung, die ich stehen lassen will",
+        "p": [
+          "Jede Karte hat ein Zentrum, und das Zentrum entscheidet, was am Rand liegt. Von hier aus steht Advaita auf der Ewigkeitsseite, weil es <span class=\"pali\">ātman</span> und <span class=\"pali\">brahman</span> gleichsetzt. Śaṅkara zeichnet die Karte spiegelbildlich: Im Brahmasūtra-Kommentar (2.2) nennt er die Buddhisten <span class=\"pali\">vaināśika</span>, Vernichtungslehrer. Beide halten den anderen für einen nahen Feind.",
+          "Dazu kommt, dass „Ur-Buddhismus“ selbst eine Rekonstruktion ist. Und eine Karte der Ansichten ist ihrerseits eine Ansicht. Das Brahmajāla-Sutta endet nicht mit der Liste der 62, sondern damit, dass der Tathāgata sie kennt und auch an diesem Kennen nicht haftet. Die Karte hilft beim Einordnen. Wer sie als Besitz behandelt, steht schon in Klasse E."
+        ]
+      },
+      "en": {
+        "h": "The tension I want to leave standing",
+        "p": [
+          "Every map has a centre, and the centre decides what lies at the edge. From here, Advaita stands on the eternalist side because it equates <span class=\"pali\">ātman</span> and <span class=\"pali\">brahman</span>. Śaṅkara draws the mirror image: in his Brahmasūtra commentary (2.2) he calls the Buddhists <span class=\"pali\">vaināśika</span>, annihilationists. Each regards the other as a near enemy.",
+          "On top of that, “early Buddhism” is itself a reconstruction. And a map of views is itself a view. The Brahmajāla Sutta does not end with the list of 62 but with the Tathāgata knowing them and not clinging even to that knowing. The map helps with placing. Whoever treats it as a possession is already in class E."
+        ]
+      }
+    },
+    {
+      "type": "footer",
+      "de": {
+        "p": [
+          "Kanonstellen verlinken auf die deutschen Übersetzungen bei <a href=\"https://www.palikanon.com/\" target=\"_blank\" rel=\"noopener\">palikanon.com</a> (Majjhima: Zumwinkel; Dīgha: Neuübersetzung 2018). Beim Saṃyutta führt der Link zur Seite mit dem Sutta oder zum Kapitel, beim Aṅguttara zum Buchindex. Begriffe nachschlagen: <a href=\"https://www.palikanon.com/wtb/wtb_idx.html\" target=\"_blank\" rel=\"noopener\">Nyanatiloka, Buddhistisches Wörterbuch</a>. Personen und Werke verlinken auf eine Wikipedia-Suche, die bei eindeutigem Treffer direkt auf den Artikel führt.",
+          "Kanonstellen sind aus dem Gedächtnis angegeben und nicht gegen eine Edition geprüft. Bei lebenden Lehrern ist meist eine bestimmte Rezeption gemeint, nicht ihr Gesamtwerk."
+        ]
+      },
+      "en": {
+        "p": [
+          "Canon references link to English translations on <a href=\"https://suttacentral.net/\" target=\"_blank\" rel=\"noopener\">SuttaCentral</a> (Bhikkhu Sujato), each to the individual sutta. Look up terms: <a href=\"https://www.accesstoinsight.org/glossary.html\" target=\"_blank\" rel=\"noopener\">Access to Insight glossary</a>. People and works link to a Wikipedia search that goes straight to the article when there is a clear match.",
+          "Canon references are given from memory and not checked against an edition. With living teachers, a particular reception is usually meant, not their whole work."
+        ]
+      }
+    }
+  ],
+  "ui": {
+    "de": {
+      "filterLabel": "Nach Klasse filtern",
+      "mapLabel": "Karte der Fehlformen um den mittleren Weg",
+      "all": "Alle",
+      "show": "Auf der Karte zeigen",
+      "entries": "Einträge",
+      "cls": "Klasse",
+      "dt": {
+        "bezug": "Beruft sich auf",
+        "beh": "Behauptet",
+        "verf": "Verfehlt",
+        "feind": "Naher Feind von",
+        "kanon": "Gegenstelle",
+        "bsp": "Beispiele",
+        "erk": "Fehlende Erkenntnis",
+        "bew": "Bewegung zur Mitte",
+        "vert": "Senkrechte Komponente",
+        "q": "Prüffrage"
+      },
+      "own": "eigen",
+      "canon": "Kanon"
+    },
+    "en": {
+      "filterLabel": "Filter by class",
+      "mapLabel": "Map of near misses around the middle way",
+      "all": "All",
+      "show": "Show on map",
+      "entries": "entries",
+      "cls": "Class",
+      "dt": {
+        "bezug": "Invokes",
+        "beh": "Claims",
+        "verf": "Misses",
+        "feind": "Near enemy of",
+        "kanon": "Counter-passage",
+        "bsp": "Examples",
+        "erk": "Missing insight",
+        "bew": "Movement to the middle",
+        "vert": "Vertical component",
+        "q": "Test question"
+      },
+      "own": "own",
+      "canon": "Canon"
+    }
+  },
+  "layout": {
+    "title": "name",
+    "quote": false,
+    "fields": [
+      "bezug",
+      "beh",
+      "verf",
+      "feind",
+      "kanon",
+      "bsp"
+    ],
+    "question": "hint",
+    "movement": [
+      "erk",
+      "bew"
+    ],
+    "movementSeparate": true,
+    "chipLetters": true,
+    "catalogLetters": true,
+    "catalogQuestion": false,
+    "classQuestion": "p",
+    "classMeta": "canon"
+  },
+  "map": {
+    "axisLine": [
+      50,
+      950
+    ],
+    "axes": {
+      "de": {
+        "l": "← Ewigkeit",
+        "ls": "sassata · „es ist“",
+        "r": "Vernichtung →",
+        "rs": "uccheda · „es ist nicht“",
+        "t": "↑ Lassen ohne Übung",
+        "b": "↓ Übung ohne Lassen"
+      },
+      "en": {
+        "l": "← Eternalism",
+        "ls": "sassata · “it is”",
+        "r": "Annihilation →",
+        "rs": "uccheda · “it is not”",
+        "t": "↑ Letting go without practice",
+        "b": "↓ Practice without letting go"
+      }
+    },
+    "centre": {
+      "r": 62,
+      "underlay": false,
+      "size": 19,
+      "y": 494,
+      "gap": 23,
+      "subY": 522,
+      "subSize": 13,
+      "halo": true,
+      "de": {
+        "lines": [
+          "Pāli-Kanon"
+        ],
+        "sub": "majjhimā paṭipadā"
+      },
+      "en": {
+        "lines": [
+          "Pāli Canon"
+        ],
+        "sub": "majjhimā paṭipadā"
+      }
+    },
+    "ring": {
+      "r": 150,
+      "labels": [
+        {
+          "text": "Theravāda",
+          "angle": 270
+        },
+        {
+          "text": "Madhyamaka",
+          "angle": 330
+        },
+        {
+          "text": "Yogācāra",
+          "angle": 30
+        },
+        {
+          "text": "Zen · Dōgen",
+          "angle": 90
+        },
+        {
+          "text": "Dzogchen",
+          "angle": 150
+        },
+        {
+          "text": "Advaita (Śaṅkara)",
+          "angle": 210
+        }
+      ]
+    },
+    "vertical": {
+      "de": [
+        "Anspannen: Übung aufnehmen, Einsatz (viriya). Die Saite ist zu locker (AN 6.55).",
+        "Entspannen: Zwang und Ehrgeiz lassen, Leichtigkeit zulassen. Die Saite ist zu straff (AN 6.55).",
+        "Senkrecht etwa im Gleichgewicht; die Bewegung ist vor allem waagrecht."
+      ],
+      "en": [
+        "Tighten: take up practice, effort (viriya). The string is too loose (AN 6.55).",
+        "Loosen: drop compulsion and ambition, allow ease. The string is too tight (AN 6.55).",
+        "Roughly balanced vertically; the movement is mainly horizontal."
+      ]
+    }
+  },
+  "classes": [
+    {
+      "id": "A",
+      "de": {
+        "name": "Verdinglichung",
+        "sub": "sassata · Ewigkeitsansicht",
+        "q": "Wird etwas Bleibendes gesetzt, das ich „eigentlich“ bin?",
+        "mech": "Aus der Erfahrung einer Offenheit wird ein Ding, ein Grund, ein Selbst mit Ewigkeitsmerkmalen.",
+        "erk": "Was ich finde, ist bedingt und vergeht. Auch Offenheit ist kein Ding, das ich bin: „Was vergänglich ist, davon zu sagen ‚das bin ich‘, ist nicht angemessen“ (SN 22.59).",
+        "bew": "Das Gefundene wieder als Erscheinung ansehen und das Gesetzte loslassen, ohne etwas Neues zu setzen. Nicht ins Gegenteil kippen („es gibt nichts“).",
+        "kanon": "MN 22 · MN 38 · SN 44.10"
+      },
+      "en": {
+        "name": "Reification",
+        "sub": "sassata · eternalism",
+        "q": "Is something lasting posited that I “really” am?",
+        "mech": "An experience of openness turns into a thing, a ground, a self with the marks of permanence.",
+        "erk": "What I find is conditioned and passes. Openness, too, is not a thing that I am: “Is it fitting to regard what is impermanent as ‘this I am’?” (SN 22.59).",
+        "bew": "See what was found as appearance again and let go of what was posited, without positing something new. Don’t tip into the opposite (“there is nothing”).",
+        "kanon": "MN 22 · MN 38 · SN 44.10"
+      }
+    },
+    {
+      "id": "B",
+      "de": {
+        "name": "Vernichtung",
+        "sub": "uccheda · Negation zu weit",
+        "q": "Wird aus „kein Selbst“ ein „nichts zählt“ oder „mit dem Tod ist alles aus“?",
+        "mech": "Die Verneinung des Selbst wird selbst zur Lehre über das, was ist, oder zum Wunsch nach Nicht-Sein.",
+        "erk": "Bedingtes Entstehen: Ohne Selbst entsteht und wirkt trotzdem alles. Leerheit ist Bedingtheit, deshalb zählt Handeln (MMK 24.18).",
+        "bew": "Zurück zum Sehen des Entstehens: „Wer das Entstehen der Welt sieht, für den gibt es kein ‚nicht‘“ (SN 12.15). Hinwendung statt Abwendung, Kamma ernst nehmen.",
+        "kanon": "SN 12.15 · SN 44.10 · SN 56.11 (vibhava-taṇhā)"
+      },
+      "en": {
+        "name": "Annihilation",
+        "sub": "uccheda · negation gone too far",
+        "q": "Does “no self” turn into “nothing matters” or “death ends everything”?",
+        "mech": "The denial of self becomes a doctrine about what is, or a wish not to be.",
+        "erk": "Dependent origination: without a self, everything still arises and has effects. Emptiness is conditionality, which is why action matters (MMK 24.18).",
+        "bew": "Back to seeing arising: “For one who sees the arising of the world, there is no ‘it is not’” (SN 12.15). Turning towards rather than away; taking kamma seriously.",
+        "kanon": "SN 12.15 · SN 44.10 · SN 56.11 (vibhava-taṇhā)"
+      }
+    },
+    {
+      "id": "C",
+      "de": {
+        "name": "Ebenenkollaps",
+        "sub": "zwei Wahrheiten vermischt",
+        "q": "Wird eine Aussage der letzten Ebene benutzt, um Ethik, Verantwortung oder Übung außer Kraft zu setzen?",
+        "mech": "Was letztlich gilt, soll konventionell nicht mehr gelten. Ohne die konventionelle Ebene gibt es aber keinen Zugang zur letzten.",
+        "erk": "Zwei Wahrheiten: Die letzte ist nur über die konventionelle zugänglich und hebt sie nicht auf (MMK 24.10).",
+        "bew": "Absteigen: die Einsicht in Verhalten übersetzen. sīla als Ausdruck der Einsicht, nicht als ihr Gegenteil. „Vorher Holz hacken, Wasser tragen; nachher Holz hacken, Wasser tragen.“",
+        "kanon": "MMK 24.8–10 · AN 9.7"
+      },
+      "en": {
+        "name": "Level collapse",
+        "sub": "two truths conflated",
+        "q": "Is an ultimate-level statement used to suspend ethics, responsibility or practice?",
+        "mech": "What holds ultimately is supposed to cancel the conventional. But without the conventional level there is no access to the ultimate.",
+        "erk": "Two truths: the ultimate is reached only through the conventional and does not cancel it (MMK 24.10).",
+        "bew": "Coming down: translate insight into conduct. sīla as an expression of insight, not its opposite. “Before: chop wood, carry water. After: chop wood, carry water.”",
+        "kanon": "MMK 24.8–10 · AN 9.7"
+      }
+    },
+    {
+      "id": "D",
+      "de": {
+        "name": "Mittel als Ziel",
+        "sub": "das Floß auf dem Rücken",
+        "q": "Wird ein Zustand, eine Technik oder eine Karte zum Ziel?",
+        "mech": "Ein Werkzeug des Pfads wird zum Aufenthaltsort.",
+        "erk": "Jeder Zustand, jede Technik und jede Karte ist bedingt und vergänglich. Das Ziel ist das Ende von dukkha, kein Zustand.",
+        "bew": "Fragen „wozu?“ und das Mittel loslassen, sobald es seinen Dienst getan hat. Das Floß am Ufer lassen.",
+        "kanon": "MN 22 (Floß) · MN 24 · MN 26"
+      },
+      "en": {
+        "name": "Means as end",
+        "sub": "the raft on your back",
+        "q": "Is a state, a technique or a map becoming the goal?",
+        "mech": "A tool of the path becomes a place to live.",
+        "erk": "Every state, technique and map is conditioned and impermanent. The goal is the end of dukkha, not a state.",
+        "bew": "Ask “what for?” and let go of the means once it has done its work. Leave the raft on the shore.",
+        "kanon": "MN 22 (raft) · MN 24 · MN 26"
+      }
+    },
+    {
+      "id": "E",
+      "de": {
+        "name": "Ich durch die Hintertür",
+        "sub": "Aneignung der Einsicht",
+        "q": "Wer hat die Einsicht? Wird Erwachen besessen, gesammelt oder vorgezeigt?",
+        "mech": "Das Ich zieht in die Einsicht ein, die es auflösen sollte, und wohnt dort besser als vorher.",
+        "erk": "Auch die Einsicht gehört niemandem. Der Dünkel „ich bin“ (asmimāna) überlebt jede Ansicht über das Selbst.",
+        "bew": "Ramanas Frage auf die Einsicht selbst richten: Wem geschieht das? Wer hat diese Erkenntnis? Den Besitzer suchen, nicht den Besitz polieren.",
+        "kanon": "MN 1 · MN 113 · SN 22.89"
+      },
+      "en": {
+        "name": "The self through the back door",
+        "sub": "appropriating insight",
+        "q": "Who has the insight? Is awakening owned, collected or displayed?",
+        "mech": "The self moves into the very insight that was meant to dissolve it, and lives there more comfortably than before.",
+        "erk": "The insight belongs to no one either. The conceit “I am” (asmimāna) survives every view about the self.",
+        "bew": "Turn Ramana’s question on the insight itself: To whom does this happen? Who has this insight? Look for the owner instead of polishing the possession.",
+        "kanon": "MN 1 · MN 113 · SN 22.89"
+      }
+    },
+    {
+      "id": "F",
+      "de": {
+        "name": "Naher Feind im Herzen",
+        "sub": "Affekt verfehlt",
+        "q": "Ist es Gleichmut oder Gleichgültigkeit? Wird gefühlt oder umgangen?",
+        "mech": "Stumpfheit oder Umgehung sieht von außen aus wie Gelassenheit.",
+        "erk": "Der erste Pfeil wird gefühlt; nur der zweite entfällt. Gleichmut ist warm, Gleichgültigkeit kalt.",
+        "bew": "Hineinfühlen statt Abstand nehmen, bis zum Ende fühlen. mettā und karuṇā als Gegengewicht zu einer kühlen Leere.",
+        "kanon": "SN 36.6 · Vism IX"
+      },
+      "en": {
+        "name": "Near enemy in the heart",
+        "sub": "affect missed",
+        "q": "Is it equanimity or indifference? Is it felt or bypassed?",
+        "mech": "Dullness or bypassing looks like composure from the outside.",
+        "erk": "The first arrow is felt; only the second falls away. Equanimity is warm, indifference is cold.",
+        "bew": "Feel into it instead of stepping back, and feel it through to the end. mettā and karuṇā as a counterweight to a cool emptiness.",
+        "kanon": "SN 36.6 · Vism IX"
+      }
+    },
+    {
+      "id": "G",
+      "de": {
+        "name": "Entkontextualisierung",
+        "sub": "ein Teil ohne den Pfad",
+        "q": "Fehlt rechte Ansicht, sīla oder das Ziel, das Ende von dukkha?",
+        "mech": "Ein Element wird aus dem achtfachen Pfad gelöst oder mit fremden Zielen gleichgesetzt.",
+        "erk": "Die Pfadglieder tragen einander; rechte Ansicht geht voran (MN 117). Ein Teil allein führt woanders hin.",
+        "bew": "Zurück in den Zusammenhang: fragen, welches Pfadglied oder welches Ziel fehlt, und es ergänzen.",
+        "kanon": "MN 117 · SN 45.8 · DN 1"
+      },
+      "en": {
+        "name": "Decontextualisation",
+        "sub": "a part without the path",
+        "q": "Is right view, sīla or the goal, the end of dukkha, missing?",
+        "mech": "One element is cut out of the eightfold path or equated with foreign goals.",
+        "erk": "The path factors support one another; right view comes first (MN 117). A part on its own leads elsewhere.",
+        "bew": "Back into context: ask which path factor or which goal is missing, and supply it.",
+        "kanon": "MN 117 · SN 45.8 · DN 1"
+      }
+    }
+  ],
+  "entries": [
+    {
+      "id": "glas",
+      "k": "A",
+      "x": -0.75,
+      "y": -0.05,
+      "de": {
+        "label": "Universales Bewusstsein",
+        "name": "Universales Bewusstsein hinter den Erscheinungen",
+        "bezug": "Advaita, „Nondualität“",
+        "beh": "Die Sinne erzeugen Vielheit; dahinter liegt ein einziges Bewusstsein, und das ist man.",
+        "verf": "Setzt ein Substrat und eine Zahl. Schließt von „keine Grenze gefunden“ auf „universal und geteilt“. Repräsentationalismus mit Monismus dahinter.",
+        "feind": "Gewahrsein hat keine auffindbare Grenze.",
+        "kanon": "MN 22 („dies ist die Welt, dies das Selbst“), MN 38, SN 12.48",
+        "bsp": "Kyras Glasbild; Kastrups analytischer Idealismus; Schopenhauer"
+      },
+      "en": {
+        "label": "Universal consciousness",
+        "name": "Universal consciousness behind appearances",
+        "bezug": "Advaita, “nonduality”",
+        "beh": "The senses create plurality; behind it lies one single consciousness, and that is what you are.",
+        "verf": "Posits a substrate and a number. Infers from “no boundary found” to “universal and shared”. Representationalism with monism behind it.",
+        "feind": "Awareness has no boundary that can be found.",
+        "kanon": "MN 22 (“this is the world, this the self”), MN 38, SN 12.48",
+        "bsp": "Kyra’s jar image; Kastrup’s analytic idealism; Schopenhauer"
+      }
+    },
+    {
+      "id": "perennial",
+      "k": "G",
+      "x": -0.58,
+      "y": 0.13,
+      "de": {
+        "label": "Alle Wege, ein Gipfel",
+        "name": "Perennialismus und Neo-Vedānta",
+        "bezug": "Buddhismus und Advaita zugleich",
+        "beh": "Alle Mystiken lehren im Kern dasselbe; nibbāna, brahman und Gott sind Namen für eine Wirklichkeit.",
+        "verf": "Ebnet den Unterschied von anattā und ātman ein. Der Buddha unterscheidet Ansichten gerade, statt sie zu vereinen.",
+        "feind": "Respekt vor echten Konvergenzen zwischen Traditionen.",
+        "kanon": "DN 1, MN 22",
+        "bsp": "Vivekananda; Huxleys „Perennial Philosophy“; Teile von Wilbers Frühwerk",
+        "own": {
+          "erk": "Die Traditionen widersprechen sich an benennbaren Stellen: anattā gegen ātman, Bedingtheit gegen tragenden Grund. Konvergenz muss man zeigen, nicht voraussetzen.",
+          "bew": "Erst unterscheiden, dann vergleichen. Gemeinsamkeit nur dort behaupten, wo sie in den Texten steht."
+        }
+      },
+      "en": {
+        "label": "Many paths, one summit",
+        "name": "Perennialism and Neo-Vedānta",
+        "bezug": "Buddhism and Advaita at once",
+        "beh": "All mysticisms teach the same at heart; nibbāna, brahman and God are names for one reality.",
+        "verf": "Flattens the difference between anattā and ātman. The Buddha distinguishes views rather than uniting them.",
+        "feind": "Respect for genuine convergences between traditions.",
+        "kanon": "DN 1, MN 22",
+        "bsp": "Vivekananda; Huxley’s “Perennial Philosophy”; parts of Wilber’s early work",
+        "own": {
+          "erk": "The traditions contradict each other at nameable points: anattā against ātman, conditionality against a supporting ground. Convergence has to be shown, not assumed.",
+          "bew": "Distinguish first, then compare. Claim common ground only where the texts show it."
+        }
+      }
+    },
+    {
+      "id": "seele",
+      "k": "A",
+      "x": -0.88,
+      "y": 0.5,
+      "de": {
+        "label": "Seelenwanderung",
+        "name": "Seelenwanderung und Karma als Vergeltung",
+        "bezug": "Wiedergeburt, Kamma",
+        "beh": "Eine Seele wandert durch Leben und entwickelt sich höher; was geschieht, ist verdiente Folge früherer Taten.",
+        "verf": "Wiedergeburt ohne wanderndes Selbst. Kamma ist Absicht, nicht kosmische Buchhaltung; nicht jedes Gefühl stammt aus früherem Kamma.",
+        "feind": "Verantwortung für das eigene Handeln.",
+        "kanon": "MN 38, AN 3.61, SN 36.21 (Sīvaka)",
+        "bsp": "Theosophie (Blavatsky, Olcott); „Das hast du dir in einem früheren Leben eingebrockt“",
+        "own": {
+          "erk": "Wiedergeburt kommt ohne wanderndes Selbst aus, und Kamma ist Absicht (AN 6.63), keine Vergeltung. Nicht jedes Gefühl stammt aus früheren Taten (SN 36.21).",
+          "bew": "Vom Rückblick auf frühere Leben zur Absicht in diesem Moment: Was beabsichtige ich jetzt?"
+        }
+      },
+      "en": {
+        "label": "Transmigrating soul",
+        "name": "Transmigrating soul and karma as retribution",
+        "bezug": "Rebirth, kamma",
+        "beh": "A soul wanders through lives and evolves upwards; whatever happens is the deserved result of past deeds.",
+        "verf": "Rebirth without a wandering self. Kamma is intention, not cosmic bookkeeping; not every feeling comes from past kamma.",
+        "feind": "Responsibility for one’s own actions.",
+        "kanon": "MN 38, AN 3.61, SN 36.21 (Sīvaka)",
+        "bsp": "Theosophy (Blavatsky, Olcott); “You brought this on yourself in a past life”",
+        "own": {
+          "erk": "Rebirth needs no wandering self, and kamma is intention (AN 6.63), not retribution. Not every feeling comes from past deeds (SN 36.21).",
+          "bew": "From looking back at past lives to the intention in this moment: what am I intending now?"
+        }
+      }
+    },
+    {
+      "id": "selbst",
+      "k": "A",
+      "x": -0.35,
+      "y": -0.42,
+      "de": {
+        "label": "Buddha-Natur als Selbst",
+        "name": "Buddha-Natur als wahres Selbst",
+        "bezug": "Tathāgatagarbha, Zen",
+        "beh": "In jedem wohnt ein unveränderliches wahres Selbst, die Buddha-Natur.",
+        "verf": "Schon das Laṅkāvatāra-Sūtra nennt die Lehre vom Keim ein geschicktes Mittel für die, die vor anattā erschrecken. Wörtlich genommen wird sie attā.",
+        "feind": "Vertrauen, dass Erwachen möglich ist.",
+        "kanon": "MN 22; Laṅkāvatāra-Sūtra; Debatte um „Critical Buddhism“ (Hakamaya, Matsumoto)",
+        "bsp": "Populäre Rede vom „wahren Selbst“"
+      },
+      "en": {
+        "label": "Buddha-nature as self",
+        "name": "Buddha-nature as true self",
+        "bezug": "Tathāgatagarbha, Zen",
+        "beh": "In everyone dwells an unchanging true self, the Buddha-nature.",
+        "verf": "The Laṅkāvatāra Sūtra itself calls the teaching of the embryo a skilful means for those frightened by anattā. Taken literally, it becomes attā.",
+        "feind": "Confidence that awakening is possible.",
+        "kanon": "MN 22; Laṅkāvatāra Sūtra; the “Critical Buddhism” debate (Hakamaya, Matsumoto)",
+        "bsp": "Popular talk of the “true self”"
+      }
+    },
+    {
+      "id": "manifest",
+      "k": "A",
+      "x": -0.85,
+      "y": -0.5,
+      "de": {
+        "label": "Bewusstsein erschafft Welt",
+        "name": "Bewusstsein erschafft die Wirklichkeit",
+        "bezug": "Yogācāra „nur Geist“; Dhp 1",
+        "beh": "Der Geist erschafft die Welt; wer sein Bewusstsein ändert, ändert die Wirklichkeit nach Wunsch.",
+        "verf": "Dhp 1 meint die Ethik der Absicht, nicht Weltschöpfung. Yogācāra analysiert Erfahrung und erklärt am Ende auch den Geist für leer.",
+        "feind": "Einsicht in die gestaltende Rolle des Geistes.",
+        "kanon": "Dhp 1–2, AN 3.61 (Schöpfungsglaube)",
+        "bsp": "Manifestations- und „Law of Attraction“-Literatur mit Nondual-Vokabular",
+        "own": {
+          "erk": "„Der Geist geht den Dingen voran“ (Dhp 1) heißt: Absicht prägt Erfahrung und Folgen. Es heißt nicht, dass Wünsche die Welt erschaffen.",
+          "bew": "Die Wunschbewegung selbst ansehen: Manifestieren-Wollen ist taṇhā mit spirituellem Vokabular."
+        }
+      },
+      "en": {
+        "label": "Mind creates the world",
+        "name": "Consciousness creates reality",
+        "bezug": "Yogācāra “mind only”; Dhp 1",
+        "beh": "The mind creates the world; change your consciousness and you change reality at will.",
+        "verf": "Dhp 1 is about the ethics of intention, not world-creation. Yogācāra analyses experience and in the end declares the mind empty too.",
+        "feind": "Insight into the shaping role of the mind.",
+        "kanon": "Dhp 1–2, AN 3.61 (creator view)",
+        "bsp": "Manifestation and “Law of Attraction” literature with nondual vocabulary",
+        "own": {
+          "erk": "“Mind precedes things” (Dhp 1) means that intention shapes experience and consequences. It does not mean that wishes create the world.",
+          "bew": "Look at the wishing itself: wanting to manifest is taṇhā in spiritual vocabulary."
+        }
+      }
+    },
+    {
+      "id": "jetzt",
+      "k": "D",
+      "x": -0.42,
+      "y": -0.62,
+      "de": {
+        "label": "Präsenz-Kult",
+        "name": "Das Jetzt als Heimat",
+        "bezug": "sati, Zen, Präsenzlehren",
+        "beh": "Im Jetzt zu sein ist das Ziel; Präsenz ist, was man ist.",
+        "verf": "Das Gegenwärtige ist der Ort der Einsicht in Vergänglichkeit, nicht der Ort, an dem man sich niederlässt. Heideggers Einwand der „beständigen Anwesenheit“ trifft hier.",
+        "feind": "Sammlung im Gegenwärtigen.",
+        "kanon": "MN 131 (Bhaddekaratta), MN 1",
+        "bsp": "Bestimmte Rezeptionen populärer Präsenzliteratur",
+        "own": {
+          "erk": "Auch das Jetzt entsteht und vergeht. Es ist der Ort der Einsicht, nicht ein Ort zum Bleiben (MN 131).",
+          "bew": "Das Gegenwärtige untersuchen, statt sich darin einzurichten: Was entsteht hier gerade, was vergeht?"
+        }
+      },
+      "en": {
+        "label": "Cult of presence",
+        "name": "The Now as home",
+        "bezug": "sati, Zen, presence teachings",
+        "beh": "Being in the Now is the goal; presence is what you are.",
+        "verf": "The present is where impermanence is seen, not a place to settle down. Heidegger’s objection of “constant presence” applies here.",
+        "feind": "Collectedness in the present.",
+        "kanon": "MN 131 (Bhaddekaratta), MN 1",
+        "bsp": "Certain receptions of popular presence literature",
+        "own": {
+          "erk": "The Now, too, arises and passes. It is the place of insight, not a place to stay (MN 131).",
+          "bew": "Investigate the present instead of settling into it: what is arising here right now, what is passing?"
+        }
+      }
+    },
+    {
+      "id": "inflation",
+      "k": "E",
+      "x": -0.65,
+      "y": -0.8,
+      "de": {
+        "label": "Ich bin das Ganze",
+        "name": "Inflation: „Ich bin das Absolute“",
+        "bezug": "Advaita (aham brahmāsmi)",
+        "beh": "Ich bin Gott, das Ganze, das Bewusstsein selbst.",
+        "verf": "Das Ich, das den Satz ausspricht, ist genau der ahaṃkāra. Ramana: Der Satz ist kein Gedanke zum Wiederholen. Im Kanon: der Dünkel „ich bin“ (asmimāna).",
+        "feind": "Erkenntnis der Nicht-Getrenntheit.",
+        "kanon": "SN 22.89 (Khemaka), MN 1 (das All ersinnen)",
+        "bsp": "Jungs Begriff der Inflation; Lehrer mit Absolutheitsanspruch"
+      },
+      "en": {
+        "label": "I am the whole",
+        "name": "Inflation: “I am the Absolute”",
+        "bezug": "Advaita (aham brahmāsmi)",
+        "beh": "I am God, the whole, consciousness itself.",
+        "verf": "The I that utters the sentence is precisely the ahaṃkāra. Ramana: the sentence is not a thought to repeat. In the Canon: the conceit “I am” (asmimāna).",
+        "feind": "Recognition of non-separation.",
+        "kanon": "SN 22.89 (Khemaka), MN 1 (conceiving the All)",
+        "bsp": "Jung’s concept of inflation; teachers claiming absolute authority"
+      }
+    },
+    {
+      "id": "hongaku",
+      "k": "C",
+      "x": -0.22,
+      "y": -0.7,
+      "de": {
+        "label": "Schon erleuchtet",
+        "name": "„Schon erleuchtet, also keine Übung“",
+        "bezug": "Zen (hongaku), „Jeder ist schon erleuchtet“",
+        "beh": "Da alle ursprünglich erleuchtet sind, ist Übung überflüssig.",
+        "verf": "Dōgens Ausgangszweifel: Wenn ursprünglich erleuchtet, warum üben alle Buddhas? Seine Antwort: Übung ist Vollzug der Erleuchtung. Der Satz zeigt, er ersetzt nicht.",
+        "feind": "Nichts muss hinzugefügt werden.",
+        "kanon": "Dōgen (shushō ittō); MN 22",
+        "bsp": "Der Buchtitel von Christian Meyer ist eine legitime Zeigegeste in dieser Linie und kippt erst, wenn er die Übung ersetzt."
+      },
+      "en": {
+        "label": "Already enlightened",
+        "name": "“Already enlightened, so no practice”",
+        "bezug": "Zen (hongaku), “Everyone is already enlightened”",
+        "beh": "Since everyone is originally enlightened, practice is superfluous.",
+        "verf": "Dōgen’s starting doubt: if we are originally enlightened, why do all Buddhas practise? His answer: practice is the enactment of enlightenment. The sentence points; it does not replace.",
+        "feind": "Nothing needs to be added.",
+        "kanon": "Dōgen (shushō ittō); MN 22",
+        "bsp": "Christian Meyer’s book title (“Jeder ist schon erleuchtet”) is a legitimate pointer in this line and only tips over when it replaces practice."
+      }
+    },
+    {
+      "id": "antinom",
+      "k": "C",
+      "x": 0.05,
+      "y": -0.92,
+      "de": {
+        "label": "Jenseits von Gut und Böse",
+        "name": "Antinomismus",
+        "bezug": "Tantra, Zen, Advaita („der Weise handelt nicht“)",
+        "beh": "Wer erwacht ist, steht über Regeln; Ethik gilt nur für Unerwachte.",
+        "verf": "sīla ist Grundlage und Frucht. Der Arahant kann gar nicht mehr absichtlich töten, stehlen oder lügen.",
+        "feind": "Freiheit von Regelzwang.",
+        "kanon": "AN 9.7 (Sutavā), MMK 24.10",
+        "bsp": "Rechtfertigungen von Lehrermissbrauch als „verrückte Weisheit“"
+      },
+      "en": {
+        "label": "Beyond good and evil",
+        "name": "Antinomianism",
+        "bezug": "Tantra, Zen, Advaita (“the sage does not act”)",
+        "beh": "The awakened stand above rules; ethics is only for the unawakened.",
+        "verf": "sīla is foundation and fruit. An arahant can no longer intentionally kill, steal or lie.",
+        "feind": "Freedom from rule-bound compulsion.",
+        "kanon": "AN 9.7 (Sutavā), MMK 24.10",
+        "bsp": "Justifications of teacher abuse as “crazy wisdom”"
+      }
+    },
+    {
+      "id": "niemand",
+      "k": "C",
+      "x": 0.55,
+      "y": -0.78,
+      "de": {
+        "label": "Niemand da",
+        "name": "„Niemand da, nichts zu tun“",
+        "bezug": "Advaita ohne Vedānta",
+        "beh": "Es gibt keinen, der übt, keinen Weg, nichts zu tun; alles ist schon, was es ist.",
+        "verf": "Klassisches Advaita verlangt Voraussetzungen (sādhana-catuṣṭaya) und Hören, Nachdenken, Vertiefen. Die letzte Aussage wird gegen die konventionelle Ebene gewendet.",
+        "feind": "Tun braucht kein Täter-Ich.",
+        "kanon": "BĀU 2.4.5 (śrotavyo mantavyo nididhyāsitavyaḥ); MN 22",
+        "bsp": "Radikales Neo-Advaita (z. B. Tony Parsons)"
+      },
+      "en": {
+        "label": "Nobody home",
+        "name": "“Nobody here, nothing to do”",
+        "bezug": "Advaita without Vedānta",
+        "beh": "There is no one who practises, no path, nothing to do; everything already is what it is.",
+        "verf": "Classical Advaita requires prerequisites (sādhana-catuṣṭaya) and hearing, reflecting, meditating. The ultimate statement is turned against the conventional level.",
+        "feind": "Action needs no doer-self.",
+        "kanon": "BĀU 2.4.5 (śrotavyo mantavyo nididhyāsitavyaḥ); MN 22",
+        "bsp": "Radical Neo-Advaita (e.g. Tony Parsons)"
+      }
+    },
+    {
+      "id": "bypass",
+      "k": "F",
+      "x": 0.15,
+      "y": -0.5,
+      "de": {
+        "label": "Spirituelles Umgehen",
+        "name": "Spirituelles Umgehen",
+        "bezug": "Nicht-Identifikation, Leerheit",
+        "beh": "Gefühle, Verletzungen und Konflikte sind nur Gedanken oder Erscheinungen und brauchen keine Aufmerksamkeit.",
+        "verf": "Der erste Pfeil wird gefühlt, nur der zweite entfällt. Was nicht gefühlt wurde, ist nicht durchschaut, sondern verdrängt.",
+        "feind": "Nicht-Identifikation mit Emotionen.",
+        "kanon": "SN 36.6 (Sallatha)",
+        "bsp": "John Welwood (1984) prägte den Begriff; „it's all just a thought“ als Abkürzung"
+      },
+      "en": {
+        "label": "Spiritual bypassing",
+        "name": "Spiritual bypassing",
+        "bezug": "Non-identification, emptiness",
+        "beh": "Feelings, wounds and conflicts are just thoughts or appearances and need no attention.",
+        "verf": "The first arrow is felt; only the second falls away. What was never felt has not been seen through but repressed.",
+        "feind": "Non-identification with emotions.",
+        "kanon": "SN 36.6 (Sallatha)",
+        "bsp": "John Welwood (1984) coined the term; “it’s all just a thought” as a shortcut"
+      }
+    },
+    {
+      "id": "mcmind",
+      "k": "G",
+      "x": 0.25,
+      "y": -0.38,
+      "de": {
+        "label": "Achtsamkeit als Wellness",
+        "name": "Achtsamkeit als Wellness",
+        "bezug": "sati, Vipassanā",
+        "beh": "Achtsamkeit ist eine Technik zur Stressreduktion und Leistungssteigerung.",
+        "verf": "sati ohne rechte Ansicht, ohne sīla und ohne Ziel. „Stress“ ersetzt dukkha; das Ende des Begehrens wird zur besseren Funktionsfähigkeit.",
+        "feind": "Achtsamkeit selbst.",
+        "kanon": "MN 117 (rechte Ansicht geht voran), SN 45.8",
+        "bsp": "Ron Purser, „McMindfulness“ (2019)"
+      },
+      "en": {
+        "label": "Mindfulness as wellness",
+        "name": "Mindfulness as wellness",
+        "bezug": "sati, Vipassanā",
+        "beh": "Mindfulness is a technique for reducing stress and boosting performance.",
+        "verf": "sati without right view, without sīla and without a goal. “Stress” replaces dukkha; the end of craving becomes better functioning.",
+        "feind": "Mindfulness itself.",
+        "kanon": "MN 117 (right view comes first), SN 45.8",
+        "bsp": "Ron Purser, “McMindfulness” (2019)"
+      }
+    },
+    {
+      "id": "nihil",
+      "k": "B",
+      "x": 0.9,
+      "y": -0.15,
+      "de": {
+        "label": "Leerheit als Nichts",
+        "name": "Leerheit als Nichts",
+        "bezug": "Madhyamaka, śūnyatā",
+        "beh": "Nichts existiert wirklich, also ist nichts von Bedeutung.",
+        "verf": "Leerheit ist bedingtes Entstehen, nicht Nicht-Sein. Nāgārjuna warnt: Falsch ergriffen zerstört sie wie eine falsch gepackte Schlange.",
+        "feind": "Leerheitseinsicht.",
+        "kanon": "MMK 24.11 und 24.18; SN 12.15",
+        "bsp": "Nihilistische Lesarten von „alles ist Illusion“"
+      },
+      "en": {
+        "label": "Emptiness as nothing",
+        "name": "Emptiness as nothingness",
+        "bezug": "Madhyamaka, śūnyatā",
+        "beh": "Nothing really exists, so nothing matters.",
+        "verf": "Emptiness is dependent origination, not non-existence. Nāgārjuna warns: grasped wrongly, it destroys like a snake seized the wrong way.",
+        "feind": "Insight into emptiness.",
+        "kanon": "MMK 24.11 and 24.18; SN 12.15",
+        "bsp": "Nihilistic readings of “everything is illusion”"
+      }
+    },
+    {
+      "id": "nihilismus",
+      "k": "B",
+      "x": 0.92,
+      "y": -0.55,
+      "de": {
+        "label": "Nihilismus",
+        "name": "Nihilismus: „Nichts hat Wert“",
+        "bezug": "dukkha, anattā, nirodha; Advaita „jagan mithyā“",
+        "beh": "Leben ist Leiden, das Selbst ist Illusion, das Ziel ist Erlöschen. Also hat nichts Wert, und Handeln ist gleichgültig.",
+        "verf": "Liest Befreiung als Auslöschung und Erkenntnis als Entwertung. dukkha ist eine Diagnose mit Heilmittel, kein Urteil über den Wert des Lebens. nibbāna ist das Erlöschen von Gier, Hass und Verblendung, nicht von Wesen. Advaitas mithyā heißt „weder wirklich noch unwirklich“, nicht „nichts“. Und wer sagt „nichts hat Wert“, behauptet wieder etwas über das, was ist: „es ist nicht“.",
+        "feind": "Ernüchterung (nibbidā) und Loslassen (virāga).",
+        "kanon": "DN 2 (Ajita Kesakambalī), MN 117 und MN 60 (natthika-diṭṭhi als falsche Ansicht), SN 22.85 (Yamaka), SN 12.15",
+        "bsp": "Nietzsches Bild vom Buddhismus als „passivem Nihilismus“ über Schopenhauer; „alles ist Illusion, also egal“"
+      },
+      "en": {
+        "label": "Nihilism",
+        "name": "Nihilism: “Nothing has value”",
+        "bezug": "dukkha, anattā, nirodha; Advaita “jagan mithyā”",
+        "beh": "Life is suffering, the self is an illusion, the goal is extinction. So nothing has value, and action doesn’t matter.",
+        "verf": "Reads liberation as annihilation and insight as devaluation. dukkha is a diagnosis with a cure, not a verdict on life’s worth. nibbāna is the extinguishing of greed, hatred and delusion, not of beings. Advaita’s mithyā means “neither real nor unreal”, not “nothing”. And whoever says “nothing has value” is again asserting something about what is: “it is not”.",
+        "feind": "Disenchantment (nibbidā) and letting go (virāga).",
+        "kanon": "DN 2 (Ajita Kesakambalī), MN 117 and MN 60 (natthika-diṭṭhi as wrong view), SN 22.85 (Yamaka), SN 12.15",
+        "bsp": "Nietzsche’s picture of Buddhism as “passive nihilism”, via Schopenhauer; “it’s all illusion, so who cares”"
+      }
+    },
+    {
+      "id": "reduktiv",
+      "k": "B",
+      "x": 0.82,
+      "y": 0,
+      "de": {
+        "label": "Tot ist tot",
+        "name": "Reduktiver Säkularbuddhismus",
+        "bezug": "anattā, Neurowissenschaft",
+        "beh": "Kein Selbst heißt: Es gibt nur das Gehirn, und mit dem Tod ist alles aus.",
+        "verf": "Der Buddha weist auch die Vernichtungsansicht zurück. anattā ist Nicht-Aneignung, keine materialistische These. Zum Tathāgata nach dem Tod schweigt er.",
+        "feind": "Nüchternheit gegenüber Metaphysik.",
+        "kanon": "SN 44.10, SN 44.1",
+        "bsp": "Reduktive Lesarten in säkularen Strömungen, nicht Batchelors agnostische Position selbst",
+        "own": {
+          "erk": "Der Buddha weist auch „mit dem Tod ist alles aus“ zurück. Sein Schweigen über den Tathāgata nach dem Tod ist keine verschämte Verneinung (SN 44.1).",
+          "bew": "Vom Bescheidwissen zum Offenhalten: die Frage unbeantwortet lassen, ohne sie zu verneinen."
+        }
+      },
+      "en": {
+        "label": "Dead is dead",
+        "name": "Reductive secular Buddhism",
+        "bezug": "anattā, neuroscience",
+        "beh": "No self means there is only the brain, and death ends everything.",
+        "verf": "The Buddha also rejects the annihilationist view. anattā is non-appropriation, not a materialist thesis. On the Tathāgata after death he stays silent.",
+        "feind": "Sobriety about metaphysics.",
+        "kanon": "SN 44.10, SN 44.1",
+        "bsp": "Reductive readings in secular currents, not Batchelor’s agnostic position itself",
+        "own": {
+          "erk": "The Buddha also rejects “death ends everything”. His silence about the Tathāgata after death is not a bashful denial (SN 44.1).",
+          "bew": "From knowing better to keeping open: leave the question unanswered without denying it."
+        }
+      }
+    },
+    {
+      "id": "depers",
+      "k": "F",
+      "x": 0.65,
+      "y": 0.4,
+      "de": {
+        "label": "Fühlen abgeschaltet",
+        "name": "Abgeschaltetes Fühlen als Erwachen",
+        "bezug": "upekkhā, anattā",
+        "beh": "Wer nichts mehr fühlt und keinen Bezug mehr zum Selbst hat, ist frei.",
+        "verf": "Depersonalisation ist keine Befreiung. Der Arahant fühlt; Gleichgültigkeit ist der nahe Feind des Gleichmuts. Die brahmavihāra fehlen.",
+        "feind": "upekkhā.",
+        "kanon": "SN 36.6, Vism IX",
+        "bsp": "Lindahl und Britton zu schwierigen Meditationserfahrungen",
+        "own": {
+          "erk": "Abgeschaltetes Fühlen ist ein Symptom, kein Ergebnis von Einsicht, und kann behandlungsbedürftig sein (Lindahl und Britton).",
+          "bew": "Nicht weiter vertiefen, sondern erden: Körper, Bewegung, Kontakt zu Menschen, mettā. Hält es an, fachliche Begleitung suchen."
+        }
+      },
+      "en": {
+        "label": "Feeling switched off",
+        "name": "Switched-off feeling as awakening",
+        "bezug": "upekkhā, anattā",
+        "beh": "Whoever no longer feels anything and has no relation to a self is free.",
+        "verf": "Depersonalisation is not liberation. The arahant feels; indifference is the near enemy of equanimity. The brahmavihāra are missing.",
+        "feind": "upekkhā.",
+        "kanon": "SN 36.6, Vism IX",
+        "bsp": "Lindahl and Britton on challenging meditation experiences",
+        "own": {
+          "erk": "Switched-off feeling is a symptom, not a result of insight, and may need treatment (Lindahl and Britton).",
+          "bew": "Don’t go deeper; ground yourself instead: body, movement, contact with people, mettā. If it persists, seek professional support."
+        }
+      }
+    },
+    {
+      "id": "zenwar",
+      "k": "C",
+      "x": 0.4,
+      "y": 0.52,
+      "de": {
+        "label": "Niemand stirbt",
+        "name": "„Kein Selbst, also tötet niemand“",
+        "bezug": "anattā; Bhagavad Gītā 2.19",
+        "beh": "Da es kein Selbst gibt, stirbt niemand; Töten im Dienst ist selbstlos.",
+        "verf": "anattā wird zur Lizenz. Die Gītā-Stelle („er tötet nicht, wird nicht getötet“) wird aus ihrem Rahmen gelöst. Die erste Übungsregel gilt ohne Ausnahme.",
+        "feind": "Handeln ohne Ich-Bezug.",
+        "kanon": "Dhp 129–130; erste Übungsregel",
+        "bsp": "Brian Victoria, „Zen at War“",
+        "own": {
+          "erk": "Ohne Selbst bleibt der Schmerz der anderen: Alle zittern vor dem Stock, alle fürchten den Tod (Dhp 129).",
+          "bew": "Sich selbst zum Vergleich nehmen (attānaṃ upamaṃ katvā) und die Lehre auf das eigene Handeln richten, nicht auf das Opfer."
+        }
+      },
+      "en": {
+        "label": "Nobody dies",
+        "name": "“No self, so nobody kills”",
+        "bezug": "anattā; Bhagavad Gītā 2.19",
+        "beh": "Since there is no self, nobody dies; killing in service is selfless.",
+        "verf": "anattā becomes a licence. The Gītā verse (“he does not kill, nor is he killed”) is torn from its frame. The first precept holds without exception.",
+        "feind": "Acting without self-reference.",
+        "kanon": "Dhp 129–130; first precept",
+        "bsp": "Brian Victoria, “Zen at War”",
+        "own": {
+          "erk": "Without a self, the pain of others remains: all tremble at the rod, all fear death (Dhp 129).",
+          "bew": "Take yourself as the measure (attānaṃ upamaṃ katvā) and apply the teaching to your own actions, not to the victim."
+        }
+      }
+    },
+    {
+      "id": "egotot",
+      "k": "B",
+      "x": 0.5,
+      "y": 0.88,
+      "de": {
+        "label": "Das Ego töten",
+        "name": "„Das Ego töten“",
+        "bezug": "anattā, Entsagung",
+        "beh": "Das Ego ist der Feind und muss mit Gewalt bezwungen werden.",
+        "verf": "Der Wunsch, nicht zu sein (vibhava-taṇhā), ist selbst Begehren. Selbstquälerei ist das zweite Extrem; der Bodhisatta erinnert sich unter dem Rosenapfelbaum an die Freude der Versenkung und gibt die Askese auf.",
+        "feind": "Entsagung (nekkhamma).",
+        "kanon": "SN 56.11, MN 36",
+        "bsp": "Harte „Ego-Death“-Rhetorik",
+        "own": {
+          "erk": "Der Wunsch, nicht zu sein (vibhava-taṇhā), ist selbst Begehren. Wer das Ich bekämpft, bestätigt es als Gegner.",
+          "bew": "Den Kampf beenden und dem, was auftaucht, freundlich begegnen. Der Bodhisatta findet den Weg, als er sich an die mühelose Freude der ersten Vertiefung erinnert (MN 36)."
+        }
+      },
+      "en": {
+        "label": "Killing the ego",
+        "name": "“Killing the ego”",
+        "bezug": "anattā, renunciation",
+        "beh": "The ego is the enemy and must be subdued by force.",
+        "verf": "The wish not to be (vibhava-taṇhā) is itself craving. Self-mortification is the second extreme; under the rose-apple tree the Bodhisatta recalls the joy of absorption and gives up asceticism.",
+        "feind": "Renunciation (nekkhamma).",
+        "kanon": "SN 56.11, MN 36",
+        "bsp": "Hard “ego death” rhetoric",
+        "own": {
+          "erk": "The wish not to be (vibhava-taṇhā) is itself craving. Fighting the self confirms it as an opponent.",
+          "bew": "End the fight and meet whatever arises with kindness. The Bodhisatta finds the way when he remembers the effortless joy of the first absorption (MN 36)."
+        }
+      }
+    },
+    {
+      "id": "stufen",
+      "k": "D",
+      "x": 0.1,
+      "y": 0.78,
+      "de": {
+        "label": "Stufenjagd",
+        "name": "Erleuchtung als Leistungssport",
+        "bezug": "ñāṇa-Karten, Pfadstufen",
+        "beh": "Fortschritt heißt, die nächste Stufe zu erreichen und zu bestätigen.",
+        "verf": "Die Stufen sind wie Staffelwagen: Jeder bringt zum nächsten, keiner ist das Ziel. Karten beschreiben, sie sind keine Trophäen.",
+        "feind": "Präzision und Ernsthaftigkeit.",
+        "kanon": "MN 24 (Rathavinīta)",
+        "bsp": "Teile der Szene um pragmatisches Dharma; die Karten selbst sind nützlich"
+      },
+      "en": {
+        "label": "Stage hunting",
+        "name": "Awakening as competitive sport",
+        "bezug": "ñāṇa maps, stages of the path",
+        "beh": "Progress means reaching and confirming the next stage.",
+        "verf": "The stages are like relay chariots: each brings you to the next, none is the goal. Maps describe; they are not trophies.",
+        "feind": "Precision and earnestness.",
+        "kanon": "MN 24 (Rathavinīta)",
+        "bsp": "Parts of the pragmatic dharma scene; the maps themselves are useful"
+      }
+    },
+    {
+      "id": "spirmat",
+      "k": "E",
+      "x": -0.2,
+      "y": 0.62,
+      "de": {
+        "label": "Spiritueller Materialismus",
+        "name": "Spiritueller Materialismus",
+        "bezug": "Praxis, Erfahrungen, Lehrer",
+        "beh": "Einsichten, Zustände und Einweihungen sammeln sich wie Besitz an.",
+        "verf": "Der gute Mensch erhebt sich nicht über andere wegen seiner Versenkungen. Wer Erwachen besitzt, hat ein neues Selbst.",
+        "feind": "Ernsthafte Hingabe an die Praxis.",
+        "kanon": "MN 113 (Sappurisa), SN 22.89",
+        "bsp": "Chögyam Trungpa, „Cutting Through Spiritual Materialism“ (1973)"
+      },
+      "en": {
+        "label": "Spiritual materialism",
+        "name": "Spiritual materialism",
+        "bezug": "Practice, experiences, teachers",
+        "beh": "Insights, states and initiations pile up like possessions.",
+        "verf": "A good person does not exalt themselves over others because of their absorptions. Whoever owns awakening has a new self.",
+        "feind": "Earnest dedication to practice.",
+        "kanon": "MN 113 (Sappurisa), SN 22.89",
+        "bsp": "Chögyam Trungpa, “Cutting Through Spiritual Materialism” (1973)"
+      }
+    },
+    {
+      "id": "jhana",
+      "k": "D",
+      "x": -0.62,
+      "y": 0.38,
+      "de": {
+        "label": "Versenkung als Ziel",
+        "name": "Versenkung als Ziel",
+        "bezug": "samādhi, nirvikalpa",
+        "beh": "Der tiefste Versenkungszustand ist die Befreiung.",
+        "verf": "Der Bodhisatta verlässt Āḷāra Kālāma und Uddaka Rāmaputta, weil Nichtsheit und Weder-Wahrnehmung-noch-Nichtwahrnehmung nicht zum Erlöschen führen. Bei Ramana entspricht das kevala- statt sahaja-samādhi.",
+        "feind": "Rechte Sammlung.",
+        "kanon": "MN 26 (Ariyapariyesana)",
+        "bsp": "Jagd nach Zuständen; Gleichsetzung von Absorption und Erwachen",
+        "own": {
+          "erk": "Auch die tiefste Versenkung ist gestaltet, gewollt und darum vergänglich (MN 52).",
+          "bew": "Nach der Versenkung die Versenkung selbst betrachten und ihre Bedingtheit sehen, statt sie nur zu wiederholen."
+        }
+      },
+      "en": {
+        "label": "Absorption as goal",
+        "name": "Absorption as the goal",
+        "bezug": "samādhi, nirvikalpa",
+        "beh": "The deepest absorption is liberation.",
+        "verf": "The Bodhisatta leaves Āḷāra Kālāma and Uddaka Rāmaputta because nothingness and neither-perception-nor-non-perception do not lead to extinction. In Ramana’s terms: kevala instead of sahaja-samādhi.",
+        "feind": "Right concentration.",
+        "kanon": "MN 26 (Ariyapariyesana)",
+        "bsp": "Chasing states; equating absorption with awakening",
+        "own": {
+          "erk": "Even the deepest absorption is constructed, willed and therefore impermanent (MN 52).",
+          "bew": "After absorption, look at the absorption itself and see its conditionality instead of merely repeating it."
+        }
+      }
+    },
+    {
+      "id": "zeuge",
+      "k": "E",
+      "x": -0.28,
+      "y": 0.3,
+      "de": {
+        "label": "Zeuge als Standort",
+        "name": "Der Zeuge als neuer Standort",
+        "bezug": "sākṣin, Vipassanā-Beobachter",
+        "beh": "Ich bin der unbeteiligte Beobachter hinter allem.",
+        "verf": "Der Zeuge ist in Advaita ein Durchgangsbegriff, im Vipassanā ist Beobachten höhere Auflösung, kein Abstand. Die Verortung wird verschoben, nicht aufgelöst.",
+        "feind": "Nicht-Identifikation.",
+        "kanon": "MN 1; Ud 1.10 (Bāhiya: „nicht hier, nicht dort“)",
+        "bsp": "„Ich bin nur der Beobachter“ als Dauerhaltung; Dissoziation unter spirituellem Namen"
+      },
+      "en": {
+        "label": "Witness as standpoint",
+        "name": "The witness as a new standpoint",
+        "bezug": "sākṣin, the Vipassanā observer",
+        "beh": "I am the uninvolved observer behind everything.",
+        "verf": "In Advaita the witness is a transitional concept; in Vipassanā, observing means finer resolution, not distance. The location is shifted, not dissolved.",
+        "feind": "Non-identification.",
+        "kanon": "MN 1; Ud 1.10 (Bāhiya: “neither here nor there”)",
+        "bsp": "“I’m just the observer” as a permanent stance; dissociation under a spiritual name"
+      }
+    }
+  ],
+  "glossary": {
+    "de": {
+      "majjhimā paṭipadā": "mittlerer Weg zwischen den Extremen",
+      "sassata": "Ewigkeitsansicht: Es gibt ein bleibendes Selbst oder eine bleibende Welt",
+      "uccheda": "Vernichtungsansicht: Mit dem Tod endet alles",
+      "āsanna-paccatthika": "naher Feind: eine Haltung, die einer Tugend täuschend ähnlich sieht",
+      "anattā": "Nicht-Selbst: Nichts in der Erfahrung ist „ich, mein, mein Selbst“",
+      "attā": "Selbst (Skt. ātman)",
+      "sīla": "Sittlichkeit, ethisches Verhalten",
+      "dukkha": "Leiden, Unzulänglichkeit, Unbefriedigtsein",
+      "kamma": "absichtsvolles Handeln und seine Folgen (Skt. karma)",
+      "samādhi": "Sammlung, Versenkung",
+      "sahaja-samādhi": "(Skt.) natürliche, anhaltende Versenkung mitten im Alltag (Ramana)",
+      "kevala": "(Skt.) kevala-samādhi: zeitweilige Versenkung, nach der die Prägungen zurückkehren (Ramana)",
+      "nirvikalpa": "(Skt.) ohne Unterscheidung: gedankenfreie Versenkung",
+      "upekkhā": "Gleichmut",
+      "nibbāna": "Erlöschen von Gier, Hass und Verblendung (Skt. nirvāṇa)",
+      "nibbidā": "Ernüchterung, Abwendung vom Bedingten",
+      "virāga": "Entreizung, Abklingen der Leidenschaft",
+      "nirodha": "Aufhören, Erlöschen (des Leidens)",
+      "taṇhā": "Durst, Begehren",
+      "vibhava-taṇhā": "Begehren nach Nicht-Sein",
+      "asmimāna": "Dünkel „ich bin“",
+      "mettā": "Güte, Wohlwollen",
+      "karuṇā": "Mitgefühl",
+      "brahmavihāra": "die vier göttlichen Verweilungen: Güte, Mitgefühl, Mitfreude, Gleichmut",
+      "nekkhamma": "Entsagung",
+      "viriya": "Tatkraft, Einsatz",
+      "sati": "Achtsamkeit, Gegenwärtigkeit des Geistes",
+      "Vipassanā": "Einsichtsmeditation",
+      "ñāṇa": "Einsichtswissen; die ñāṇa-Karten beschreiben Stufen der Einsicht",
+      "natthika-diṭṭhi": "Ansicht des „es gibt nicht“: Leugnung von Tatfolgen, Nihilismus",
+      "attānaṃ upamaṃ katvā": "sich selbst zum Vergleich nehmend",
+      "Arahant": "Vollendeter: wer den Pfad zu Ende gegangen ist",
+      "Tathāgata": "„So-Gegangener“: Selbstbezeichnung des Buddha",
+      "Bodhisatta": "der Buddha vor seinem Erwachen (Skt. bodhisattva)",
+      "ātman": "(Skt.) Selbst; in Advaita identisch mit brahman",
+      "brahman": "(Skt.) das Absolute, Grund von allem",
+      "śūnyatā": "(Skt.) Leerheit: Fehlen eines Eigenwesens, gleichbedeutend mit bedingtem Entstehen",
+      "jagan mithyā": "(Skt.) „Die Welt ist mithyā“: weder wirklich noch unwirklich (Śaṅkara)",
+      "mithyā": "(Skt.) weder wirklich noch unwirklich; abhängige Wirklichkeit",
+      "sākṣin": "(Skt.) Zeuge, das bezeugende Bewusstsein",
+      "ahaṃkāra": "(Skt.) „Ich-Macher“: das Ich-Gefühl",
+      "aham brahmāsmi": "(Skt.) „Ich bin brahman“ (BĀU 1.4.10)",
+      "sādhana-catuṣṭaya": "(Skt.) vierfache Voraussetzung: Unterscheidung, Leidenschaftslosigkeit, sechs Tugenden, Befreiungswunsch",
+      "śrotavyo mantavyo nididhyāsitavyaḥ": "(Skt.) „zu hören, zu bedenken, zu vertiefen“",
+      "vaināśika": "(Skt.) „Vernichtungslehrer“: Śaṅkaras Name für die Buddhisten",
+      "Tathāgatagarbha": "(Skt.) Buddha-Keim, Buddha-Natur",
+      "Yogācāra": "(Skt.) „Yoga-Praxis“: Schule der Nur-Geist-Lehre",
+      "Madhyamaka": "(Skt.) Schule des mittleren Weges (Nāgārjuna)",
+      "Theravāda": "„Lehre der Älteren“: südliche Tradition auf Basis des Pāli-Kanons",
+      "Vedānta": "(Skt.) „Ende des Veda“: Philosophie der Upaniṣaden",
+      "shushō ittō": "(jap.) Einheit von Übung und Verwirklichung (Dōgen)",
+      "hongaku": "(jap.) ursprüngliche Erleuchtung",
+      "Dzogchen": "(tib.) „Große Vollkommenheit“"
+    },
+    "en": {
+      "majjhimā paṭipadā": "the middle way between the extremes",
+      "sassata": "eternalism: there is a lasting self or a lasting world",
+      "uccheda": "annihilationism: death ends everything",
+      "āsanna-paccatthika": "near enemy: an attitude that looks deceptively like a virtue",
+      "anattā": "not-self: nothing in experience is “I, mine, my self”",
+      "attā": "self (Skt. ātman)",
+      "sīla": "ethical conduct, virtue",
+      "dukkha": "suffering, unsatisfactoriness",
+      "kamma": "intentional action and its results (Skt. karma)",
+      "samādhi": "concentration, absorption",
+      "sahaja-samādhi": "(Skt.) natural, continuous absorption amid everyday life (Ramana)",
+      "kevala": "(Skt.) kevala-samādhi: temporary absorption after which the tendencies return (Ramana)",
+      "nirvikalpa": "(Skt.) without distinctions: thought-free absorption",
+      "upekkhā": "equanimity",
+      "nibbāna": "extinguishing of greed, hatred and delusion (Skt. nirvāṇa)",
+      "nibbidā": "disenchantment, turning away from the conditioned",
+      "virāga": "dispassion, fading of passion",
+      "nirodha": "cessation (of suffering)",
+      "taṇhā": "thirst, craving",
+      "vibhava-taṇhā": "craving for non-existence",
+      "asmimāna": "the conceit “I am”",
+      "mettā": "loving-kindness, goodwill",
+      "karuṇā": "compassion",
+      "brahmavihāra": "the four divine abodes: loving-kindness, compassion, sympathetic joy, equanimity",
+      "nekkhamma": "renunciation",
+      "viriya": "energy, effort",
+      "sati": "mindfulness, presence of mind",
+      "Vipassanā": "insight meditation",
+      "ñāṇa": "insight knowledge; the ñāṇa maps describe stages of insight",
+      "natthika-diṭṭhi": "the view “there is not”: denial of the results of action, nihilism",
+      "attānaṃ upamaṃ katvā": "taking oneself as the measure",
+      "Arahant": "one who has completed the path",
+      "Tathāgata": "“thus-gone”: the Buddha’s way of referring to himself",
+      "Bodhisatta": "the Buddha before his awakening (Skt. bodhisattva)",
+      "ātman": "(Skt.) self; in Advaita identical with brahman",
+      "brahman": "(Skt.) the Absolute, the ground of everything",
+      "śūnyatā": "(Skt.) emptiness: absence of inherent existence, equivalent to dependent origination",
+      "jagan mithyā": "(Skt.) “the world is mithyā”: neither real nor unreal (Śaṅkara)",
+      "mithyā": "(Skt.) neither real nor unreal; dependent reality",
+      "sākṣin": "(Skt.) witness, witnessing consciousness",
+      "ahaṃkāra": "(Skt.) “I-maker”: the sense of I",
+      "aham brahmāsmi": "(Skt.) “I am brahman” (BĀU 1.4.10)",
+      "sādhana-catuṣṭaya": "(Skt.) fourfold qualification: discrimination, dispassion, six virtues, longing for liberation",
+      "śrotavyo mantavyo nididhyāsitavyaḥ": "(Skt.) “to be heard, reflected on, meditated upon”",
+      "vaināśika": "(Skt.) “annihilationists”: Śaṅkara’s name for the Buddhists",
+      "Tathāgatagarbha": "(Skt.) Buddha-embryo, Buddha-nature",
+      "Yogācāra": "(Skt.) “yoga practice”: the mind-only school",
+      "Madhyamaka": "(Skt.) the school of the middle way (Nāgārjuna)",
+      "Theravāda": "“teaching of the elders”: the southern tradition based on the Pāli Canon",
+      "Vedānta": "(Skt.) “end of the Veda”: the philosophy of the Upaniṣads",
+      "shushō ittō": "(Jap.) oneness of practice and realisation (Dōgen)",
+      "hongaku": "(Jap.) original enlightenment",
+      "Dzogchen": "(Tib.) “Great Perfection”"
+    }
+  },
+  "linking": {
+    "tables": {
+      "DHP": [
+        [
+          1,
+          20
+        ],
+        [
+          21,
+          32
+        ],
+        [
+          33,
+          43
+        ],
+        [
+          44,
+          59
+        ],
+        [
+          60,
+          75
+        ],
+        [
+          76,
+          89
+        ],
+        [
+          90,
+          99
+        ],
+        [
+          100,
+          115
+        ],
+        [
+          116,
+          128
+        ],
+        [
+          129,
+          145
+        ],
+        [
+          146,
+          156
+        ],
+        [
+          157,
+          166
+        ],
+        [
+          167,
+          178
+        ],
+        [
+          179,
+          196
+        ],
+        [
+          197,
+          208
+        ],
+        [
+          209,
+          220
+        ],
+        [
+          221,
+          234
+        ],
+        [
+          235,
+          255
+        ],
+        [
+          256,
+          272
+        ],
+        [
+          273,
+          289
+        ],
+        [
+          290,
+          305
+        ],
+        [
+          306,
+          319
+        ],
+        [
+          320,
+          333
+        ],
+        [
+          334,
+          359
+        ],
+        [
+          360,
+          382
+        ],
+        [
+          383,
+          423
+        ]
+      ]
+    },
+    "rules": [
+      {
+        "lang": "de",
+        "pattern": "Chögyam Trungpa, „Cutting Through Spiritual Materialism“ \\(1973\\)",
+        "url": "https://en.wikipedia.org/w/index.php?search=Cutting%20Through%20Spiritual%20Materialism&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Ron Purser, „McMindfulness“ \\(2019\\)",
+        "url": "https://en.wikipedia.org/w/index.php?search=McMindfulness%20Purser&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Kastrups analytischer Idealismus",
+        "url": "https://en.wikipedia.org/w/index.php?search=Bernardo%20Kastrup&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Huxleys „Perennial Philosophy“",
+        "url": "https://de.wikipedia.org/w/index.php?search=Philosophia%20perennis&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Theosophie \\(Blavatsky, Olcott\\)",
+        "url": "https://de.wikipedia.org/w/index.php?search=Theosophie&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Brian Victoria, „Zen at War“",
+        "url": "https://en.wikipedia.org/w/index.php?search=Zen%20at%20War&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Jungs Begriff der Inflation",
+        "url": "https://de.wikipedia.org/w/index.php?search=Inflation%20C.%20G.%20Jung%20Psychologie&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Teile von Wilbers Frühwerk",
+        "url": "https://de.wikipedia.org/w/index.php?search=Ken%20Wilber&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Brahmasūtra-Kommentar",
+        "url": "https://de.wikipedia.org/w/index.php?search=Brahmasutra&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "„Critical Buddhism“",
+        "url": "https://en.wikipedia.org/w/index.php?search=Critical%20Buddhism&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "„Law of Attraction“",
+        "url": "https://en.wikipedia.org/w/index.php?search=Law%20of%20attraction%20(New%20Thought)&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Lindahl und Britton",
+        "url": "https://doi.org/10.1371/journal.pone.0176239"
+      },
+      {
+        "lang": "de",
+        "pattern": "Bhagavad Gītā 2\\.19",
+        "url": "https://de.wikipedia.org/w/index.php?search=Bhagavad%20Gita&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Laṅkāvatāra-Sūtra",
+        "url": "https://de.wikipedia.org/w/index.php?search=Lankavatara-Sutra&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Kyras Glasbild",
+        "url": "https://kyraspira.substack.com/p/what-is-non-duality"
+      },
+      {
+        "lang": "de",
+        "pattern": "Schopenhauer",
+        "url": "https://de.wikipedia.org/w/index.php?search=Arthur%20Schopenhauer&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Tony Parsons",
+        "url": "https://www.theopensecret.com/"
+      },
+      {
+        "lang": "de",
+        "pattern": "John Welwood",
+        "url": "https://en.wikipedia.org/w/index.php?search=Spiritual%20bypass&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Vivekananda",
+        "url": "https://de.wikipedia.org/w/index.php?search=Vivekananda&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Buddhaghosa",
+        "url": "https://de.wikipedia.org/w/index.php?search=Buddhaghosa&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Nietzsches",
+        "url": "https://de.wikipedia.org/w/index.php?search=Nietzsche%20Nihilismus%20Buddhismus&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Batchelors",
+        "url": "https://en.wikipedia.org/w/index.php?search=Stephen%20Batchelor&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Dōgen",
+        "url": "https://de.wikipedia.org/w/index.php?search=D%C5%8Dgen&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Chögyam Trungpa, “Cutting Through Spiritual Materialism” \\(1973\\)",
+        "url": "https://en.wikipedia.org/w/index.php?search=Cutting%20Through%20Spiritual%20Materialism&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Ron Purser, “McMindfulness” \\(2019\\)",
+        "url": "https://en.wikipedia.org/w/index.php?search=McMindfulness%20Purser&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Huxley’s “Perennial Philosophy”",
+        "url": "https://en.wikipedia.org/w/index.php?search=The%20Perennial%20Philosophy&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Theosophy \\(Blavatsky, Olcott\\)",
+        "url": "https://en.wikipedia.org/w/index.php?search=Theosophy%20Blavatsky&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "parts of Wilber’s early work",
+        "url": "https://en.wikipedia.org/w/index.php?search=Ken%20Wilber&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Brian Victoria, “Zen at War”",
+        "url": "https://en.wikipedia.org/w/index.php?search=Zen%20at%20War&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Kastrup’s analytic idealism",
+        "url": "https://en.wikipedia.org/w/index.php?search=Bernardo%20Kastrup&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Jung’s concept of inflation",
+        "url": "https://en.wikipedia.org/w/index.php?search=Inflation%20psychology%20Jung&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Brahmasūtra commentary",
+        "url": "https://en.wikipedia.org/w/index.php?search=Brahma%20Sutra%20Bhasya&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "“Critical Buddhism”",
+        "url": "https://en.wikipedia.org/w/index.php?search=Critical%20Buddhism&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "“Law of Attraction”",
+        "url": "https://en.wikipedia.org/w/index.php?search=Law%20of%20attraction%20(New%20Thought)&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Lindahl and Britton",
+        "url": "https://doi.org/10.1371/journal.pone.0176239"
+      },
+      {
+        "lang": "en",
+        "pattern": "Bhagavad Gītā 2\\.19",
+        "url": "https://en.wikipedia.org/w/index.php?search=Bhagavad%20Gita&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Laṅkāvatāra Sūtra",
+        "url": "https://en.wikipedia.org/w/index.php?search=Lankavatara%20Sutra&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Kyra’s jar image",
+        "url": "https://kyraspira.substack.com/p/what-is-non-duality"
+      },
+      {
+        "lang": "en",
+        "pattern": "Schopenhauer",
+        "url": "https://en.wikipedia.org/w/index.php?search=Arthur%20Schopenhauer&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Tony Parsons",
+        "url": "https://www.theopensecret.com/"
+      },
+      {
+        "lang": "en",
+        "pattern": "John Welwood",
+        "url": "https://en.wikipedia.org/w/index.php?search=Spiritual%20bypass&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Vivekananda",
+        "url": "https://en.wikipedia.org/w/index.php?search=Swami%20Vivekananda&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Nietzsche’s",
+        "url": "https://en.wikipedia.org/w/index.php?search=Nietzsche%20Buddhism%20nihilism&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Batchelor’s",
+        "url": "https://en.wikipedia.org/w/index.php?search=Stephen%20Batchelor&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Buddhaghosa",
+        "url": "https://en.wikipedia.org/w/index.php?search=Buddhaghosa&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Dōgen",
+        "url": "https://en.wikipedia.org/w/index.php?search=D%C5%8Dgen&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])DN (\\d+)(?:\\.(\\d+))?",
+        "url": "https://www.palikanon.com/digha1/dn{1|pad2}.html"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])MN (\\d+)(?:\\.(\\d+))?",
+        "url": "https://www.palikanon.com/majjhima/zumwinkel/m{1|pad3}z.html"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])SN 12\\.(\\d+)",
+        "url": "https://www.palikanon.com/samyutta/sam12_{1|ceil10}.html#s12_{1}"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])SN 22\\.(\\d+)",
+        "url": "https://www.palikanon.com/samyutta/sam22_{1|ceil10|pad3}.html#s22_{1}"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])SN (\\d+)(?:\\.(\\d+))?",
+        "url": "https://www.palikanon.com/samyutta/sam{1|pad2}.html[#s{1}_{2}]"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])AN (\\d+)(?:\\.(\\d+))?",
+        "url": "https://www.palikanon.com/angutt/a{1|pad2}_000_idx.html"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])Ud (\\d+)(?:\\.(\\d+))?",
+        "url": "https://www.palikanon.com/khuddaka/udana/ud_{1}.htm"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])Dhp (\\d+)(?:\\.(\\d+))?",
+        "url": "https://www.palikanon.com/khuddaka/dhp/dhp.html"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])Vism (\\d+|IX)(?:\\.(\\d+))?",
+        "url": "https://www.palikanon.com/visuddhi/vis09.html"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])MMK (\\d+)(?:\\.(\\d+))?",
+        "url": "https://de.wikipedia.org/w/index.php?search=M%C5%ABlamadhyamakak%C4%81rik%C4%81&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])BĀU (\\d+)(?:\\.(\\d+))?",
+        "url": "https://de.wikipedia.org/w/index.php?search=Brihadaranyaka-Upanishad&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])DN (\\d+)(?:\\.(\\d+))?",
+        "url": "https://suttacentral.net/dn{1}/en/sujato"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])MN (\\d+)(?:\\.(\\d+))?",
+        "url": "https://suttacentral.net/mn{1}/en/sujato"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])SN (\\d+)(?:\\.(\\d+))?",
+        "url": "https://suttacentral.net/sn{1}.{2|or:1}/en/sujato"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])AN (\\d+)(?:\\.(\\d+))?",
+        "url": "https://suttacentral.net/an{1}.{2|or:1}/en/sujato"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])Ud (\\d+)(?:\\.(\\d+))?",
+        "url": "https://suttacentral.net/ud{1}.{2|or:1}/en/sujato"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])Dhp (\\d+)(?:\\.(\\d+))?",
+        "url": "https://suttacentral.net/dhp{1|range:DHP}/en/sujato"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])Vism (\\d+|IX)(?:\\.(\\d+))?",
+        "url": "https://en.wikipedia.org/w/index.php?search=Visuddhimagga&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])MMK (\\d+)(?:\\.(\\d+))?",
+        "url": "https://en.wikipedia.org/w/index.php?search=M%C5%ABlamadhyamakak%C4%81rik%C4%81&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])BĀU (\\d+)(?:\\.(\\d+))?",
+        "url": "https://en.wikipedia.org/w/index.php?search=Brihadaranyaka%20Upanishad&go=Go"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1636 @@
+{
+  "format": "landkarte/1",
+  "id": "christ",
+  "version": 1,
+  "modified": "2026-11-18",
+  "langs": [
+    "de",
+    "en"
+  ],
+  "start": "funke",
+  "page": {
+    "de": {
+      "title": "Unterscheidung der Geister",
+      "eyebrow": "Die christliche Karte des Knapp-daneben",
+      "h1": "Unterscheidung der Geister",
+      "intro": [
+        "Auch das Christentum kennt das „Knapp daneben“. Es nennt die Kunst, das Echte vom täuschend Ähnlichen zu trennen, Unterscheidung der Geister. Ihr Grundsatz steht bei Paulus: Der Feind tritt als Engel des Lichts auf (2 Kor 11,14). Diese Karte ordnet 20 solche Fehlformen, von den Gemeinden des Paulus über das Thomas-Evangelium und Meister Eckhart bis heute.",
+        "Die Karte ist von der christlichen Mitte aus gezeichnet. Was hier am Rand liegt, kann auf den beiden anderen Karten näher an der Mitte stehen, und umgekehrt."
+      ]
+    },
+    "en": {
+      "title": "Discernment of Spirits",
+      "eyebrow": "The Christian map of near misses",
+      "h1": "Discernment of Spirits",
+      "intro": [
+        "Christianity knows the near miss too. It calls the art of telling the real thing from its deceptive likeness the discernment of spirits. Its principle is in Paul: the enemy appears as an angel of light (2 Cor 11:14). This map orders 20 such near misses, from Paul’s congregations through the Gospel of Thomas and Meister Eckhart to the present.",
+        "The map is drawn from the Christian centre. What lies at the edge here may stand closer to the middle on the other two maps, and the other way round."
+      ]
+    }
+  },
+  "sections": [
+    {
+      "type": "prose",
+      "style": "centre",
+      "de": {
+        "h": "Die Mitte: Nicht mehr ich, sondern Christus in mir",
+        "p": [
+          "Paulus schreibt: „Nicht mehr ich lebe, sondern Christus lebt in mir“ (Gal 2,20). Der Satz hält zwei Dinge zusammen. Das Ich steht nicht mehr im Mittelpunkt, und doch bleibt jemand, der lebt und liebt. Die Mitte ist hier keine Haltung, die man einnimmt, sondern ein Gegenüber, dem man Raum gibt.",
+          "Daraus ergeben sich die beiden Achsen. Waagrecht geht es um das Verhältnis zu Gott. Links wird vermischt: Das Ich setzt sich an Gottes Stelle oder macht Gott zum Besitz. Rechts wird getrennt: Gott rückt in die Ferne, Welt und Leib werden entwertet. Senkrecht geht es um den Weg. Oben steht Gnade ohne Mitwirken, unten Mitwirken ohne Gnade.",
+          "Woran man die Mitte erkennt: an den Früchten (Mt 7,16). Paulus zählt sie auf: Liebe, Freude, Friede, Langmut, Freundlichkeit, Güte (Gal 5,22). Und daran, dass man sich prüfen lässt, statt sich selbst das Zeugnis auszustellen."
+        ]
+      },
+      "en": {
+        "h": "The middle: no longer I, but Christ in me",
+        "p": [
+          "Paul writes: “It is no longer I who live, but Christ who lives in me” (Gal 2:20). The sentence holds two things together. The I no longer stands at the centre, and yet someone remains who lives and loves. The middle here is not a stance you take up but a counterpart you make room for.",
+          "The two axes follow from this. The horizontal one is about the relation to God. On the left things are fused: the I puts itself in God’s place or turns God into a possession. On the right things are separated: God recedes into the distance, world and body are devalued. The vertical one is about the way. At the top stands grace without cooperation, at the bottom cooperation without grace.",
+          "How to recognise the middle: by the fruits (Matt 7:16). Paul lists them: love, joy, peace, patience, kindness, generosity (Gal 5:22). And by letting yourself be tested instead of writing your own reference."
+        ]
+      }
+    },
+    {
+      "type": "sources",
+      "de": {
+        "h": "Die Tradition hat diese Karte selbst gezeichnet",
+        "items": [
+          {
+            "b": "1 Joh 4,1 · 2 Kor 11,14",
+            "t": "„Prüft die Geister.“ Der Feind kommt als Engel des Lichts: der nahe Feind in einem Satz."
+          },
+          {
+            "b": "Mt 7,16 · Gal 5,22",
+            "t": "Der Prüfstein sind die Früchte, nicht die Erlebnisse."
+          },
+          {
+            "b": "Phil 2,12–13",
+            "t": "„Wirkt euer Heil … denn Gott ist es, der in euch wirkt“: Mitwirken und Gnade in einem Satz. Daraus die senkrechte Achse."
+          },
+          {
+            "b": "Konzil von Chalcedon (451)",
+            "t": "„Unvermischt und ungetrennt“: weder verschmelzen noch trennen. Daraus die waagrechte Achse."
+          },
+          {
+            "b": "Evagrius · Cassian (4./5. Jh.)",
+            "t": "Acht Gedanken, die den Mönch täuschen. Die Unterscheidung gilt als höchste Tugend, höher als die Strenge."
+          },
+          {
+            "b": "Ignatius, Exerzitien 313–336",
+            "t": "Regeln zur Unterscheidung: Anfang, Mitte und Ende eines Gedankens prüfen."
+          },
+          {
+            "b": "Johannes vom Kreuz, Dunkle Nacht I,2–7",
+            "t": "Die sieben Hauptsünden in geistlicher Form: geistlicher Stolz, geistliche Habsucht, geistliche Völlerei."
+          }
+        ],
+        "hint": "Die waagrechte Achse ist meine Übertragung. Chalcedon spricht von den zwei Naturen Christi, nicht vom Verhältnis der Seele zu Gott."
+      },
+      "en": {
+        "h": "The tradition drew this map itself",
+        "items": [
+          {
+            "b": "1 John 4:1 · 2 Cor 11:14",
+            "t": "“Test the spirits.” The enemy comes as an angel of light: the near enemy in one sentence."
+          },
+          {
+            "b": "Matt 7:16 · Gal 5:22",
+            "t": "The test is the fruits, not the experiences."
+          },
+          {
+            "b": "Phil 2:12–13",
+            "t": "“Work on your own salvation … for it is God who is at work in you”: cooperation and grace in one sentence. Hence the vertical axis."
+          },
+          {
+            "b": "Council of Chalcedon (451)",
+            "t": "“Without confusion, without separation”: neither fuse nor divide. Hence the horizontal axis."
+          },
+          {
+            "b": "Evagrius · Cassian (4th/5th c.)",
+            "t": "Eight thoughts that deceive the monk. Discernment counts as the highest virtue, above austerity."
+          },
+          {
+            "b": "Ignatius, Spiritual Exercises 313–336",
+            "t": "Rules for discernment: examine the beginning, middle and end of a thought."
+          },
+          {
+            "b": "John of the Cross, Dark Night I.2–7",
+            "t": "The seven capital sins in spiritual form: spiritual pride, spiritual avarice, spiritual gluttony."
+          }
+        ],
+        "hint": "The horizontal axis is my extrapolation. Chalcedon speaks of the two natures of Christ, not of the soul’s relation to God."
+      }
+    },
+    {
+      "type": "map",
+      "de": {
+        "h": "Die Karte",
+        "hint": "Punkt antippen, um Details zu sehen. Abstand von der Mitte heißt: deutlichere Schlagseite. Die Platzierungen sind Urteile, keine Messungen."
+      },
+      "en": {
+        "h": "The map",
+        "hint": "Tap a point for details. Distance from the middle means a stronger tilt. Placements are judgements, not measurements."
+      }
+    },
+    {
+      "type": "classes",
+      "de": {
+        "h": "Sieben Klassen von Fehlformen",
+        "p": [
+          "Die sieben Klassen sind dieselben wie auf den beiden anderen Karten, hier in christlicher Sprache. Zu jeder gehören eine Prüffrage, das, was übersehen wird, und eine Bewegung zur Mitte. Die Bewegung führt zur Mitte, nicht zum Gegenpol: Wer aus der Werkgerechtigkeit in den Quietismus springt, hat nur die Hälfte gewechselt."
+        ]
+      },
+      "en": {
+        "h": "Seven classes of near miss",
+        "p": [
+          "The seven classes are the same as on the other two maps, here in Christian language. Each has a test question, what gets overlooked, and a movement to the middle. The movement leads to the middle, not to the opposite pole: whoever jumps from works-righteousness into Quietism has only swapped halves."
+        ]
+      }
+    },
+    {
+      "type": "catalog",
+      "de": {
+        "h": "Katalog"
+      },
+      "en": {
+        "h": "Catalogue"
+      }
+    },
+    {
+      "type": "prose",
+      "style": "tension",
+      "de": {
+        "h": "Die Spannung, die ich stehen lassen will",
+        "p": [
+          "Diese Karte hatte ein Tribunal. Marguerite Porete wurde 1310 verbrannt, 28 Sätze Eckharts wurden 1329 verurteilt, Molinos starb in Haft. Wo die Grenze verlief, entschied oft die Macht, und manche der Verurteilten werden heute anders gelesen. Die Unterscheidung der Geister ist älter und besser als ihre Vollstreckung.",
+          "Die drei Karten haben verschiedene Mitten. „Ich bin Gott“ ist hier der äußerste Rand, in Advaita das Ziel. Das christliche Du ist auf der ersten Karte noch ein Festhalten. Eckhart steht genau auf der Grenze: Er bittet Gott, ihn „Gottes quitt“ zu machen (Predigt 52). Ob er knapp daneben lag oder alle drei Mitten traf, entscheidet diese Karte nicht.",
+          "Auch das Thomas-Evangelium steht je nach Karte woanders. Hier liegt es auf der Seite des „schon da“. Auf einer Karte mit anderer Mitte läge es näher am Zentrum."
+        ]
+      },
+      "en": {
+        "h": "The tension I want to leave standing",
+        "p": [
+          "This map had a tribunal. Marguerite Porete was burned in 1310, 28 of Eckhart’s propositions were condemned in 1329, Molinos died in prison. Where the line ran was often decided by power, and some of the condemned are read differently today. The discernment of spirits is older and better than its enforcement.",
+          "The three maps have different centres. “I am God” is the outermost edge here and the goal in Advaita. The Christian Thou is still a form of clinging on the first map. Eckhart stands exactly on the border: he asks God to make him “free of God” (Sermon 52). Whether he narrowly missed or hit all three centres, this map does not decide.",
+          "The Gospel of Thomas also stands in a different place depending on the map. Here it lies on the side of “already here”. On a map with a different centre it would lie closer to the middle."
+        ]
+      }
+    },
+    {
+      "type": "footer",
+      "de": {
+        "p": [
+          "Bibelstellen verlinken auf die Einheitsübersetzung 2016 bei <a href=\"https://www.bibleserver.com/EU\" target=\"_blank\" rel=\"noopener\">bibleserver.com</a>. Sprüche des Thomas-Evangeliums verlinken auf englische Übersetzungen bei <a href=\"https://www.earlychristianwritings.com/thomas/\" target=\"_blank\" rel=\"noopener\">Early Christian Writings</a>. Personen und Werke verlinken auf eine Wikipedia-Suche, die bei eindeutigem Treffer direkt zum Artikel führt. Die Stellen aus den Mystikern und Konzilien sind aus dem Gedächtnis angegeben und nicht gegen eine Edition geprüft.",
+          "Die beiden anderen Karten: <a href=\"https://claude.ai/artifact/9iBHqJCZp7KQV4TNhzZYUt\" target=\"_blank\" rel=\"noopener\">Landkarte der Fehlformen</a> (Mitte: Pāli-Kanon) und <a href=\"https://claude.ai/artifact/KMN8ZQ2RtwZcHjD2WTTEqZ\" target=\"_blank\" rel=\"noopener\">Knapp daneben ist auch daneben</a> (Alltagssprache)."
+        ]
+      },
+      "en": {
+        "p": [
+          "Bible references link to the NRSVUE on <a href=\"https://www.biblegateway.com/\" target=\"_blank\" rel=\"noopener\">BibleGateway</a>. Sayings of the Gospel of Thomas link to <a href=\"https://www.earlychristianwritings.com/thomas/\" target=\"_blank\" rel=\"noopener\">Early Christian Writings</a>. People and works link to a Wikipedia search that goes straight to the article when there is a clear match. Passages from the mystics and councils are given from memory and not checked against an edition.",
+          "The other two maps: <a href=\"https://claude.ai/artifact/9iBHqJCZp7KQV4TNhzZYUt\" target=\"_blank\" rel=\"noopener\">Map of Near Misses</a> (centre: the Pāli Canon) and <a href=\"https://claude.ai/artifact/KMN8ZQ2RtwZcHjD2WTTEqZ\" target=\"_blank\" rel=\"noopener\">A Near Miss Is Still a Miss</a> (everyday language)."
+        ]
+      }
+    }
+  ],
+  "ui": {
+    "de": {
+      "filterLabel": "Nach Klasse filtern",
+      "mapLabel": "Karte von 20 Fehlformen rund um die Mitte „Nicht mehr ich, sondern Christus in mir“",
+      "all": "Alle",
+      "show": "Auf der Karte zeigen",
+      "entries": "Einträge",
+      "cls": "Klasse",
+      "dt": {
+        "wahr": "Was daran stimmt",
+        "kippt": "Wo es kippt",
+        "stellen": "Gegenstellen",
+        "bsp": "Beispiele",
+        "q": "Prüffrage",
+        "erk": "Was übersehen wird",
+        "bew": "Bewegung zur Mitte",
+        "vert": "Senkrechte Komponente",
+        "links": "Zum Nachlesen"
+      },
+      "own": "eigen",
+      "canon": "Stellen"
+    },
+    "en": {
+      "filterLabel": "Filter by class",
+      "mapLabel": "Map of 20 near misses around the middle “no longer I, but Christ in me”",
+      "all": "All",
+      "show": "Show on map",
+      "entries": "entries",
+      "cls": "Class",
+      "dt": {
+        "wahr": "What’s right about it",
+        "kippt": "Where it tips over",
+        "stellen": "Counter-passages",
+        "bsp": "Examples",
+        "q": "Test question",
+        "erk": "What gets overlooked",
+        "bew": "Movement to the middle",
+        "vert": "Vertical component",
+        "links": "Further reading"
+      },
+      "own": "own",
+      "canon": "Passages"
+    }
+  },
+  "layout": {
+    "title": "label",
+    "quote": true,
+    "fields": [
+      "wahr",
+      "kippt",
+      "stellen",
+      "bsp"
+    ],
+    "question": "row",
+    "movement": [
+      "bew"
+    ],
+    "movementSeparate": false,
+    "chipLetters": true,
+    "catalogLetters": true,
+    "catalogQuestion": true,
+    "classQuestion": "row",
+    "classMeta": "canon"
+  },
+  "map": {
+    "axisLine": [
+      64,
+      936
+    ],
+    "axes": {
+      "de": {
+        "l": "← Vermischt",
+        "ls": "„Ich bin Gott“ · Gott als Besitz",
+        "r": "Getrennt →",
+        "rs": "Gott fern · Welt nichts",
+        "t": "↑ Gnade ohne Mitwirken",
+        "ts": "Quietismus",
+        "b": "↓ Mitwirken ohne Gnade",
+        "bs": "Pelagianismus"
+      },
+      "en": {
+        "l": "← Fused",
+        "ls": "“I am God” · God as possession",
+        "r": "Separated →",
+        "rs": "God far · world nothing",
+        "t": "↑ Grace without cooperation",
+        "ts": "Quietism",
+        "b": "↓ Cooperation without grace",
+        "bs": "Pelagianism"
+      }
+    },
+    "centre": {
+      "r": 92,
+      "underlay": true,
+      "size": 18,
+      "y": 478,
+      "gap": 23,
+      "subY": 554,
+      "subSize": 12,
+      "halo": false,
+      "de": {
+        "lines": [
+          "Nicht mehr ich,",
+          "sondern Christus",
+          "in mir"
+        ],
+        "sub": "Gal 2,20"
+      },
+      "en": {
+        "lines": [
+          "No longer I,",
+          "but Christ",
+          "in me"
+        ],
+        "sub": "Gal 2:20"
+      }
+    },
+    "vertical": {
+      "de": [
+        "Mitwirken: beten, üben und handeln, statt nur zu warten.",
+        "Empfangen lernen: den Krampf lassen und sich beschenken lassen.",
+        "Senkrecht etwa im Gleichgewicht; die Bewegung ist vor allem waagrecht."
+      ],
+      "en": [
+        "Cooperate: pray, practise and act instead of only waiting.",
+        "Learn to receive: let go of the strain and allow yourself to be given to.",
+        "Roughly balanced vertically; the movement is mainly horizontal."
+      ]
+    }
+  },
+  "classes": [
+    {
+      "id": "A",
+      "de": {
+        "name": "Gott zum Besitz machen",
+        "sub": "Bild statt Gott",
+        "q": "Halte ich mein Bild von Gott, oder ein Stück von mir, für Gott selbst?",
+        "mech": "Aus der Nähe Gottes wird ein Gegenstand: ein Begriff, ein Bild, ein göttlicher Kern, den ich habe.",
+        "erk": "Gott ist größer als jedes Bild. „Wenn du es begreifst, ist es nicht Gott“ (Augustinus, Sermo 117). Näher als ich mir selbst heißt nicht: mein Eigentum.",
+        "bew": "Das Bild loslassen, ohne Gott loszulassen. Eckhart bittet Gott, ihn „Gottes quitt“ zu machen (Predigt 52).",
+        "kanon": "Ex 20,4 · Joh 20,17 · Augustinus, Sermo 117"
+      },
+      "en": {
+        "name": "Turning God into a possession",
+        "sub": "image instead of God",
+        "q": "Do I take my image of God, or a piece of myself, for God himself?",
+        "mech": "God’s nearness is turned into an object: a concept, an image, a divine core that I have.",
+        "erk": "God is greater than any image. “If you comprehend it, it is not God” (Augustine, Sermon 117). Closer to me than I am to myself does not mean: my property.",
+        "bew": "Let go of the image without letting go of God. Eckhart asks God to make him “free of God” (Sermon 52).",
+        "kanon": "Exod 20:4 · John 20:17 · Augustine, Sermon 117"
+      }
+    },
+    {
+      "id": "B",
+      "de": {
+        "name": "Welt und Leib verneinen",
+        "sub": "Abwendung statt Hingabe",
+        "q": "Wird aus „nicht von der Welt“ ein „gegen die Welt“, gegen den Leib oder gegen das Leben?",
+        "mech": "Die Schöpfung wird zum Gefängnis oder zum Nichts erklärt, oder der Überdruss wendet sich von allem ab.",
+        "erk": "Die Schöpfung ist gut (Gen 1,31), und das Wort ist Fleisch geworden (Joh 1,14). Erlösung geschieht im Leib, nicht aus ihm heraus.",
+        "bew": "Sich dem Geschaffenen wieder zuwenden: dem eigenen Leib, dem Nächsten, der Arbeit. In der Welt, nicht von der Welt (Joh 17,15).",
+        "kanon": "Gen 1,31 · Joh 1,14 · Joh 17,15"
+      },
+      "en": {
+        "name": "Denying world and body",
+        "sub": "turning away instead of devotion",
+        "q": "Does “not of the world” turn into “against the world”, against the body or against life?",
+        "mech": "Creation is declared a prison or a nothing, or weariness turns away from everything.",
+        "erk": "Creation is good (Gen 1:31), and the Word became flesh (John 1:14). Redemption happens in the body, not out of it.",
+        "bew": "Turn towards created things again: your own body, your neighbour, your work. In the world, not of the world (John 17:15).",
+        "kanon": "Gen 1:31 · John 1:14 · John 17:15"
+      }
+    },
+    {
+      "id": "C",
+      "de": {
+        "name": "Gnade als Freibrief",
+        "sub": "das Schon ohne das Noch-nicht",
+        "q": "Benutze ich Gnade, Freiheit oder Vollendung, um mich von Gebot, Umkehr oder Übung freizusprechen?",
+        "mech": "Was am Ende gilt, soll schon jetzt alles andere aufheben.",
+        "erk": "„Schon“ und „noch nicht“ gehören zusammen. Paulus ist von Christus ergriffen und jagt doch weiter, um es zu ergreifen (Phil 3,12). Freiheit ist Freiheit zum Lieben (Gal 5,13).",
+        "bew": "Vom Berg hinuntersteigen: Die Gnade zeigt sich im Tun. Glaube ohne Werke ist tot (Jak 2,17).",
+        "kanon": "Röm 6,1 · Gal 5,13 · Phil 3,12 · Jak 2,17"
+      },
+      "en": {
+        "name": "Grace as a licence",
+        "sub": "the already without the not yet",
+        "q": "Am I using grace, freedom or perfection to excuse myself from commandment, repentance or practice?",
+        "mech": "What holds in the end is supposed to cancel everything else already now.",
+        "erk": "“Already” and “not yet” belong together. Paul has been taken hold of by Christ and still presses on to take hold of it (Phil 3:12). Freedom is freedom to love (Gal 5:13).",
+        "bew": "Come down from the mountain: grace shows in what you do. Faith without works is dead (Jas 2:17).",
+        "kanon": "Rom 6:1 · Gal 5:13 · Phil 3:12 · Jas 2:17"
+      }
+    },
+    {
+      "id": "D",
+      "de": {
+        "name": "Die Weise statt Gott",
+        "sub": "Mittel und Ziel vertauscht",
+        "q": "Suche ich Gott, oder das Gefühl, die Methode, die Regel, den Nutzen?",
+        "mech": "Ein Weg zu Gott, etwa Trost, Gebetsweise oder Regel, wird selbst zum Ziel. Oder Gott wird zum Mittel für meine Zwecke.",
+        "erk": "„Wer Gott in einer Weise sucht, ergreift die Weise und verfehlt Gott“ (Eckhart, Predigt 5b). Tröstungen sind Geschenke, kein Wohnort.",
+        "bew": "Fragen, wozu es dient, und die Gabe wieder hergeben. „Halte mich nicht fest“ (Joh 20,17).",
+        "kanon": "Mk 9,5 · Joh 20,17 · Mk 2,27"
+      },
+      "en": {
+        "name": "The way instead of God",
+        "sub": "means and end swapped",
+        "q": "Am I seeking God, or the feeling, the method, the rule, the benefit?",
+        "mech": "A way to God, such as consolation, a form of prayer or a rule, becomes the goal itself. Or God becomes a means to my ends.",
+        "erk": "“Whoever seeks God in a particular way takes the way and misses God” (Eckhart, Sermon 5b). Consolations are gifts, not a place to live.",
+        "bew": "Ask what it is for, and hand the gift back. “Do not hold on to me” (John 20:17).",
+        "kanon": "Mark 9:5 · John 20:17 · Mark 2:27"
+      }
+    },
+    {
+      "id": "E",
+      "de": {
+        "name": "Geistlicher Hochmut",
+        "sub": "das Ich im frommen Gewand",
+        "q": "Wer rühmt sich hier? Macht mich meine Frömmigkeit größer als andere?",
+        "mech": "Das Ich zieht in die Gnade ein und schreibt sie sich selbst zu.",
+        "erk": "„Was hast du, das du nicht empfangen hättest?“ (1 Kor 4,7). Paulus bekommt einen Stachel, damit er sich nicht überhebt (2 Kor 12,7).",
+        "bew": "Sich prüfen lassen, statt selbst zu urteilen: einen Begleiter fragen und auf die Früchte schauen (Mt 7,16). Demut ist die Bewegung nach unten (Phil 2,5–8).",
+        "kanon": "Lk 18,9–14 · 1 Kor 4,7 · 2 Kor 12,7"
+      },
+      "en": {
+        "name": "Spiritual pride",
+        "sub": "the I in pious clothing",
+        "q": "Who is boasting here? Does my piety make me greater than others?",
+        "mech": "The I moves into grace and credits it to itself.",
+        "erk": "“What do you have that you did not receive?” (1 Cor 4:7). Paul is given a thorn to keep him from being too elated (2 Cor 12:7).",
+        "bew": "Let yourself be tested instead of judging for yourself: ask a companion and look at the fruits (Matt 7:16). Humility is the movement downwards (Phil 2:5–8).",
+        "kanon": "Luke 18:9–14 · 1 Cor 4:7 · 2 Cor 12:7"
+      }
+    },
+    {
+      "id": "F",
+      "de": {
+        "name": "Ohne Liebe",
+        "sub": "kalt, ängstlich oder zu glatt",
+        "q": "Macht es mich liebevoller, oder nur ruhiger, sicherer, überlegener?",
+        "mech": "Erkenntnis, Ehrfurcht oder Freude treten ohne Liebe auf und sehen aus wie das Echte.",
+        "erk": "Die Liebe ist das Maß (1 Kor 13). Sie weint mit den Weinenden (Röm 12,15) und kennt keine Furcht (1 Joh 4,18).",
+        "bew": "Zum Nächsten gehen. Eckhart: die Verzückung lassen und dem Kranken die Suppe bringen (Reden der Unterweisung 10).",
+        "kanon": "1 Kor 13 · 1 Joh 4,18 · Röm 12,15"
+      },
+      "en": {
+        "name": "Without love",
+        "sub": "cold, fearful or too smooth",
+        "q": "Does it make me more loving, or only calmer, safer, more superior?",
+        "mech": "Knowledge, reverence or joy appear without love and look like the real thing.",
+        "erk": "Love is the measure (1 Cor 13). It weeps with those who weep (Rom 12:15) and knows no fear (1 John 4:18).",
+        "bew": "Go to your neighbour. Eckhart: leave the rapture and bring the sick person their soup (Talks of Instruction 10).",
+        "kanon": "1 Cor 13 · 1 John 4:18 · Rom 12:15"
+      }
+    },
+    {
+      "id": "G",
+      "de": {
+        "name": "Die halbe Wahrheit",
+        "sub": "Häresie heißt Auswahl",
+        "q": "Welche Hälfte habe ich weggelassen: Gnade oder Mitwirken, Trost oder Kreuz, Nähe oder Unterschied?",
+        "mech": "Ein Teil wird aus dem Ganzen herausgenommen und für das Ganze gehalten.",
+        "erk": "Die Mitte ist meist ein Paar: Wirkt euer Heil, denn Gott ist es, der wirkt (Phil 2,12–13). Unvermischt und ungetrennt (Chalcedon).",
+        "bew": "Die fehlende Hälfte suchen und wieder dazunehmen.",
+        "kanon": "Phil 2,12–13 · Mk 8,34 · Chalcedon 451"
+      },
+      "en": {
+        "name": "The half truth",
+        "sub": "heresy means choice",
+        "q": "Which half have I left out: grace or cooperation, consolation or cross, nearness or difference?",
+        "mech": "One part is taken out of the whole and held to be the whole.",
+        "erk": "The middle is usually a pair: work on your salvation, for it is God who works (Phil 2:12–13). Without confusion, without separation (Chalcedon).",
+        "bew": "Look for the missing half and put it back.",
+        "kanon": "Phil 2:12–13 · Mark 8:34 · Chalcedon 451"
+      }
+    }
+  ],
+  "entries": [
+    {
+      "id": "freigeist",
+      "k": "E",
+      "x": -0.7,
+      "y": -0.75,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Brüder und Schwestern des freien Geistes",
+            "https://de.wikipedia.org/w/index.php?search=Br%C3%BCder%20und%20Schwestern%20des%20freien%20Geistes&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Brethren of the Free Spirit",
+            "https://en.wikipedia.org/w/index.php?search=Brethren%20of%20the%20Free%20Spirit&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Marguerite Porete",
+            "https://de.wikipedia.org/w/index.php?search=Marguerite%20Porete&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Marguerite Porete",
+            "https://en.wikipedia.org/w/index.php?search=Marguerite%20Porete&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Heinrich Seuse",
+            "https://de.wikipedia.org/w/index.php?search=Heinrich%20Seuse&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Henry Suso",
+            "https://en.wikipedia.org/w/index.php?search=Henry%20Suso&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Jan van Ruusbroec",
+            "https://de.wikipedia.org/w/index.php?search=Jan%20van%20Ruusbroec&go=Go"
+          ],
+          "en": [
+            "Wikipedia: John of Ruusbroec",
+            "https://en.wikipedia.org/w/index.php?search=John%20of%20Ruusbroec&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Ich bin Gott",
+        "say": "„Ich bin mit Gott eins geworden und kann darum nicht mehr sündigen.“",
+        "wahr": "Einung mit Gott ist das Ziel der Mystik. „Wer sich an den Herrn bindet, ist ein Geist mit ihm“ (1 Kor 6,17).",
+        "kippt": "Aus Einung wird Gleichsetzung, und das Ich schreibt sich Gottes Freiheit zu. Die Einung ist Geschenk und Liebe, kein Besitz und keine Verwandlung in Gott.",
+        "stellen": "Konzil von Vienne 1311/12 („Ad nostrum“, acht Irrtümer); Seuse, Büchlein der Wahrheit („das namenlose Wilde“); Ruusbroec, Geistliche Hochzeit II",
+        "bsp": "Brüder und Schwestern des freien Geistes (13./14. Jh.). Heute: „Christus-Bewusstsein“ als eigenes höheres Ich."
+      },
+      "en": {
+        "label": "I am God",
+        "say": "“I have become one with God and therefore can no longer sin.”",
+        "wahr": "Union with God is the goal of mysticism. “Anyone united to the Lord becomes one spirit with him” (1 Cor 6:17).",
+        "kippt": "Union turns into identification, and the I claims God’s freedom for itself. Union is gift and love, not possession and not a transformation into God.",
+        "stellen": "Council of Vienne 1311/12 (“Ad nostrum”, eight errors); Suso, Little Book of Truth (“the nameless wild one”); Ruusbroec, Spiritual Espousals II",
+        "bsp": "Brethren of the Free Spirit (13th/14th c.). Today: “Christ consciousness” as one’s own higher self."
+      }
+    },
+    {
+      "id": "funke",
+      "k": "A",
+      "x": -0.55,
+      "y": -0.32,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Meister Eckhart",
+            "https://de.wikipedia.org/w/index.php?search=Meister%20Eckhart&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Meister Eckhart",
+            "https://en.wikipedia.org/w/index.php?search=Meister%20Eckhart&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: In agro dominico",
+            "https://de.wikipedia.org/w/index.php?search=In%20agro%20dominico&go=Go"
+          ],
+          "en": [
+            "Wikipedia: In agro dominico",
+            "https://en.wikipedia.org/w/index.php?search=In%20agro%20dominico&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Der göttliche Funke",
+        "say": "„In meiner Seele ist etwas, das ungeschaffen und Gott selbst ist.“",
+        "wahr": "Eckharts Seelenfünklein: Gott ist dem Menschen innerlicher als sein eigenes Innerstes (Augustinus).",
+        "kippt": "Als Besitzangabe gelesen wird daraus ein göttliches Selbst, das ich habe. Eckhart meint einen Vollzug, die Gottesgeburt, und keinen Gegenstand in mir.",
+        "stellen": "Bulle „In agro dominico“ 1329 (28 Sätze); Eckhart, Predigt 52 als Selbstkorrektur",
+        "bsp": "Lesarten, die Eckhart ohne Rest mit Advaita gleichsetzen. „Der göttliche Funke in jedem“ als Kalenderspruch.",
+        "own": {
+          "bew": "Vom Haben zum Geschehen: nicht „Ich habe etwas Göttliches“, sondern „In mir geschieht etwas, das nicht mir gehört“."
+        }
+      },
+      "en": {
+        "label": "The divine spark",
+        "say": "“There is something in my soul that is uncreated and is God himself.”",
+        "wahr": "Eckhart’s spark of the soul: God is more inward to a person than their own inmost self (Augustine).",
+        "kippt": "Read as a statement of ownership, it becomes a divine self that I have. Eckhart means an event, the birth of God, not an object inside me.",
+        "stellen": "Bull “In agro dominico” 1329 (28 propositions); Eckhart, Sermon 52 as self-correction",
+        "bsp": "Readings that equate Eckhart with Advaita without remainder. “The divine spark in everyone” as a calendar motto.",
+        "own": {
+          "bew": "From having to happening: not “I have something divine” but “something is happening in me that does not belong to me”."
+        }
+      }
+    },
+    {
+      "id": "griff",
+      "k": "A",
+      "x": -0.85,
+      "y": 0.2,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Negative Theologie",
+            "https://de.wikipedia.org/w/index.php?search=Negative%20Theologie&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Apophatic theology",
+            "https://en.wikipedia.org/w/index.php?search=Apophatic%20theology&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Pseudo-Dionysius Areopagita",
+            "https://de.wikipedia.org/w/index.php?search=Pseudo-Dionysius%20Areopagita&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Pseudo-Dionysius the Areopagite",
+            "https://en.wikipedia.org/w/index.php?search=Pseudo-Dionysius%20the%20Areopagite&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Meister Eckhart",
+            "https://de.wikipedia.org/w/index.php?search=Meister%20Eckhart&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Meister Eckhart",
+            "https://en.wikipedia.org/w/index.php?search=Meister%20Eckhart&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Gott im Griff",
+        "say": "„Ich weiß, wie Gott ist und was er will.“",
+        "wahr": "Glaube braucht Bilder und Worte.",
+        "kippt": "Das Bild wird mit Gott verwechselt. Wer Gott in einer bestimmten Weise sucht, ergreift die Weise (Eckhart). Thomas von Aquin: Wir wissen von Gott eher, was er nicht ist.",
+        "stellen": "Ex 20,4 (Bilderverbot); Dionysius Areopagita, Mystische Theologie; Augustinus, Sermo 117; Eckhart, Predigt 5b",
+        "bsp": "Fundamentalismus. „Gott will es.“ Das Gottesbild der eigenen Gruppe als Gott."
+      },
+      "en": {
+        "label": "God in my grip",
+        "say": "“I know what God is like and what he wants.”",
+        "wahr": "Faith needs images and words.",
+        "kippt": "The image is mistaken for God. Whoever seeks God in a particular way takes the way (Eckhart). Thomas Aquinas: we know rather what God is not.",
+        "stellen": "Exod 20:4 (prohibition of images); Dionysius the Areopagite, Mystical Theology; Augustine, Sermon 117; Eckhart, Sermon 5b",
+        "bsp": "Fundamentalism. “God wills it.” One’s own group’s image of God taken for God."
+      }
+    },
+    {
+      "id": "lieferant",
+      "k": "D",
+      "x": -0.8,
+      "y": 0.5,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Wohlstandsevangelium",
+            "https://de.wikipedia.org/w/index.php?search=Wohlstandsevangelium&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Prosperity theology",
+            "https://en.wikipedia.org/w/index.php?search=Prosperity%20theology&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Meister Eckhart",
+            "https://de.wikipedia.org/w/index.php?search=Meister%20Eckhart&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Meister Eckhart",
+            "https://en.wikipedia.org/w/index.php?search=Meister%20Eckhart&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Gott als Lieferant",
+        "say": "„Wer richtig glaubt und betet, wird gesund und reich.“",
+        "wahr": "Bitten ist erlaubt: „Bittet und es wird euch gegeben“ (Mt 7,7).",
+        "kippt": "Gott wird zum Mittel für meine Zwecke. Eckhart: Manche lieben Gott, wie sie eine Kuh lieben, wegen der Milch und des Käses (Predigt 16b). Und wer krank oder arm bleibt, hat dann angeblich zu wenig geglaubt.",
+        "stellen": "Joh 9,2–3 („Weder er noch seine Eltern haben gesündigt“); das Buch Ijob gegen seine Freunde; Mt 4,1–11",
+        "bsp": "Wohlstandsevangelium. „Name it and claim it.“ Krankheit als Zeichen mangelnden Glaubens."
+      },
+      "en": {
+        "label": "God as supplier",
+        "say": "“Whoever believes and prays rightly will be healthy and rich.”",
+        "wahr": "Asking is allowed: “Ask, and it will be given to you” (Matt 7:7).",
+        "kippt": "God becomes a means to my ends. Eckhart: some people love God the way they love a cow, for the milk and the cheese (Sermon 16b). And whoever stays ill or poor has then supposedly believed too little.",
+        "stellen": "John 9:2–3 (“Neither this man nor his parents sinned”); the Book of Job against his friends; Matt 4:1–11",
+        "bsp": "The prosperity gospel. “Name it and claim it.” Illness as a sign of too little faith."
+      }
+    },
+    {
+      "id": "huetten",
+      "k": "D",
+      "x": -0.5,
+      "y": 0.38,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Johannes vom Kreuz",
+            "https://de.wikipedia.org/w/index.php?search=Johannes%20vom%20Kreuz&go=Go"
+          ],
+          "en": [
+            "Wikipedia: John of the Cross",
+            "https://en.wikipedia.org/w/index.php?search=John%20of%20the%20Cross&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Teresa von Ávila",
+            "https://de.wikipedia.org/w/index.php?search=Teresa%20von%20%C3%81vila&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Teresa of Ávila",
+            "https://en.wikipedia.org/w/index.php?search=Teresa%20of%20%C3%81vila&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Messalianer",
+            "https://de.wikipedia.org/w/index.php?search=Messalianer&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Euchites",
+            "https://en.wikipedia.org/w/index.php?search=Euchites&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Hütten bauen",
+        "say": "„Es ist gut, dass wir hier sind. Wir wollen drei Hütten bauen.“",
+        "wahr": "Trost und Gipfelerfahrungen sind Geschenke.",
+        "kippt": "Petrus will den Augenblick auf dem Berg festhalten (Mk 9,5). Wer die Süße sucht statt Gott, betreibt „geistliche Völlerei“ (Johannes vom Kreuz). Visionen und Tröstungen soll man nicht festhalten.",
+        "stellen": "Mk 9,5; Joh 20,17; Johannes vom Kreuz, Dunkle Nacht I,6; Teresa von Ávila, Innere Burg IV,3",
+        "bsp": "Hochgefühl im Gottesdienst als Maß des Glaubens. Von Exerzitien zu Exerzitien. Die Messalianer (4. Jh.), die nur spürbare Erfahrung gelten ließen."
+      },
+      "en": {
+        "label": "Building shelters",
+        "say": "“It is good for us to be here. Let us set up three tents.”",
+        "wahr": "Consolation and peak experiences are gifts.",
+        "kippt": "Peter wants to hold on to the moment on the mountain (Mark 9:5). Whoever seeks the sweetness instead of God practises “spiritual gluttony” (John of the Cross). Visions and consolations are not to be held on to.",
+        "stellen": "Mark 9:5; John 20:17; John of the Cross, Dark Night I.6; Teresa of Ávila, Interior Castle IV.3",
+        "bsp": "The high in worship as the measure of faith. From retreat to retreat. The Messalians (4th c.), who accepted only felt experience."
+      }
+    },
+    {
+      "id": "eingebung",
+      "k": "E",
+      "x": -0.5,
+      "y": 0.26,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Unterscheidung der Geister",
+            "https://de.wikipedia.org/w/index.php?search=Unterscheidung%20der%20Geister&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Discernment of spirits",
+            "https://en.wikipedia.org/w/index.php?search=Discernment%20of%20spirits&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Geistliche Übungen",
+            "https://de.wikipedia.org/w/index.php?search=Geistliche%20%C3%9Cbungen&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Spiritual Exercises",
+            "https://en.wikipedia.org/w/index.php?search=Spiritual%20Exercises&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Montanismus",
+            "https://de.wikipedia.org/w/index.php?search=Montanismus&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Montanism",
+            "https://en.wikipedia.org/w/index.php?search=Montanism&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Gott hat mir gesagt",
+        "say": "„Der Geist hat es mir direkt eingegeben. Darum muss ich niemanden fragen.“",
+        "wahr": "Es gibt Eingebung. „Löscht den Geist nicht aus!“ (1 Thess 5,19).",
+        "kippt": "Der Satz geht weiter: „Prüft alles und behaltet das Gute“ (1 Thess 5,21). Ungeprüfte Eingebung ist von Wunsch und Eitelkeit nicht zu unterscheiden.",
+        "stellen": "1 Joh 4,1; 2 Kor 11,14; 1 Thess 5,19–21; Ignatius, Exerzitien 328–336",
+        "bsp": "Montanismus (2. Jh.). Luthers „Schwärmer“. Selbsternannte Propheten.",
+        "own": {
+          "bew": "Die Eingebung jemandem vorlegen und ihren Verlauf prüfen: Anfang, Mitte und Ende (Ignatius)."
+        }
+      },
+      "en": {
+        "label": "God told me",
+        "say": "“The Spirit gave it to me directly. So I don’t need to ask anyone.”",
+        "wahr": "Inspiration exists. “Do not quench the Spirit” (1 Thess 5:19).",
+        "kippt": "The sentence continues: “Test everything; hold fast to what is good” (1 Thess 5:21). Untested inspiration cannot be told apart from wish and vanity.",
+        "stellen": "1 John 4:1; 2 Cor 11:14; 1 Thess 5:19–21; Ignatius, Spiritual Exercises 328–336",
+        "bsp": "Montanism (2nd c.). Luther’s “enthusiasts”. Self-appointed prophets.",
+        "own": {
+          "bew": "Put the inspiration before someone else and examine its course: beginning, middle and end (Ignatius)."
+        }
+      }
+    },
+    {
+      "id": "pharisaeer",
+      "k": "E",
+      "x": -0.3,
+      "y": 0.62,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Evagrios Pontikos",
+            "https://de.wikipedia.org/w/index.php?search=Evagrios%20Pontikos&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Evagrius Ponticus",
+            "https://en.wikipedia.org/w/index.php?search=Evagrius%20Ponticus&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia (englisch): Prelest",
+            "https://en.wikipedia.org/w/index.php?search=Prelest&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Prelest",
+            "https://en.wikipedia.org/w/index.php?search=Prelest&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Johannes vom Kreuz",
+            "https://de.wikipedia.org/w/index.php?search=Johannes%20vom%20Kreuz&go=Go"
+          ],
+          "en": [
+            "Wikipedia: John of the Cross",
+            "https://en.wikipedia.org/w/index.php?search=John%20of%20the%20Cross&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Der Pharisäer",
+        "say": "„Gott, ich danke dir, dass ich nicht wie die anderen Menschen bin.“",
+        "wahr": "Ernsthafte Frömmigkeit und Disziplin sind gut.",
+        "kippt": "Die Frömmigkeit wird zum Besitz und zum Maß für andere. Evagrius nennt Ruhmsucht und Hochmut die letzten und feinsten Versuchungen. Sie kommen gerade nach dem Fortschritt.",
+        "stellen": "Lk 18,9–14; Mt 6,1–6; 1 Kor 8,1; Johannes vom Kreuz, Dunkle Nacht I,2",
+        "bsp": "Geistlicher Stolz. In der Ostkirche: Prelest. Frömmigkeit als Status in der Gemeinde."
+      },
+      "en": {
+        "label": "The Pharisee",
+        "say": "“God, I thank you that I am not like other people.”",
+        "wahr": "Earnest piety and discipline are good.",
+        "kippt": "Piety becomes a possession and a yardstick for others. Evagrius calls vainglory and pride the last and subtlest temptations. They come precisely after progress.",
+        "stellen": "Luke 18:9–14; Matt 6:1–6; 1 Cor 8:1; John of the Cross, Dark Night I.2",
+        "bsp": "Spiritual pride. In the Eastern church: prelest. Piety as status in the congregation."
+      }
+    },
+    {
+      "id": "allewege",
+      "k": "G",
+      "x": -0.68,
+      "y": -0.12,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Nostra aetate",
+            "https://de.wikipedia.org/w/index.php?search=Nostra%20aetate&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Nostra aetate",
+            "https://en.wikipedia.org/w/index.php?search=Nostra%20aetate&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Synkretismus",
+            "https://de.wikipedia.org/w/index.php?search=Synkretismus&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Religious syncretism",
+            "https://en.wikipedia.org/w/index.php?search=Religious%20syncretism&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Alle Wege sind gleich",
+        "say": "„Christus, Buddha, Krishna: verschiedene Namen für dasselbe.“",
+        "wahr": "Die Kirche lehnt nichts ab, was in anderen Religionen „wahr und heilig“ ist (Nostra aetate 2, 1965). Paulus knüpft in Athen an den „unbekannten Gott“ an (Apg 17,23).",
+        "kippt": "Die Unterschiede werden eingeebnet: Person oder Nicht-Selbst, Gnade oder Einsicht, Du oder Das. Wer alles gleichsetzt, hört keinem mehr zu.",
+        "stellen": "Apg 17,22–28; Joh 14,6; Nostra aetate 2",
+        "bsp": "„Christus-Bewusstsein“ im New Age. Synkretismus. Aus christlicher Sicht steht auch ein Vergleich wie auf diesen drei Karten unter dieser Frage.",
+        "own": {
+          "bew": "Erst unterscheiden, dann vergleichen. Das Eigene kennen, bevor man es gleichsetzt."
+        }
+      },
+      "en": {
+        "label": "All paths are the same",
+        "say": "“Christ, Buddha, Krishna: different names for the same thing.”",
+        "wahr": "The church rejects nothing that is “true and holy” in other religions (Nostra aetate 2, 1965). In Athens Paul starts from the “unknown god” (Acts 17:23).",
+        "kippt": "The differences are levelled: person or not-self, grace or insight, Thou or That. Whoever equates everything no longer listens to anyone.",
+        "stellen": "Acts 17:22–28; John 14:6; Nostra aetate 2",
+        "bsp": "“Christ consciousness” in the New Age. Religious syncretism. From a Christian point of view, a comparison like the one across these three maps stands under this question too.",
+        "own": {
+          "bew": "Distinguish first, then compare. Know your own before equating it."
+        }
+      }
+    },
+    {
+      "id": "schon",
+      "k": "C",
+      "x": -0.25,
+      "y": -0.72,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Thomasevangelium",
+            "https://de.wikipedia.org/w/index.php?search=Thomasevangelium&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Gospel of Thomas",
+            "https://en.wikipedia.org/w/index.php?search=Gospel%20of%20Thomas&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Präsentische Eschatologie",
+            "https://de.wikipedia.org/w/index.php?search=Pr%C3%A4sentische%20Eschatologie&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Realized eschatology",
+            "https://en.wikipedia.org/w/index.php?search=Realized%20eschatology&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Schon auferstanden",
+        "say": "„Wir sind schon vollendet. Die Auferstehung ist schon geschehen.“",
+        "wahr": "Das Reich Gottes ist „mitten unter euch“ (Lk 17,21). Im Thomas-Evangelium: Es ist über die Erde ausgebreitet, und die Menschen sehen es nicht (Logion 113).",
+        "kippt": "Das „Schon“ verschluckt das „Noch nicht“. Paulus spottet: „Ihr seid schon satt, ihr seid schon reich geworden“ (1 Kor 4,8).",
+        "stellen": "1 Kor 4,8; 2 Tim 2,18; Phil 3,12; Logion 51",
+        "bsp": "Die Gemeinde in Korinth. Lesarten des Thomas-Evangeliums ohne Weg, obwohl Logion 2 einen kennt: suchen, finden, erschüttert werden, staunen."
+      },
+      "en": {
+        "label": "Already risen",
+        "say": "“We are already perfected. The resurrection has already taken place.”",
+        "wahr": "The kingdom of God is “among you” (Luke 17:21). In the Gospel of Thomas: it is spread out upon the earth, and people do not see it (saying 113).",
+        "kippt": "The “already” swallows the “not yet”. Paul mocks: “Already you have all you want! Already you have become rich!” (1 Cor 4:8).",
+        "stellen": "1 Cor 4:8; 2 Tim 2:18; Phil 3:12; saying 51",
+        "bsp": "The congregation in Corinth. Readings of the Gospel of Thomas without a path, although saying 2 knows one: seek, find, be troubled, marvel."
+      }
+    },
+    {
+      "id": "freibrief",
+      "k": "C",
+      "x": 0,
+      "y": -0.9,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Antinomismus",
+            "https://de.wikipedia.org/w/index.php?search=Antinomismus&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Antinomianism",
+            "https://en.wikipedia.org/w/index.php?search=Antinomianism&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Nachfolge (Bonhoeffer)",
+            "https://de.wikipedia.org/w/index.php?search=Nachfolge%20(Bonhoeffer)&go=Go"
+          ],
+          "en": [
+            "Wikipedia: The Cost of Discipleship",
+            "https://en.wikipedia.org/w/index.php?search=The%20Cost%20of%20Discipleship&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Gnade als Freibrief",
+        "say": "„Wo die Gnade ist, gilt kein Gebot mehr.“",
+        "wahr": "„Zur Freiheit hat uns Christus befreit“ (Gal 5,1). Augustinus: „Liebe, und tu, was du willst.“",
+        "kippt": "Die Freiheit wird vom Lieben getrennt. „Sollen wir an der Sünde festhalten, damit die Gnade umso mächtiger werde? Keineswegs!“ (Röm 6,1). Alles ist erlaubt, aber nicht alles nützt (1 Kor 10,23).",
+        "stellen": "Röm 6,1; Gal 5,13; 1 Kor 10,23; Jak 2,17; Bonhoeffer, Nachfolge (1937)",
+        "bsp": "Antinomismus zu Luthers Zeit. Bonhoeffers „billige Gnade“. Übergriffe geistlicher Autoritäten mit frommer Begründung."
+      },
+      "en": {
+        "label": "Grace as a licence",
+        "say": "“Where grace is, no commandment applies any more.”",
+        "wahr": "“For freedom Christ has set us free” (Gal 5:1). Augustine: “Love, and do what you will.”",
+        "kippt": "Freedom is cut off from loving. “Should we continue in sin in order that grace may increase? By no means!” (Rom 6:1). All things are permitted, but not all things are beneficial (1 Cor 10:23).",
+        "stellen": "Rom 6:1; Gal 5:13; 1 Cor 10:23; Jas 2:17; Bonhoeffer, The Cost of Discipleship (1937)",
+        "bsp": "The antinomianism of Luther’s time. Bonhoeffer’s “cheap grace”. Abuse by spiritual authorities with pious justification."
+      }
+    },
+    {
+      "id": "ruhen",
+      "k": "G",
+      "x": 0.3,
+      "y": -0.78,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Quietismus",
+            "https://de.wikipedia.org/w/index.php?search=Quietismus&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Quietism (Christian contemplation)",
+            "https://en.wikipedia.org/w/index.php?search=Quietism%20(Christian%20contemplation)&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Miguel de Molinos",
+            "https://de.wikipedia.org/w/index.php?search=Miguel%20de%20Molinos&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Miguel de Molinos",
+            "https://en.wikipedia.org/w/index.php?search=Miguel%20de%20Molinos&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Jan van Ruusbroec",
+            "https://de.wikipedia.org/w/index.php?search=Jan%20van%20Ruusbroec&go=Go"
+          ],
+          "en": [
+            "Wikipedia: John of Ruusbroec",
+            "https://en.wikipedia.org/w/index.php?search=John%20of%20Ruusbroec&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Nur noch ruhen",
+        "say": "„Die Seele soll nichts mehr wollen und nichts mehr tun, nicht einmal beten.“",
+        "wahr": "Gelassenheit heißt: Gott wirken lassen. „Lasst ab und erkennt, dass ich Gott bin“ (Ps 46,11).",
+        "kippt": "Aus Gelassenheit wird Untätigkeit. Ruusbroec nennt das falsche Ledigkeit. Eckhart stellt die tätige Marta über Maria, weil sie aus dem Grund heraus handelt (Predigt 86).",
+        "stellen": "Phil 2,12–13; Lk 10,38–42; Ruusbroec, Geistliche Hochzeit II; Verurteilung des Molinos 1687",
+        "bsp": "Quietismus (Molinos, Madame Guyon). Heute: „Gott macht das schon“ als Ausrede.",
+        "own": {
+          "bew": "Die andere Hälfte dazunehmen und mitwirken. Marta nicht gegen Maria ausspielen."
+        }
+      },
+      "en": {
+        "label": "Only resting",
+        "say": "“The soul should want nothing and do nothing any more, not even pray.”",
+        "wahr": "Releasement means letting God act. “Be still, and know that I am God” (Ps 46:10).",
+        "kippt": "Releasement turns into inactivity. Ruusbroec calls this false emptiness. Eckhart ranks the active Martha above Mary because she acts out of the ground (Sermon 86).",
+        "stellen": "Phil 2:12–13; Luke 10:38–42; Ruusbroec, Spiritual Espousals II; condemnation of Molinos 1687",
+        "bsp": "Quietism (Molinos, Madame Guyon). Today: “God will take care of it” as an excuse.",
+        "own": {
+          "bew": "Add the other half and cooperate. Don’t play Martha off against Mary."
+        }
+      }
+    },
+    {
+      "id": "kreuz",
+      "k": "F",
+      "x": 0.15,
+      "y": -0.5,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Theologia crucis",
+            "https://de.wikipedia.org/w/index.php?search=Theologia%20crucis&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Theology of the Cross",
+            "https://en.wikipedia.org/w/index.php?search=Theology%20of%20the%20Cross&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Heidelberger Disputation",
+            "https://de.wikipedia.org/w/index.php?search=Heidelberger%20Disputation&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Heidelberg Disputation",
+            "https://en.wikipedia.org/w/index.php?search=Heidelberg%20Disputation&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Am Kreuz vorbei",
+        "say": "„Wer wirklich glaubt, ist immer froh.“",
+        "wahr": "Freude ist eine echte Frucht des Geistes (Gal 5,22).",
+        "kippt": "Leid, Zweifel und Klage werden übersprungen. Luther nennt das Theologie der Herrlichkeit: Sie nennt das Schlechte gut. Die Psalmen klagen, und Jesus weint (Joh 11,35).",
+        "stellen": "Luther, Heidelberger Disputation 1518 (These 21); Röm 12,15; Joh 11,35; Mk 15,34",
+        "bsp": "Trauernden sagen, es sei Gottes Plan. Dauerlobpreis. Fromme Positivität."
+      },
+      "en": {
+        "label": "Past the cross",
+        "say": "“Whoever truly believes is always joyful.”",
+        "wahr": "Joy is a real fruit of the Spirit (Gal 5:22).",
+        "kippt": "Suffering, doubt and lament are skipped. Luther calls this the theology of glory: it calls evil good. The Psalms lament, and Jesus weeps (John 11:35).",
+        "stellen": "Luther, Heidelberg Disputation 1518 (thesis 21); Rom 12:15; John 11:35; Mark 15:34",
+        "bsp": "Telling the bereaved that it is God’s plan. Non-stop praise. Pious positivity."
+      }
+    },
+    {
+      "id": "wohlfuehl",
+      "k": "G",
+      "x": 0.3,
+      "y": -0.35,
+      "links": [
+        {
+          "de": [
+            "Wikipedia (englisch): Moralistic therapeutic deism",
+            "https://en.wikipedia.org/w/index.php?search=Moralistic%20therapeutic%20deism&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Moralistic therapeutic deism",
+            "https://en.wikipedia.org/w/index.php?search=Moralistic%20therapeutic%20deism&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Nachfolge (Bonhoeffer)",
+            "https://de.wikipedia.org/w/index.php?search=Nachfolge%20(Bonhoeffer)&go=Go"
+          ],
+          "en": [
+            "Wikipedia: The Cost of Discipleship",
+            "https://en.wikipedia.org/w/index.php?search=The%20Cost%20of%20Discipleship&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Wohlfühl-Glaube",
+        "say": "„Gott möchte, dass ich nett bin und mich gut fühle. Mehr verlangt er nicht.“",
+        "wahr": "Gott ist gütig, und Glaube tröstet.",
+        "kippt": "Herausgepickt sind Trost und Moral. Weggelassen sind Umkehr, Kreuz und Nachfolge (Mk 8,34). Häresie heißt wörtlich Auswahl.",
+        "stellen": "Mk 8,34; Mt 7,21; Bonhoeffer, Nachfolge (1937)",
+        "bsp": "Moralistic Therapeutic Deism. Jesus nur als weiser Lehrer. Christentum als Wertelieferant."
+      },
+      "en": {
+        "label": "Feel-good faith",
+        "say": "“God wants me to be nice and to feel good. He asks nothing more.”",
+        "wahr": "God is kind, and faith consoles.",
+        "kippt": "Consolation and morality have been picked out. Left out are repentance, cross and discipleship (Mark 8:34). The word heresy literally means choice.",
+        "stellen": "Mark 8:34; Matt 7:21; Bonhoeffer, The Cost of Discipleship (1937)",
+        "bsp": "Moralistic Therapeutic Deism. Jesus only as a wise teacher. Christianity as a supplier of values."
+      }
+    },
+    {
+      "id": "gnosis",
+      "k": "B",
+      "x": 0.85,
+      "y": -0.25,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Gnosis",
+            "https://de.wikipedia.org/w/index.php?search=Gnosis&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Gnosticism",
+            "https://en.wikipedia.org/w/index.php?search=Gnosticism&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Doketismus",
+            "https://de.wikipedia.org/w/index.php?search=Doketismus&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Docetism",
+            "https://en.wikipedia.org/w/index.php?search=Docetism&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Irenäus von Lyon",
+            "https://de.wikipedia.org/w/index.php?search=Iren%C3%A4us%20von%20Lyon&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Irenaeus",
+            "https://en.wikipedia.org/w/index.php?search=Irenaeus&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Thomasevangelium",
+            "https://de.wikipedia.org/w/index.php?search=Thomasevangelium&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Gospel of Thomas",
+            "https://en.wikipedia.org/w/index.php?search=Gospel%20of%20Thomas&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Die Welt ist nichts",
+        "say": "„Welt und Leib sind Schein oder Gefängnis. Erlöst wird, wer das erkennt.“",
+        "wahr": "Erkenntnis befreit: „Die Wahrheit wird euch befreien“ (Joh 8,32).",
+        "kippt": "Die Schöpfung wird zum Unfall. Dagegen steht: „Es war sehr gut“ (Gen 1,31) und „Das Wort ist Fleisch geworden“ (Joh 1,14). Das ist auch das Kriterium der Unterscheidung in 1 Joh 4,2.",
+        "stellen": "Gen 1,31; Joh 1,14; 1 Joh 4,2; Irenäus, Gegen die Häresien (um 180)",
+        "bsp": "Gnosis, Doketismus, Manichäismus. Einzelne Sprüche im Thomas-Evangelium (Logion 56). Heute: Leibfeindlichkeit, „nur die Seele zählt“."
+      },
+      "en": {
+        "label": "The world is nothing",
+        "say": "“World and body are illusion or prison. Whoever sees this is saved.”",
+        "wahr": "Knowledge sets free: “The truth will make you free” (John 8:32).",
+        "kippt": "Creation becomes an accident. Against this stands: “It was very good” (Gen 1:31) and “The Word became flesh” (John 1:14). That is also the criterion of discernment in 1 John 4:2.",
+        "stellen": "Gen 1:31; John 1:14; 1 John 4:2; Irenaeus, Against Heresies (c. 180)",
+        "bsp": "Gnosticism, Docetism, Manichaeism. Individual sayings in the Gospel of Thomas (saying 56). Today: hostility to the body, “only the soul counts”."
+      }
+    },
+    {
+      "id": "akedia",
+      "k": "B",
+      "x": 0.9,
+      "y": -0.02,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Acedia",
+            "https://de.wikipedia.org/w/index.php?search=Acedia&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Acedia",
+            "https://en.wikipedia.org/w/index.php?search=Acedia&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Evagrios Pontikos",
+            "https://de.wikipedia.org/w/index.php?search=Evagrios%20Pontikos&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Evagrius Ponticus",
+            "https://en.wikipedia.org/w/index.php?search=Evagrius%20Ponticus&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Johannes vom Kreuz",
+            "https://de.wikipedia.org/w/index.php?search=Johannes%20vom%20Kreuz&go=Go"
+          ],
+          "en": [
+            "Wikipedia: John of the Cross",
+            "https://en.wikipedia.org/w/index.php?search=John%20of%20the%20Cross&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Der Mittagsdämon",
+        "say": "„Es bringt alles nichts. Wozu beten, wozu bleiben?“",
+        "wahr": "Trockenheit gehört zum Weg. Johannes vom Kreuz nennt sie die dunkle Nacht.",
+        "kippt": "Akedia ist Überdruss, der sich abwendet. Die Nacht ist Trockenheit, die trotzdem sucht. Johannes vom Kreuz gibt drei Zeichen, um beides zu unterscheiden (Dunkle Nacht I,9).",
+        "stellen": "Evagrius, Praktikos 12; Ps 91,6; Johannes vom Kreuz, Dunkle Nacht I,9",
+        "bsp": "Überdruss im Kloster wie im Alltag. Zynismus gegenüber allem Geistlichen.",
+        "own": {
+          "bew": "Bleiben und das Kleine tun: Evagrius rät, in der Zelle auszuharren. Hält die Schwere an, kann es eine Depression sein, und die gehört in ärztliche Hände."
+        }
+      },
+      "en": {
+        "label": "The noonday demon",
+        "say": "“None of it is any use. Why pray, why stay?”",
+        "wahr": "Dryness belongs to the way. John of the Cross calls it the dark night.",
+        "kippt": "Acedia is weariness that turns away. The night is dryness that goes on seeking. John of the Cross gives three signs for telling them apart (Dark Night I.9).",
+        "stellen": "Evagrius, Praktikos 12; Ps 91:6; John of the Cross, Dark Night I.9",
+        "bsp": "Weariness in the monastery as in everyday life. Cynicism towards everything spiritual.",
+        "own": {
+          "bew": "Stay and do the small thing: Evagrius advises persevering in the cell. If the heaviness persists, it may be depression, and that belongs in a doctor’s hands."
+        }
+      }
+    },
+    {
+      "id": "fern",
+      "k": "F",
+      "x": 0.78,
+      "y": 0.45,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Skrupulosität",
+            "https://de.wikipedia.org/w/index.php?search=Skrupulosit%C3%A4t&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Scrupulosity",
+            "https://en.wikipedia.org/w/index.php?search=Scrupulosity&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Jansenismus",
+            "https://de.wikipedia.org/w/index.php?search=Jansenismus&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Jansenism",
+            "https://en.wikipedia.org/w/index.php?search=Jansenism&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Gott ist weit weg",
+        "say": "„Gott ist der ferne Richter. Ich muss mich erst würdig machen.“",
+        "wahr": "Ehrfurcht: Gott ist größer als alles, was ich denke.",
+        "kippt": "Aus Ehrfurcht wird Angst und Abstand. „Furcht gibt es in der Liebe nicht“ (1 Joh 4,18). Der Vater läuft dem verlorenen Sohn entgegen (Lk 15,20).",
+        "stellen": "1 Joh 4,18; Lk 15,20; Röm 8,15",
+        "bsp": "Skrupulosität. Jansenismus. Strafende Gottesbilder aus der Kindheit.",
+        "own": {
+          "bew": "Sich finden lassen. Der Vater läuft entgegen, bevor der Sohn sein Bekenntnis zu Ende gesprochen hat."
+        }
+      },
+      "en": {
+        "label": "God is far away",
+        "say": "“God is the distant judge. I must first make myself worthy.”",
+        "wahr": "Reverence: God is greater than anything I can think.",
+        "kippt": "Reverence turns into fear and distance. “There is no fear in love” (1 John 4:18). The father runs to meet the lost son (Luke 15:20).",
+        "stellen": "1 John 4:18; Luke 15:20; Rom 8:15",
+        "bsp": "Scrupulosity. Jansenism. Punishing images of God from childhood.",
+        "own": {
+          "bew": "Let yourself be found. The father runs to meet the son before he has finished his confession."
+        }
+      }
+    },
+    {
+      "id": "kraft",
+      "k": "G",
+      "x": 0.3,
+      "y": 0.82,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Pelagianismus",
+            "https://de.wikipedia.org/w/index.php?search=Pelagianismus&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Pelagianism",
+            "https://en.wikipedia.org/w/index.php?search=Pelagianism&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Augustinus von Hippo",
+            "https://de.wikipedia.org/w/index.php?search=Augustinus%20von%20Hippo&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Augustine of Hippo",
+            "https://en.wikipedia.org/w/index.php?search=Augustine%20of%20Hippo&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Aus eigener Kraft",
+        "say": "„Wenn ich mich nur genug anstrenge, schaffe ich es.“",
+        "wahr": "Mitwirken ist verlangt: „Wirkt mit Furcht und Zittern euer Heil!“ (Phil 2,12).",
+        "kippt": "Der zweite Halbsatz fehlt: „Denn Gott ist es, der in euch das Wollen und das Vollbringen bewirkt“ (Phil 2,13).",
+        "stellen": "Phil 2,12–13; 1 Kor 4,7; Eph 2,8–9; Synode von Karthago 418",
+        "bsp": "Pelagianismus. Heute: Leistungsfrömmigkeit, geistliche Selbstoptimierung.",
+        "own": {
+          "bew": "Empfangen lernen. „Was hast du, das du nicht empfangen hättest?“ (1 Kor 4,7)."
+        }
+      },
+      "en": {
+        "label": "By my own strength",
+        "say": "“If I only try hard enough, I will make it.”",
+        "wahr": "Cooperation is required: “Work on your own salvation with fear and trembling” (Phil 2:12).",
+        "kippt": "The second half is missing: “For it is God who is at work in you, enabling you both to will and to work” (Phil 2:13).",
+        "stellen": "Phil 2:12–13; 1 Cor 4:7; Eph 2:8–9; Council of Carthage 418",
+        "bsp": "Pelagianism. Today: performance piety, spiritual self-optimisation.",
+        "own": {
+          "bew": "Learn to receive. “What do you have that you did not receive?” (1 Cor 4:7)."
+        }
+      }
+    },
+    {
+      "id": "buchstabe",
+      "k": "D",
+      "x": 0.55,
+      "y": 0.62,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Gesetzlichkeit (Theologie)",
+            "https://de.wikipedia.org/w/index.php?search=Gesetzlichkeit%20(Theologie)&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Legalism (theology)",
+            "https://en.wikipedia.org/w/index.php?search=Legalism%20(theology)&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Der Buchstabe",
+        "say": "„Wer alle Regeln hält, ist gerecht.“",
+        "wahr": "Gebote schützen und geben dem Leben Form.",
+        "kippt": "Die Regel wird zum Ziel. „Der Buchstabe tötet, der Geist aber macht lebendig“ (2 Kor 3,6). „Der Sabbat wurde für den Menschen gemacht“ (Mk 2,27).",
+        "stellen": "2 Kor 3,6; Mk 2,27; Mt 23,23; Gal 3,3",
+        "bsp": "Gesetzlichkeit. Moral als Kern des Glaubens. Streit um die richtige Form statt um die Sache."
+      },
+      "en": {
+        "label": "The letter",
+        "say": "“Whoever keeps all the rules is righteous.”",
+        "wahr": "Commandments protect and give life a form.",
+        "kippt": "The rule becomes the goal. “The letter kills, but the Spirit gives life” (2 Cor 3:6). “The Sabbath was made for humankind” (Mark 2:27).",
+        "stellen": "2 Cor 3:6; Mark 2:27; Matt 23:23; Gal 3:3",
+        "bsp": "Legalism. Morality as the core of faith. Fighting over the correct form instead of the matter itself."
+      }
+    },
+    {
+      "id": "leib",
+      "k": "B",
+      "x": 0.6,
+      "y": 0.9,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Askese",
+            "https://de.wikipedia.org/w/index.php?search=Askese&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Asceticism",
+            "https://en.wikipedia.org/w/index.php?search=Asceticism&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Johannes Cassianus",
+            "https://de.wikipedia.org/w/index.php?search=Johannes%20Cassianus&go=Go"
+          ],
+          "en": [
+            "Wikipedia: John Cassian",
+            "https://en.wikipedia.org/w/index.php?search=John%20Cassian&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Heinrich Seuse",
+            "https://de.wikipedia.org/w/index.php?search=Heinrich%20Seuse&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Henry Suso",
+            "https://en.wikipedia.org/w/index.php?search=Henry%20Suso&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Den Leib bezwingen",
+        "say": "„Je härter ich gegen mich bin, desto näher bin ich Gott.“",
+        "wahr": "Fasten und Verzicht haben ihren Ort.",
+        "kippt": "Härte gegen den Leib hat nur „den Schein von Weisheit“ (Kol 2,23). Seuse quälte sich jahrelang und hörte dann, er solle damit aufhören. Die Wüstenväter stellen die Unterscheidung über die Strenge.",
+        "stellen": "Kol 2,23; 1 Tim 4,4; Cassian, Unterredungen II; Seuse, Vita",
+        "bsp": "Selbstgeißelung. Selbsthass in frommem Gewand.",
+        "own": {
+          "bew": "Maß halten und milde mit sich sein. Alles, was Gott geschaffen hat, ist gut (1 Tim 4,4)."
+        }
+      },
+      "en": {
+        "label": "Subduing the body",
+        "say": "“The harder I am on myself, the closer I am to God.”",
+        "wahr": "Fasting and renunciation have their place.",
+        "kippt": "Severity to the body has only “an appearance of wisdom” (Col 2:23). Suso tormented himself for years and was then told to stop. The Desert Fathers rank discernment above austerity.",
+        "stellen": "Col 2:23; 1 Tim 4:4; Cassian, Conferences II; Suso, Life",
+        "bsp": "Self-flagellation. Self-hatred in pious clothing.",
+        "own": {
+          "bew": "Keep measure and be gentle with yourself. Everything created by God is good (1 Tim 4:4)."
+        }
+      }
+    },
+    {
+      "id": "ohneliebe",
+      "k": "F",
+      "x": 0.2,
+      "y": 0.32,
+      "links": [
+        {
+          "de": [
+            "Wikipedia: Meister Eckhart",
+            "https://de.wikipedia.org/w/index.php?search=Meister%20Eckhart&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Meister Eckhart",
+            "https://en.wikipedia.org/w/index.php?search=Meister%20Eckhart&go=Go"
+          ]
+        },
+        {
+          "de": [
+            "Wikipedia: Teresa von Ávila",
+            "https://de.wikipedia.org/w/index.php?search=Teresa%20von%20%C3%81vila&go=Go"
+          ],
+          "en": [
+            "Wikipedia: Teresa of Ávila",
+            "https://en.wikipedia.org/w/index.php?search=Teresa%20of%20%C3%81vila&go=Go"
+          ]
+        }
+      ],
+      "de": {
+        "label": "Erkenntnis ohne Liebe",
+        "say": "„Ich habe es verstanden. Die anderen sind noch nicht so weit.“",
+        "wahr": "Erkenntnis ist eine Gabe des Geistes (1 Kor 12,8).",
+        "kippt": "„Wenn ich alle Erkenntnis hätte, hätte aber die Liebe nicht, wäre ich nichts“ (1 Kor 13,2). Eckhart: Wer in Verzückung ist und weiß, dass ein Kranker eine Suppe braucht, soll die Verzückung lassen.",
+        "stellen": "1 Kor 13,2; 1 Kor 8,1; 1 Joh 4,20; Eckhart, Reden der Unterweisung 10; Teresa von Ávila, Innere Burg VII,4 („Werke, Werke“)",
+        "bsp": "Kalte Rechtgläubigkeit. Kontemplativer Rückzug ohne Blick für den Nächsten."
+      },
+      "en": {
+        "label": "Knowledge without love",
+        "say": "“I have understood it. The others aren’t that far yet.”",
+        "wahr": "Knowledge is a gift of the Spirit (1 Cor 12:8).",
+        "kippt": "“If I have all knowledge but do not have love, I am nothing” (1 Cor 13:2). Eckhart: if you are in rapture and know that a sick person needs soup, leave the rapture.",
+        "stellen": "1 Cor 13:2; 1 Cor 8:1; 1 John 4:20; Eckhart, Talks of Instruction 10; Teresa of Ávila, Interior Castle VII.4 (“works, works”)",
+        "bsp": "Cold orthodoxy. Contemplative withdrawal with no eye for one’s neighbour."
+      }
+    }
+  ],
+  "glossary": {
+    "de": {
+      "Unterscheidung der Geister": "(lat. discretio spirituum) die Kunst zu prüfen, woher ein innerer Antrieb kommt und wohin er führt",
+      "Quietismus": "Lehre des 17. Jh. (Molinos): Die Seele soll völlig passiv ruhen; 1687 verurteilt",
+      "Pelagianismus": "Lehre des Pelagius (um 400): Der Mensch kann das Heil aus eigener Kraft erreichen; 418 verurteilt",
+      "Werkgerechtigkeit": "die Vorstellung, sich durch eigene Leistungen vor Gott gerecht zu machen",
+      "Antinomismus": "„gegen das Gesetz“: Wer in der Gnade steht, sei an kein Gebot mehr gebunden",
+      "Antinomer": "Luthers Wort für die Vertreter des Antinomismus",
+      "Gnosis": "„Erkenntnis“: Strömungen des 2./3. Jh., die Erlösung durch geheimes Wissen lehren und die Welt abwerten",
+      "Doketismus": "Lehre, Christus habe nur einen Scheinleib gehabt",
+      "Manichäismus": "Religion des Mani (3. Jh.) mit strengem Gegensatz von Licht und Materie",
+      "Akedia": "(griech.) Überdruss, geistliche Trägheit; bei Evagrius der „Mittagsdämon“",
+      "Prelest": "(russ.) geistliche Selbsttäuschung: sich für fortgeschritten halten und gerade darin getäuscht sein",
+      "Messalianer": "„Beter“: Bewegung des 4. Jh., die allein auf spürbare Gebetserfahrung setzte; 431 verurteilt",
+      "Montanismus": "prophetische Bewegung des 2. Jh., die neue Offenbarungen über die Kirche stellte",
+      "Jansenismus": "strenge Bewegung des 17. Jh. mit düsterem Bild von Gnade und Erwählung",
+      "Skrupulosität": "quälende, übergenaue Gewissensangst",
+      "Gesetzlichkeit": "Glaube als Regelbefolgung",
+      "Schwärmer": "Luthers Wort für Gruppen, die sich auf unmittelbare Eingebung beriefen",
+      "Häresie": "von griech. haíresis, „Auswahl“: ein Teil der Lehre wird herausgenommen und absolut gesetzt",
+      "Gelassenheit": "von Eckhart geprägt: sich und die Dinge lassen, damit Gott wirken kann",
+      "falsche Ledigkeit": "Ruusbroecs Ausdruck für ein leeres, selbstbezogenes Ruhen, das sich für Einung hält",
+      "Seelenfünklein": "Eckharts Bild für das Innerste der Seele, in dem Gott gegenwärtig ist",
+      "Gottesgeburt": "Eckharts Lehre: Gott gebiert seinen Sohn im Grund der Seele",
+      "Logion": "(griech.) Spruch; das Thomas-Evangelium besteht aus 114 Jesusworten",
+      "Wohlstandsevangelium": "Lehre, Gott belohne rechten Glauben mit Gesundheit und Reichtum",
+      "Synkretismus": "Vermischung verschiedener Religionen",
+      "Theologie der Herrlichkeit": "Luthers Gegenbegriff zur Theologie des Kreuzes: Gott im Glanz und Erfolg suchen",
+      "billige Gnade": "Bonhoeffers Ausdruck (1937): Vergebung ohne Umkehr, Gnade ohne Nachfolge",
+      "Chalcedon": "Konzil von 451: Christus ist wahrer Gott und wahrer Mensch, „unvermischt und ungetrennt“",
+      "Moralistic Therapeutic Deism": "Begriff des Soziologen Christian Smith (2005): Gott will, dass man nett ist und sich gut fühlt, und bleibt sonst fern"
+    },
+    "en": {
+      "discernment of spirits": "(Lat. discretio spirituum) the art of testing where an inner impulse comes from and where it leads",
+      "Quietism": "17th-century teaching (Molinos): the soul should rest in complete passivity; condemned in 1687",
+      "Pelagianism": "teaching of Pelagius (c. 400): humans can reach salvation by their own strength; condemned in 418",
+      "works-righteousness": "the idea of making oneself righteous before God through one’s own achievements",
+      "antinomianism": "“against the law”: whoever stands in grace is no longer bound by any commandment",
+      "Gnosticism": "currents of the 2nd/3rd century teaching salvation through secret knowledge and devaluing the world",
+      "Docetism": "the teaching that Christ only seemed to have a body",
+      "Manichaeism": "religion of Mani (3rd c.) with a strict opposition of light and matter",
+      "acedia": "(Greek) listlessness, spiritual sloth; in Evagrius the “noonday demon”",
+      "prelest": "(Russian) spiritual self-deception: believing oneself advanced and being deceived in exactly that",
+      "Messalians": "“those who pray”: 4th-century movement relying solely on felt experience in prayer; condemned in 431",
+      "Montanism": "prophetic movement of the 2nd century that placed new revelations above the church",
+      "Jansenism": "strict 17th-century movement with a dark view of grace and election",
+      "scrupulosity": "tormenting, over-exact anxiety of conscience",
+      "legalism": "faith as rule-keeping",
+      "enthusiasts": "Luther’s word (Schwärmer) for groups appealing to direct inspiration",
+      "heresy": "from Greek haíresis, “choice”: one part of the teaching is picked out and made absolute",
+      "releasement": "Eckhart’s Gelassenheit: letting go of oneself and of things so that God can act",
+      "false emptiness": "Ruusbroec’s term for an empty, self-absorbed rest that takes itself for union",
+      "spark of the soul": "Eckhart’s image for the innermost part of the soul, where God is present",
+      "birth of God": "Eckhart’s teaching: God gives birth to his Son in the ground of the soul",
+      "saying": "the Gospel of Thomas consists of 114 sayings (logia) of Jesus",
+      "prosperity gospel": "teaching that God rewards right faith with health and wealth",
+      "syncretism": "the blending of different religions",
+      "theology of glory": "Luther’s counter-term to the theology of the cross: seeking God in splendour and success",
+      "cheap grace": "Bonhoeffer’s phrase (1937): forgiveness without repentance, grace without discipleship",
+      "Chalcedon": "council of 451: Christ is true God and true human, “without confusion, without separation”",
+      "Moralistic Therapeutic Deism": "term of the sociologist Christian Smith (2005): God wants people to be nice and feel good, and otherwise stays distant"
+    }
+  },
+  "linking": {
+    "tables": {
+      "BOOK_DE": {
+        "Gen": "1.Mose",
+        "Ex": "2.Mose",
+        "Ps": "Psalm",
+        "Mt": "Matthäus",
+        "Mk": "Markus",
+        "Lk": "Lukas",
+        "Joh": "Johannes",
+        "Apg": "Apostelgeschichte",
+        "Röm": "Römer",
+        "1 Kor": "1.Korinther",
+        "2 Kor": "2.Korinther",
+        "Gal": "Galater",
+        "Eph": "Epheser",
+        "Phil": "Philipper",
+        "Kol": "Kolosser",
+        "1 Thess": "1.Thessalonicher",
+        "1 Tim": "1.Timotheus",
+        "2 Tim": "2.Timotheus",
+        "Jak": "Jakobus",
+        "1 Joh": "1.Johannes"
+      },
+      "BOOK_EN": {
+        "Gen": "Genesis",
+        "Exod": "Exodus",
+        "Ps": "Psalm",
+        "Matt": "Matthew",
+        "Mark": "Mark",
+        "Luke": "Luke",
+        "John": "John",
+        "Acts": "Acts",
+        "Rom": "Romans",
+        "1 Cor": "1 Corinthians",
+        "2 Cor": "2 Corinthians",
+        "Gal": "Galatians",
+        "Eph": "Ephesians",
+        "Phil": "Philippians",
+        "Col": "Colossians",
+        "1 Thess": "1 Thessalonians",
+        "1 Tim": "1 Timothy",
+        "2 Tim": "2 Timothy",
+        "Jas": "James",
+        "1 John": "1 John"
+      }
+    },
+    "rules": [
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])(1 Thess|1 Kor|2 Kor|1 Tim|2 Tim|1 Joh|Phil|Gen|Joh|Apg|Röm|Gal|Eph|Kol|Jak|Ex|Ps|Mt|Mk|Lk) (\\d+)(?:,(\\d+)(?:[–-](\\d+))?)?(?![\\p{L}\\d])",
+        "url": "https://www.bibleserver.com/EU/{1|map:BOOK_DE|enc}{2}[%2C{3}][-{4}]"
+      },
+      {
+        "lang": "de",
+        "pattern": "(?<![\\p{L}\\d])Logion (\\d+)(?![\\p{L}\\d])",
+        "url": "https://www.earlychristianwritings.com/thomas/gospelthomas{1}.html"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])(1 Thess|1 John|1 Cor|2 Cor|1 Tim|2 Tim|Exod|Matt|Mark|Luke|John|Acts|Phil|Gen|Rom|Gal|Eph|Col|Jas|Ps) (\\d+)(?::(\\d+)(?:[–-](\\d+))?)?(?![\\p{L}\\d])",
+        "url": "https://www.biblegateway.com/passage/?search={1|map:BOOK_EN|enc}%20{2}[%3A{3}][-{4}]&version=NRSVUE"
+      },
+      {
+        "lang": "en",
+        "pattern": "(?<![\\p{L}\\d])[Ss]aying (\\d+)(?![\\p{L}\\d])",
+        "url": "https://www.earlychristianwritings.com/thomas/gospelthomas{1}.html"
+      }
+    ]
+  }
+}

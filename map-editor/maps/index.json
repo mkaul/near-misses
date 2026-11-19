@@ -1,0 +1,34 @@
+[
+  {
+    "id": "buddha",
+    "file": "maps/buddha.json",
+    "title": {
+      "de": "Landkarte der Fehlformen",
+      "en": "Map of Near Misses"
+    }
+  },
+  {
+    "id": "nonduality",
+    "file": "maps/nonduality.json",
+    "title": {
+      "de": "Knapp daneben ist auch daneben",
+      "en": "A Near Miss Is Still a Miss"
+    }
+  },
+  {
+    "id": "christ",
+    "file": "maps/christ.json",
+    "title": {
+      "de": "Unterscheidung der Geister",
+      "en": "Discernment of Spirits"
+    }
+  },
+  {
+    "id": "islam",
+    "file": "maps/islam.json",
+    "title": {
+      "de": "Der verborgene Götze",
+      "en": "The Hidden Idol"
+    }
+  }
+]
