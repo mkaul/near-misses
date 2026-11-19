@@ -17,6 +17,7 @@ const SH={
    term:"Begriff",expl:"Erklärung",addTerm:"+ Begriff",
    linkHelp:"Jede Regel hat lang (de, en oder *), pattern (regulärer Ausdruck) und url. In der url stehen {1}, {2} … für die Gruppen des Ausdrucks, mit Filtern wie {1|pad3}, {1|enc}, {1|map:TABELLE}, {2|or:1}. Teile in [eckigen Klammern] fallen weg, wenn eine Gruppe darin leer ist.",
    jsonErr:"Fehler im JSON:"},
+  casesH:"Fälle",casesP:"Ein Fall nimmt eine einzelne Haltung oder Übung, etwa Dankbarkeit, und prüft sie mit den sieben Prüffragen dieser Karten. Die Einschätzung gilt für alle vier Karten. Auf jeder Karte werden die Punkte hervorgehoben, die der Fall berührt. Wähle einen Fall, um ihn über die Karte zu legen.",casesPEdit:"Ein Fall prüft eine Haltung oder Übung mit den sieben Prüffragen. Wähle einen Fall zum Bearbeiten oder lege einen neuen an. Darunter folgt die Karte mit den hervorgehobenen Punkten.",noCaseChip:"Keiner",
   caseL:"Fall",noCase:"kein Fall",newCase:"+ Neuer Fall",kern:"Körnchen Wahrheit",caseOpen:"Offen",lv:{yes:"trifft",part:"teils",no:"trifft nicht"},
   caseHint:"Hervorgehoben sind die Punkte, die der Fall auf dieser Karte berührt. Ein Klick auf eine Klasse filtert die Karte, ein Klick auf einen Punktnamen zeigt ihn.",
   casesDirty:"Fälle: ungespeicherte Änderungen",casesDraft:"Für die Fälle gibt es einen ungespeicherten Entwurf vom",
@@ -36,6 +37,7 @@ const SH={
    term:"Term",expl:"Explanation",addTerm:"+ Term",
    linkHelp:"Each rule has lang (de, en or *), pattern (a regular expression) and url. In the url, {1}, {2} … stand for the groups of the expression, with filters such as {1|pad3}, {1|enc}, {1|map:TABLE}, {2|or:1}. Parts in [square brackets] are dropped when a group inside is empty.",
    jsonErr:"Error in JSON:"},
+  casesH:"Cases",casesP:"A case takes a single attitude or practice, such as gratitude, and checks it with the seven test questions of these maps. The assessment holds for all four maps. On each map the points the case touches are highlighted. Choose a case to lay it over the map.",casesPEdit:"A case checks an attitude or practice with the seven test questions. Choose a case to edit or create a new one. The map with the highlighted points follows below.",noCaseChip:"None",
   caseL:"Case",noCase:"no case",newCase:"+ New case",kern:"Grain of truth",caseOpen:"Open",lv:{yes:"applies",part:"partly",no:"does not apply"},
   caseHint:"Highlighted are the points the case touches on this map. Click a class to filter the map, click a point name to show it.",
   casesDirty:"Cases: unsaved changes",casesDraft:"There is an unsaved draft of the cases from",
@@ -87,7 +89,7 @@ function mount(){
     panelRenderer:state.mode==="edit"?entryForm:null,
     onMove:(e,done)=>{if(done==="start"){commit();return}if(done===true){setDirty(true);safeUpdate()}const f=$("ef-x");if(f&&state.view.selected===e.id){f.value=e.x;$("ef-y").value=e.y}},
     onAdd:(x,y,k)=>newEntry(x,y,k),
-    beforeMap:caseBox,
+    beforeMap:caseSection,
     onSelect:null});
   if(sel)state.view.selected=sel;
   state.view.overlay=overlayFor(curCase());
@@ -357,12 +359,26 @@ async function saveCases(){
 }
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n}
 function caseLabel(V,k){const t=(k[state.lang]||{});const b=el("span","case-cls-in");b.appendChild(el("i"));b.append(k.id+" · "+LK.stripTags(t.name||""));return b}
+function caseSection(V){
+  if(!state.data)return null;const T=S(),edit=state.mode==="edit";
+  if(!state.cases.cases.length&&!edit)return null;
+  const sec=el("section","cases");sec.id="lk-cases";
+  sec.appendChild(el("h2",null,T.casesH));
+  const p=el("p","cases-intro",edit?T.casesPEdit:T.casesP);sec.appendChild(p);
+  const ch=el("div","case-choose");ch.setAttribute("role","group");ch.setAttribute("aria-label",T.casesH);
+  const chip=(label,id,cls)=>{const b=el("button","chip"+(cls?" "+cls:""),label);b.type="button";b.setAttribute("aria-pressed",(state.caseId||"")===id?"true":"false");
+    b.addEventListener("click",()=>{if(id==="__new")newCase();else setCase(id)});ch.appendChild(b)};
+  chip(T.noCaseChip,"");for(const c of state.cases.cases)chip(caseName(c),c.id);if(edit)chip(T.newCase,"__new","case-new");
+  sec.appendChild(ch);
+  const box=caseBox(V);if(box)sec.appendChild(box);
+  return sec;
+}
 function caseBox(V){
   const c=curCase();if(!c||!state.data)return null;
   const L=state.lang,T=S(),t=c[L]||{},d=state.data,pts=new Set((c.points||{})[d.id]||[]);
   const box=el("div","case");box.setAttribute("aria-label",T.caseL);
   if(state.mode==="edit")return caseForm(V,box,c);
-  box.appendChild(el("div","eyebrow",T.caseL));box.appendChild(el("h3",null,t.name||c.id));
+  box.appendChild(el("h3",null,t.name||c.id));
   if(t.desc){const p=el("p");LK.setHTML(p,t.desc);box.appendChild(p)}
   if(t.kern){const p=el("p");p.appendChild(el("span","lbl",T.kern));const s=el("span");LK.setHTML(s,t.kern);p.appendChild(s);box.appendChild(p)}
   const rows=el("div","case-rows");
@@ -384,7 +400,6 @@ function caseBox(V){
 function caseForm(V,box,c){
   const L=state.lang,T=S(),F=T.cf,d=state.data,t=c[L]||(c[L]={});
   box.classList.add("ed-form");
-  box.appendChild(el("div","eyebrow",T.caseL));
   const g=el("div","ed-grid");
   const idI=input(c.id);const msg=el("small","ed-err");
   idI.addEventListener("change",()=>{const v=idI.value.trim();if(!/^[a-z0-9][a-z0-9-]*$/.test(v)){msg.textContent=T.f.idBad;idI.value=c.id;return}
@@ -452,12 +467,15 @@ window.addEventListener("beforeunload",ev=>{if(state.dirty||state.casesDirty){ev
 
 /* ---------- start ---------- */
 (async function(){
-  try{const q=new URLSearchParams(location.search);const s=q.get("lang")||store.get("lang");if(s==="de"||s==="en")state.lang=s;const m=q.get("mode")||store.get("lk-mode");if(m==="edit"||m==="view")state.mode=m}catch(_){}
+  let qCase=null;
+  try{const q=new URLSearchParams(location.search);qCase=q.get("case");const s=q.get("lang")||store.get("lang");if(s==="de"||s==="en")state.lang=s;const m=q.get("mode")||store.get("lk-mode");if(m==="edit"||m==="view")state.mode=m}catch(_){}
   labels();
   mo.observe($("app"),{childList:true,subtree:true});
   await loadIndex();
   await loadCases();
+  if(qCase&&state.cases.cases.some(c=>c.id===qCase)){state.caseId=qCase;fillCaseSel()}
   const h=location.hash.slice(1);
   await loadMap(state.index.some(m=>m.id===h)?h:(state.index[0]&&state.index[0].id));
+  if(qCase&&state.caseId===qCase){const c=document.getElementById("lk-cases");if(c)c.scrollIntoView()}
 })();
 })();

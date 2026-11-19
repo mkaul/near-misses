@@ -158,6 +158,27 @@ h2{font:700 clamp(28px,4vw,42px)/1.12 var(--serif);letter-spacing:-.015em;margin
 .feat li::before{content:"";flex:none;width:6px;height:6px;border-radius:2px;background:var(--c);transform:translateY(-2px)}
 @media (max-width:480px){.feat{grid-template-columns:1fr}}
 
+/* ---------- applications (cases) ---------- */
+.apps .list{display:grid;gap:20px}
+.case-card{--c:var(--editor);background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:24px 26px;display:grid;gap:12px;border-top:4px solid var(--c)}
+.case-card .ey{font:600 12px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.case-card h3{font:700 clamp(22px,2.6vw,27px)/1.18 var(--serif);margin:0;letter-spacing:-.01em}
+.case-card p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.6;max-width:62em}
+.case-card p b{color:var(--fg);font-weight:600}
+.prof{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
+.prof .ks{display:flex;gap:5px}
+.prof .k{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font:600 13px/1 var(--sans);border:1.5px solid var(--fg);color:var(--fg)}
+.prof .k.yes{background:var(--fg);color:var(--bg)}
+.prof .k.no{border-color:var(--line);color:var(--muted)}
+.prof .legend{font-size:14px;color:var(--muted)}
+.case-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.case-links span{font:600 13px/1 var(--sans);color:var(--muted);margin-right:4px}
+.case-links a{font:500 14px/1 var(--sans);text-decoration:none;padding:9px 13px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+.case-links a:hover{border-color:var(--fg)}
+.case-links a:focus-visible{outline:3px solid var(--christ);outline-offset:2px}
+.apps .own{margin:20px 0 0;color:var(--muted);font-size:15.5px}
+.apps .own a{color:var(--fg);font-weight:600}
+
 /* ---------- quote + footer ---------- */
 .quote{text-align:center;padding:72px 0}
 .quote blockquote{margin:0 auto;max-width:28em;font:italic 400 clamp(22px,3.2vw,32px)/1.35 var(--serif);text-wrap:balance}
@@ -183,6 +204,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--fg)}
     <nav class="nav">
       <a class="lnk" href="#idea" data-i="navIdea">Die Idee</a>
       <a class="lnk" href="#maps" data-i="navMaps">Karten</a>
+      <a class="lnk" href="#apps" data-i="navApps">Anwendungen</a>
       <a class="lnk" href="#editor" data-i="navEditor">Editor</a>
       <div class="lang" role="group" aria-label="Sprache / Language">
         <button type="button" data-lang="de" lang="de" aria-pressed="true">DE</button>
@@ -345,6 +367,17 @@ footer a{text-decoration:none}footer a:hover{color:var(--fg)}
     </div>
   </section>
 
+  <!-- ---------- applications: cases from map-editor/maps/faelle.json ---------- -->
+  <section id="apps" class="apps">
+    <div class="wrap">
+      <p class="kicker" data-i="appsKicker">Anwendungen</p>
+      <h2 data-i="appsH">Die Karten im Gebrauch</h2>
+      <p class="sub" data-i="appsSub">Ein Fall nimmt eine einzelne Haltung oder Übung und prüft sie mit den sieben Prüffragen. Das Ergebnis gilt für alle vier Karten: Auf jeder werden die Punkte hervorgehoben, die der Fall berührt.</p>
+      <div class="list" id="case-list" aria-live="polite"></div>
+      <p class="own" data-i="appsOwn" data-html>Eigene Fälle legst du im <a href="map-editor/index.html?mode=edit#nonduality" data-editor>Editor</a> unter „Fälle“ an.</p>
+    </div>
+  </section>
+
   <!-- ---------- closing ---------- -->
   <section class="quote">
     <div class="wrap">
@@ -366,7 +399,10 @@ footer a{text-decoration:none}footer a:hover{color:var(--fg)}
 "use strict";
 var T={
   en:{
-    navIdea:"The idea",navMaps:"Maps",navEditor:"Editor",
+    navIdea:"The idea",navMaps:"Maps",navApps:"Applications",navEditor:"Editor",
+    appsKicker:"Applications",appsH:"The maps in use",
+    appsSub:"A case takes a single attitude or practice and checks it with the seven test questions. The result holds for all four maps: on each one the points the case touches are highlighted.",
+    appsOwn:'Create your own cases in the <a href="map-editor/index.html?mode=edit#nonduality" data-editor>editor</a> under “Cases”.',
     eyebrow:"Four interactive maps",
     h1:'A near miss is still <span class="hl">a miss.</span>',
     lead:'Some views lie so close to real insight that you can hardly tell them apart. That is exactly why they lead astray. These maps show <strong>84 such near misses</strong> from Buddhism, Christianity, Islam and today’s nonduality, each with the real thing it imitates.',
@@ -427,11 +463,45 @@ function apply(l){
   nodes.forEach(function(n){var v=d[n.dataset.i];if(v==null)return;if(n.hasAttribute("data-html"))n.innerHTML=v;else n.textContent=v});
   document.title=l==="en"?"Near Misses · Maps of the near miss":"Near Misses · Landkarten des Knapp-daneben";
   document.querySelectorAll("a[data-map]").forEach(function(a){a.href=a.getAttribute("href").split("?")[0]+"?lang="+l});
-  document.querySelectorAll("a[data-editor]").forEach(function(a){a.href=a.getAttribute("href").split("?")[0]+"?lang="+l+"&mode=edit"});
+  document.querySelectorAll("a[data-editor]").forEach(function(a){var h=a.getAttribute("href"),hash=h.indexOf("#")>=0?h.slice(h.indexOf("#")):"";a.href=h.split("?")[0].split("#")[0]+"?lang="+l+"&mode=edit"+hash});
   document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===l?"true":"false")});
 }
 document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){if(b.dataset.lang!==lang)apply(b.dataset.lang)})});
 apply(lang);
+})();
+</script>
+<script>
+/* Applications: render the cases from map-editor/maps/faelle.json (or the embedded copy when opened from file://). */
+(function(){
+  "use strict";
+  var MAPS=[["buddha",{de:"Buddhismus",en:"Buddhism"}],["christ",{de:"Christentum",en:"Christianity"}],["islam",{de:"Islam",en:"Islam"}],["nonduality",{de:"Nondualität",en:"Nonduality"}]];
+  var TX={de:{ey:"Fall",kern:"Körnchen Wahrheit:",lv:{yes:"trifft",part:"teils",no:"trifft nicht"},see:"Auf der Karte ansehen:",none:"Noch keine Fälle."},
+          en:{ey:"Case",kern:"Grain of truth:",lv:{yes:"applies",part:"partly",no:"does not apply"},see:"See it on the map:",none:"No cases yet."}};
+  var data=null,list=document.getElementById("case-list");
+  function e(tag,cls,txt){var n=document.createElement(tag);if(cls)n.className=cls;if(txt!=null)n.textContent=txt;return n}
+  function strip(s){var d=document.createElement("div");d.innerHTML=s||"";return d.textContent}
+  function render(){
+    if(!list)return;var l=document.documentElement.lang==="en"?"en":"de",T=TX[l];list.replaceChildren();
+    if(!data||!data.cases||!data.cases.length){list.appendChild(e("p","sub",T.none));return}
+    data.cases.forEach(function(c){
+      var t=c[l]||c.de||{},a=e("article","case-card");
+      a.appendChild(e("span","ey",T.ey));a.appendChild(e("h3",null,t.name||c.id));
+      if(t.desc)a.appendChild(e("p",null,strip(t.desc)));
+      if(t.kern){var p=e("p");p.appendChild(e("b",null,T.kern+" "));p.append(strip(t.kern));a.appendChild(p)}
+      var prof=e("div","prof"),ks=e("div","ks"),by={yes:[],part:[],no:[]};
+      ["A","B","C","D","E","F","G"].forEach(function(k){var lv=((c.hits||{})[k]||{}).level||"no";by[lv].push(k);var b=e("span","k "+lv,k);b.title=k+": "+T.lv[lv];ks.appendChild(b)});
+      prof.appendChild(ks);
+      prof.appendChild(e("span","legend",["yes","part","no"].filter(function(v){return by[v].length}).map(function(v){return T.lv[v]+": "+by[v].join(", ")}).join(" · ")));
+      a.appendChild(prof);
+      var ln=e("div","case-links");ln.appendChild(e("span",null,T.see));
+      MAPS.forEach(function(m){if(!(c.points||{})[m[0]])return;var x=e("a",null,m[1][l]);x.href="map-editor/index.html?case="+encodeURIComponent(c.id)+"&lang="+l+"#"+m[0];ln.appendChild(x)});
+      a.appendChild(ln);list.appendChild(a);
+    });
+  }
+  function useEmbedded(){var s=document.createElement("script");s.src="map-editor/maps-embedded.js";s.onload=function(){data=window.__MAPS&&window.__MAPS.cases;render()};s.onerror=render;document.head.appendChild(s)}
+  if(/^https?:$/.test(location.protocol))fetch("map-editor/maps/faelle.json").then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){data=d;render()}).catch(useEmbedded);
+  else useEmbedded();
+  new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
 })();
 </script>
 </body>

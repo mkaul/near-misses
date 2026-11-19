@@ -171,7 +171,11 @@ button.danger{border-color:var(--cA)!important;color:var(--cA)!important}
 @media (max-width:600px){.ed-crow{grid-template-columns:14px 56px minmax(0,1fr) auto}.ed-crow input:nth-of-type(3),.ed-crow input[type=color]{display:none}}
 
 /* cases laid over the map */
-.case{border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--surface);border-radius:4px;padding:18px 20px;margin-bottom:18px;display:grid;gap:10px}
+.cases{display:grid;gap:14px}
+.cases-intro{max-width:68ch}
+.case-choose{display:flex;flex-wrap:wrap;gap:8px}
+.case-choose .case-new{border-style:dashed;color:var(--muted)}
+.case{border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--surface);border-radius:4px;padding:18px 20px;display:grid;gap:10px}
 .case h3{font-size:1.3rem}
 .case .lbl{font-family:var(--ui);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
 .case-rows{display:grid;border-top:1px solid var(--line)}

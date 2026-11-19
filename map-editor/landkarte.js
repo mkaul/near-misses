@@ -191,7 +191,7 @@ function create(root,opts){
           sec.appendChild(g);addBtn(sec,pth("sections",i,L(),"items"),EL().addSource);if(t.hint||V.editable)sec.appendChild(h("p",{class:"hint","data-path":pth("sections",i,L(),"hint")},t.hint||""));break}
         case "map":{
           sec=h("section",{id:"lk-map-section"});if(t.h)sec.appendChild(h("h2",{style:"margin-bottom:14px","data-path":pth("sections",i,L(),"h")},t.h));
-          if(opts.beforeMap){const bm=opts.beforeMap(V);if(bm){sec.appendChild(bm);V.els.caseBox=bm}}
+          if(opts.beforeMap){const bm=opts.beforeMap(V);if(bm){wrap.appendChild(bm);V.els.caseBox=bm}}
           V.els.filters=sec.appendChild(h("div",{class:"filters",role:"group"}));
           const atlas=sec.appendChild(h("div",{class:"atlas"}));
           const box=atlas.appendChild(h("div",{class:"mapbox"}));
@@ -292,7 +292,7 @@ function create(root,opts){
       g.classList.toggle("faint",!!O&&!hit&&lv(e.k)!=="no");
       g.classList.toggle("hit",hit);
       g.classList.toggle("sel",e.id===V.selected)});
-    root.querySelectorAll(".chip").forEach(c=>{c.setAttribute("aria-pressed",c.dataset.k===(V.active||"")?"true":"false");if(O&&c.dataset.k)c.dataset.level=lv(c.dataset.k);else delete c.dataset.level});
+    (V.els.filters?V.els.filters.querySelectorAll(".chip"):[]).forEach(c=>{c.setAttribute("aria-pressed",c.dataset.k===(V.active||"")?"true":"false");if(O&&c.dataset.k)c.dataset.level=lv(c.dataset.k);else delete c.dataset.level});
   }
 
   /* --- lists --- */
@@ -354,7 +354,7 @@ function create(root,opts){
     build();
     if(keepPanel&&V.els.panel){V.els.panel.replaceWith(keepPanel);V.els.panel=keepPanel}
     renderLists();drawMap();
-    for(const n of V.els.wrap.children){if(!n.contains(V.els.panel))enrich(n);else{for(const c of n.querySelectorAll(".hint,h2"))if(!(V.els.caseBox&&V.els.caseBox.contains(c)))enrich(c);if(V.els.caseBox&&!V.editable)enrich(V.els.caseBox)}}
+    for(const n of V.els.wrap.children){if(n===V.els.caseBox){if(!V.editable)enrich(n)}else if(!n.contains(V.els.panel))enrich(n);else{for(const c of n.querySelectorAll(".hint,h2"))enrich(c)}}
     refresh();window.scrollTo(0,y);
   }
   Object.assign(V,{render,update,select,refresh,drawMap,renderLists,panelView,enrich,
