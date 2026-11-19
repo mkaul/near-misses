@@ -17,6 +17,10 @@ const SH={
    term:"Begriff",expl:"Erklärung",addTerm:"+ Begriff",
    linkHelp:"Jede Regel hat lang (de, en oder *), pattern (regulärer Ausdruck) und url. In der url stehen {1}, {2} … für die Gruppen des Ausdrucks, mit Filtern wie {1|pad3}, {1|enc}, {1|map:TABELLE}, {2|or:1}. Teile in [eckigen Klammern] fallen weg, wenn eine Gruppe darin leer ist.",
    jsonErr:"Fehler im JSON:"},
+  caseL:"Fall",noCase:"kein Fall",newCase:"+ Neuer Fall",kern:"Körnchen Wahrheit",caseOpen:"Offen",lv:{yes:"trifft",part:"teils",no:"trifft nicht"},
+  caseHint:"Hervorgehoben sind die Punkte, die der Fall auf dieser Karte berührt. Ein Klick auf eine Klasse filtert die Karte, ein Klick auf einen Punktnamen zeigt ihn.",
+  casesDirty:"Fälle: ungespeicherte Änderungen",casesDraft:"Für die Fälle gibt es einen ungespeicherten Entwurf vom",
+  cf:{id:"Kennung",name:"Name des Falls",desc:"Worum es geht",kern:"Körnchen Wahrheit",open:"Offen geblieben",level:"Trifft zu?",note:"Begründung",pts:"Punkte auf dieser Karte",save:"Fälle als JSON speichern",del:"Fall löschen",delSure:"Wirklich löschen?",help:"Für jede Klasse: trifft die Prüffrage auf den Fall zu? Begründung in einem Satz, dazu die passenden Punkte dieser Karte anklicken. Die Einschätzung gilt für alle Karten, die Punkte nur für diese."},
   exportT:"Die Datei konnte hier nicht gespeichert werden. Kopiere den Inhalt und speichere ihn selbst als",copy:"Kopieren",copied:"Kopiert",close:"Schließen"},
  en:{map:"Map",view:"View",edit:"Edit",open:"Open JSON",undo:"Undo",newE:"New entry",save:"Save as JSON",
   own:"Own file",loading:"Loading map …",loadErr:"The map could not be loaded",badFile:"This file is not a map in the landkarte/1 format.",
@@ -32,10 +36,15 @@ const SH={
    term:"Term",expl:"Explanation",addTerm:"+ Term",
    linkHelp:"Each rule has lang (de, en or *), pattern (a regular expression) and url. In the url, {1}, {2} … stand for the groups of the expression, with filters such as {1|pad3}, {1|enc}, {1|map:TABLE}, {2|or:1}. Parts in [square brackets] are dropped when a group inside is empty.",
    jsonErr:"Error in JSON:"},
+  caseL:"Case",noCase:"no case",newCase:"+ New case",kern:"Grain of truth",caseOpen:"Open",lv:{yes:"applies",part:"partly",no:"does not apply"},
+  caseHint:"Highlighted are the points the case touches on this map. Click a class to filter the map, click a point name to show it.",
+  casesDirty:"Cases: unsaved changes",casesDraft:"There is an unsaved draft of the cases from",
+  cf:{id:"Identifier",name:"Name of the case",desc:"What it is about",kern:"Grain of truth",open:"Left open",level:"Applies?",note:"Reason",pts:"Points on this map",save:"Save cases as JSON",del:"Delete case",delSure:"Really delete?",help:"For each class: does its test question apply to the case? Give the reason in one sentence and click the matching points of this map. The assessment holds for all maps, the points only for this one."},
   exportT:"The file could not be saved here. Copy the content and save it yourself as",copy:"Copy",copied:"Copied",close:"Close"}
 };
 const S=()=>SH[state.lang];
-const state={lang:"de",mode:"view",index:[],id:null,data:null,view:null,undo:[],dirty:false,ownName:null};
+const state={lang:"de",mode:"view",index:[],id:null,data:null,view:null,undo:[],dirty:false,ownName:null,
+  cases:{format:"landkarte-faelle/1",id:"faelle",version:0,langs:["de","en"],cases:[]},caseId:null,casesDirty:false,casesDraft:null};
 const store={get(k){try{return localStorage.getItem(k)}catch(_){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(_){}},del(k){try{localStorage.removeItem(k)}catch(_){}}};
 const clone=o=>JSON.parse(JSON.stringify(o));
 
@@ -78,8 +87,10 @@ function mount(){
     panelRenderer:state.mode==="edit"?entryForm:null,
     onMove:(e,done)=>{if(done==="start"){commit();return}if(done===true){setDirty(true);safeUpdate()}const f=$("ef-x");if(f&&state.view.selected===e.id){f.value=e.x;$("ef-y").value=e.y}},
     onAdd:(x,y,k)=>newEntry(x,y,k),
+    beforeMap:caseBox,
     onSelect:null});
   if(sel)state.view.selected=sel;
+  state.view.overlay=overlayFor(curCase());
   state.view.render();
   renderSettings();
   $("edit-hint").textContent=S().hintEdit;
@@ -95,9 +106,9 @@ function setStatus(t){$("status").textContent=t||""}
 function undo(){const s=state.undo.pop();if(!s)return;snapOpen=false;state.data=JSON.parse(s);state.view.data=state.data;state.view.render();renderSettings();setDirty(true)}
 function checkDraft(){
   const b=$("banner");b.hidden=true;if(state.mode!=="edit"||!state.data)return;
-  const raw=store.get("lk-draft-"+state.data.id);if(!raw)return;
+  const raw=store.get("lk-draft-"+state.data.id);if(!raw){checkCasesDraft();return}
   let dr;try{dr=JSON.parse(raw)}catch(_){return}
-  if(!dr||!dr.data||JSON.stringify(dr.data)===JSON.stringify(state.data))return;
+  if(!dr||!dr.data||JSON.stringify(dr.data)===JSON.stringify(state.data)){checkCasesDraft();return}
   b.replaceChildren();const p=document.createElement("span");p.textContent=S().draft+" "+new Date(dr.at).toLocaleString(state.lang==="de"?"de-DE":"en-GB")+".";b.appendChild(p);
   const l=mkBtn(S().draftLoad,()=>{state.undo.push(JSON.stringify(state.data));state.data=dr.data;b.hidden=true;mount();setDirty(true)},"primary");
   const x=mkBtn(S().draftDrop,()=>{store.del("lk-draft-"+state.data.id);b.hidden=true});
@@ -277,6 +288,9 @@ async function save(){
   const d=clone(state.data);d.version=(parseInt(d.version,10)||0)+1;d.modified=new Date().toISOString().slice(0,10);cleanOwn(d);
   const name=`${d.id||"landkarte"}-v${d.version}.json`,text=JSON.stringify(d,null,2)+"\n";
   const done=()=>{state.data.version=d.version;state.data.modified=d.modified;store.del("lk-draft-"+d.id);setDirty(false);setStatus(S().saved+" "+name)};
+  await offerFile(name,text,done);
+}
+async function offerFile(name,text,done){
   if(downloads){try{await downloads.save({filename:name,data:text});done();return}catch(err){if(err&&err.code==="declined"){setStatus(S().declined);return}}}
   if(!(window.claude&&window.claude.use)){try{const u=URL.createObjectURL(new Blob([text],{type:"application/json"}));const a=document.createElement("a");a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),2000);done();return}catch(_){}}
   showExport(name,text,done);
@@ -290,15 +304,135 @@ function showExport(name,text,done){
   row.append(c,mkBtn(S().close,()=>{b.hidden=true}));b.appendChild(row);b.hidden=false;b.scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 
+/* ---------- cases: one file for all maps, laid over the current map ---------- */
+const LV=["yes","part","no"];
+const lvOf=(c,k)=>((c.hits||{})[k]||{}).level||"no";
+function validateCases(d){return d&&typeof d==="object"&&d.format==="landkarte-faelle/1"&&Array.isArray(d.cases)}
+async function loadCases(){
+  try{if(!HTTP)throw 0;const r=await fetch("maps/faelle.json");if(!r.ok)throw 0;const d=await r.json();if(validateCases(d))state.cases=d}
+  catch(_){const em=window.__MAPS&&window.__MAPS.cases;if(validateCases(em))state.cases=JSON.parse(JSON.stringify(em))}
+  const raw=store.get("lk-cases-draft");
+  if(raw){try{const dr=JSON.parse(raw);if(dr&&validateCases(dr.data)&&JSON.stringify(dr.data)!==JSON.stringify(state.cases))state.casesDraft=dr;else store.del("lk-cases-draft")}catch(_){}}
+  const c=store.get("lk-case");if(c&&state.cases.cases.some(x=>x.id===c))state.caseId=c;
+  fillCaseSel();
+}
+function curCase(){return state.cases.cases.find(c=>c.id===state.caseId)||null}
+function caseName(c){return ((c[state.lang]||c.de||c.en||{}).name)||c.id}
+function fillCaseSel(){
+  const s=$("casesel");s.replaceChildren();s.appendChild(new Option("– "+S().noCase+" –",""));
+  for(const c of state.cases.cases)s.appendChild(new Option(caseName(c),c.id));
+  if(state.mode==="edit")s.appendChild(new Option(S().newCase,"__new"));
+  s.value=state.caseId||"";
+}
+function overlayFor(c){if(!c||!state.data)return null;const levels={};for(const k in (c.hits||{}))levels[k]=c.hits[k].level||"no";
+  return {levels,points:new Set((c.points||{})[state.data.id]||[])}}
+function applyOverlay(){if(state.view)state.view.setOverlay(overlayFor(curCase()))}
+function setCase(id){
+  state.caseId=id||null;store.set("lk-case",id||"");fillCaseSel();
+  if(!state.view)return;state.view.overlay=overlayFor(curCase());state.view.update();if(state.mode==="edit")prepEditable($("app"));
+}
+function casesChanged(){state.casesDirty=true;store.set("lk-cases-draft",JSON.stringify({at:new Date().toISOString(),data:state.cases}));
+  const st=document.getElementById("case-status");if(st)st.textContent=S().casesDirty}
+function newCase(){
+  let i=1;while(state.cases.cases.some(c=>c.id==="fall-"+i))i++;
+  const c={id:"fall-"+i,hits:{},points:{}};
+  for(const l of state.cases.langs||["de","en"])c[l]={name:l==="de"?"Neuer Fall":"New case",desc:"",kern:""};
+  for(const k of (state.data&&state.data.classes)||[])c.hits[k.id]={level:"no"};
+  state.cases.cases.push(c);casesChanged();setCase(c.id);
+  setTimeout(()=>{const f=document.getElementById("cf-name");if(f){f.focus();f.select()}},50);
+}
+function checkCasesDraft(){
+  const b=$("banner");if(state.mode!=="edit"||!state.casesDraft||!b.hidden)return;
+  const dr=state.casesDraft;b.replaceChildren();
+  const p=document.createElement("span");p.textContent=S().casesDraft+" "+new Date(dr.at).toLocaleString(state.lang==="de"?"de-DE":"en-GB")+".";b.appendChild(p);
+  const l=mkBtn(S().draftLoad,()=>{state.cases=dr.data;state.casesDraft=null;state.casesDirty=true;b.hidden=true;if(!curCase())state.caseId=(state.cases.cases[0]||{}).id||null;setCase(state.caseId)},"primary");
+  const x=mkBtn(S().draftDrop,()=>{store.del("lk-cases-draft");state.casesDraft=null;b.hidden=true});
+  b.append(l,x);b.hidden=false;
+}
+async function saveCases(){
+  const d=clone(state.cases);d.version=(parseInt(d.version,10)||0)+1;d.modified=new Date().toISOString().slice(0,10);
+  const name=`${d.id||"faelle"}-v${d.version}.json`,text=JSON.stringify(d,null,2)+"\n";
+  await offerFile(name,text,()=>{state.cases.version=d.version;state.cases.modified=d.modified;store.del("lk-cases-draft");state.casesDirty=false;state.casesDraft=null;
+    setStatus(S().saved+" "+name);const st=document.getElementById("case-status");if(st)st.textContent=S().saved+" "+name});
+}
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n}
+function caseLabel(V,k){const t=(k[state.lang]||{});const b=el("span","case-cls-in");b.appendChild(el("i"));b.append(k.id+" · "+LK.stripTags(t.name||""));return b}
+function caseBox(V){
+  const c=curCase();if(!c||!state.data)return null;
+  const L=state.lang,T=S(),t=c[L]||{},d=state.data,pts=new Set((c.points||{})[d.id]||[]);
+  const box=el("div","case");box.setAttribute("aria-label",T.caseL);
+  if(state.mode==="edit")return caseForm(V,box,c);
+  box.appendChild(el("div","eyebrow",T.caseL));box.appendChild(el("h3",null,t.name||c.id));
+  if(t.desc){const p=el("p");LK.setHTML(p,t.desc);box.appendChild(p)}
+  if(t.kern){const p=el("p");p.appendChild(el("span","lbl",T.kern));const s=el("span");LK.setHTML(s,t.kern);p.appendChild(s);box.appendChild(p)}
+  const rows=el("div","case-rows");
+  const order=[...d.classes].sort((a,b)=>LV.indexOf(lvOf(c,a.id))-LV.indexOf(lvOf(c,b.id)));
+  for(const k of order){const lv=lvOf(c,k.id),hit=(c.hits||{})[k.id]||{};
+    const r=el("div","case-row lv-"+lv);r.style.setProperty("--c",`var(--c${k.id})`);
+    const head=el("button","case-cls");head.type="button";head.appendChild(caseLabel(V,k));
+    head.addEventListener("click",()=>{V.active=V.active===k.id?null:k.id;const first=d.entries.find(e=>e.k===k.id&&pts.has(e.id));if(V.active&&first)V.select(first.id);else V.refresh()});
+    r.appendChild(head);r.appendChild(el("span","case-lv",T.lv[lv]));
+    const note=el("p","case-note");LK.setHTML(note,hit[L]||"");r.appendChild(note);
+    const mine=d.entries.filter(e=>e.k===k.id&&pts.has(e.id));
+    if(mine.length){const w=el("div","case-pts");for(const e of mine){const b=el("button","case-pt",LK.stripTags((e[L]||{}).label||e.id));b.type="button";b.addEventListener("click",()=>{V.select(e.id)});w.appendChild(b)}r.appendChild(w)}
+    rows.appendChild(r)}
+  box.appendChild(rows);
+  if(t.open){const p=el("p");p.appendChild(el("span","lbl",T.caseOpen));const s=el("span");LK.setHTML(s,t.open);p.appendChild(s);box.appendChild(p)}
+  box.appendChild(el("p","hint",T.caseHint));
+  return box;
+}
+function caseForm(V,box,c){
+  const L=state.lang,T=S(),F=T.cf,d=state.data,t=c[L]||(c[L]={});
+  box.classList.add("ed-form");
+  box.appendChild(el("div","eyebrow",T.caseL));
+  const g=el("div","ed-grid");
+  const idI=input(c.id);const msg=el("small","ed-err");
+  idI.addEventListener("change",()=>{const v=idI.value.trim();if(!/^[a-z0-9][a-z0-9-]*$/.test(v)){msg.textContent=T.f.idBad;idI.value=c.id;return}
+    if(state.cases.cases.some(x=>x!==c&&x.id===v)){msg.textContent=T.f.idTaken;idI.value=c.id;return}msg.textContent="";c.id=v;state.caseId=v;store.set("lk-case",v);casesChanged();fillCaseSel()});
+  const nm=input(t.name);nm.addEventListener("input",()=>{t.name=nm.value;casesChanged()});nm.addEventListener("change",fillCaseSel);
+  g.appendChild(field(F.name,"cf-name",nm));g.appendChild(field(F.id,"cf-id",idI));box.appendChild(g);box.appendChild(msg);
+  for(const key of ["desc","kern","open"]){const a=area(t[key],2);a.addEventListener("input",()=>{if(a.value)t[key]=a.value;else delete t[key];casesChanged()});box.appendChild(field(F[key],"cf-"+key,a))}
+  box.appendChild(el("p","hint",F.help));
+  c.hits=c.hits||{};c.points=c.points||{};
+  const rows=el("div","case-rows");
+  for(const k of d.classes){const hit=c.hits[k.id]||(c.hits[k.id]={level:"no"});
+    const r=el("div","case-row lv-"+(hit.level||"no"));r.style.setProperty("--c",`var(--c${k.id})`);
+    const head=el("div","case-cls");head.appendChild(caseLabel(V,k));r.appendChild(head);
+    const sel=document.createElement("select");sel.setAttribute("aria-label",F.level+" "+k.id);
+    for(const v of LV)sel.appendChild(new Option(T.lv[v],v));sel.value=hit.level||"no";
+    sel.addEventListener("change",()=>{hit.level=sel.value;r.className="case-row lv-"+sel.value;casesChanged();applyOverlay()});
+    r.appendChild(sel);
+    const note=area(hit[L],2);note.className="case-note";note.setAttribute("aria-label",F.note+" "+k.id);
+    note.addEventListener("input",()=>{if(note.value)hit[L]=note.value;else delete hit[L];casesChanged()});r.appendChild(note);
+    const mine=d.entries.filter(e=>e.k===k.id);
+    if(mine.length){const w=el("div","case-pts");w.setAttribute("aria-label",F.pts);
+      for(const e of mine){const b=el("button","case-pt",LK.stripTags((e[L]||{}).label||e.id));b.type="button";
+        const on=()=>((c.points[d.id]||[]).includes(e.id));b.setAttribute("aria-pressed",on()?"true":"false");
+        b.addEventListener("click",()=>{const a=c.points[d.id]||(c.points[d.id]=[]);const i=a.indexOf(e.id);if(i>=0)a.splice(i,1);else a.push(e.id);if(!a.length)delete c.points[d.id];
+          b.setAttribute("aria-pressed",on()?"true":"false");casesChanged();applyOverlay()});
+        w.appendChild(b)}
+      r.appendChild(w)}
+    rows.appendChild(r)}
+  box.appendChild(rows);
+  const act=el("div","ed-actions");
+  act.appendChild(mkBtn(F.save,saveCases,"primary"));
+  const del=mkBtn(F.del,()=>{if(!del.dataset.sure){del.dataset.sure="1";del.textContent=F.delSure;del.classList.add("danger");return}
+    state.cases.cases.splice(state.cases.cases.indexOf(c),1);casesChanged();setCase(null)});
+  act.appendChild(del);
+  const st=el("span","status");st.id="case-status";st.setAttribute("aria-live","polite");st.textContent=state.casesDirty?T.casesDirty:"";act.appendChild(st);
+  box.appendChild(act);
+  return box;
+}
+
 /* ---------- toolbar ---------- */
 function labels(){
   const s=S();$("l-map").textContent=s.map;$("m-view").textContent=s.view;$("m-edit").textContent=s.edit;$("b-open").textContent=s.open;
-  $("b-undo").textContent=s.undo;$("b-new").textContent=s.newE;$("b-save").textContent=s.save;
+  $("l-case").textContent=s.caseL;$("b-undo").textContent=s.undo;$("b-new").textContent=s.newE;$("b-save").textContent=s.save;
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===state.lang?"true":"false"));
   $("m-view").setAttribute("aria-pressed",state.mode==="view");$("m-edit").setAttribute("aria-pressed",state.mode==="edit");
 }
-function setLang(l){if(l===state.lang)return;state.lang=l;store.set("lang",l);labels();const v=$("mapsel").value;loadIndex().then(()=>{$("mapsel").value=v});if(state.data)mount();setDirty(state.dirty)}
-function setMode(m){state.mode=m;store.set("lk-mode",m);labels();if(state.data){mount();checkDraft()}setDirty(state.dirty)}
+function setLang(l){if(l===state.lang)return;state.lang=l;store.set("lang",l);labels();const v=$("mapsel").value;loadIndex().then(()=>{$("mapsel").value=v});fillCaseSel();if(state.data)mount();setDirty(state.dirty)}
+function setMode(m){state.mode=m;store.set("lk-mode",m);labels();fillCaseSel();if(state.data){mount();checkDraft()}setDirty(state.dirty)}
 document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
 $("m-view").addEventListener("click",()=>setMode("view"));
 $("m-edit").addEventListener("click",()=>setMode("edit"));
@@ -307,11 +441,14 @@ $("b-new").addEventListener("click",()=>newEntry());
 $("b-save").addEventListener("click",save);
 $("b-open").addEventListener("click",()=>$("f-open").click());
 $("f-open").addEventListener("change",ev=>{const f=ev.target.files&&ev.target.files[0];if(!f)return;const r=new FileReader();
-  r.onload=()=>{let d;try{d=JSON.parse(r.result)}catch(_){setStatus(S().badFile);return}if(!validate(d)){setStatus(S().badFile);return}
+  r.onload=()=>{let d;try{d=JSON.parse(r.result)}catch(_){setStatus(S().badFile);return}
+    if(validateCases(d)){state.cases=d;state.casesDirty=false;setStatus(S().caseL+": "+f.name);setCase((d.cases[0]||{}).id||null);return}
+    if(!validate(d)){setStatus(S().badFile);return}
     state.ownName=f.name;state.id="__own";loadIndex().then(()=>{$("mapsel").value="__own"});useData(d)};r.readAsText(f);ev.target.value=""});
+$("casesel").addEventListener("change",()=>{const v=$("casesel").value;if(v==="__new"){newCase();return}setCase(v)});
 $("mapsel").addEventListener("change",()=>{const v=$("mapsel").value;if(v!=="__own")loadMap(v)});
 window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(h&&h!==state.id&&state.index.some(m=>m.id===h))loadMap(h)});
-window.addEventListener("beforeunload",ev=>{if(state.dirty){ev.preventDefault()}});
+window.addEventListener("beforeunload",ev=>{if(state.dirty||state.casesDirty){ev.preventDefault()}});
 
 /* ---------- start ---------- */
 (async function(){
@@ -319,6 +456,7 @@ window.addEventListener("beforeunload",ev=>{if(state.dirty){ev.preventDefault()}
   labels();
   mo.observe($("app"),{childList:true,subtree:true});
   await loadIndex();
+  await loadCases();
   const h=location.hash.slice(1);
   await loadMap(state.index.some(m=>m.id===h)?h:(state.index[0]&&state.index[0].id));
 })();

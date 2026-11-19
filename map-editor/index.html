@@ -169,6 +169,36 @@ button.danger{border-color:var(--cA)!important;color:var(--cA)!important}
 .ed-dot{width:12px;height:12px;border-radius:50%;display:inline-block}
 .ed-crow input[type=color]{padding:2px;height:32px}
 @media (max-width:600px){.ed-crow{grid-template-columns:14px 56px minmax(0,1fr) auto}.ed-crow input:nth-of-type(3),.ed-crow input[type=color]{display:none}}
+
+/* cases laid over the map */
+.case{border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--surface);border-radius:4px;padding:18px 20px;margin-bottom:18px;display:grid;gap:10px}
+.case h3{font-size:1.3rem}
+.case .lbl{font-family:var(--ui);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+.case-rows{display:grid;border-top:1px solid var(--line)}
+.case-row{display:grid;grid-template-columns:minmax(150px,230px) 110px minmax(0,1fr);gap:6px 14px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line)}
+.case-row.lv-no{color:var(--muted)}
+.case-cls{all:unset;cursor:pointer;font-family:var(--ui);font-size:.85rem;font-weight:600;color:var(--c)}
+div.case-cls{cursor:default}
+.case-cls-in{display:inline-flex;gap:7px;align-items:baseline}
+.case-cls i{width:10px;height:10px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.case-cls:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.case-lv{font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:1px 8px;justify-self:start;white-space:nowrap}
+.lv-yes .case-lv{background:var(--fg);color:var(--surface);border-color:var(--fg)}
+.lv-part .case-lv{border-color:var(--fg);color:var(--fg)}
+.case-note{font-size:.95rem;min-width:0}
+.case-pts{grid-column:3;display:flex;flex-wrap:wrap;gap:6px}
+.case-pt{font-family:var(--ui);font-size:.78rem;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:999px;padding:2px 9px;cursor:pointer}
+.case-pt[aria-pressed="true"]{border-color:var(--accent);background:var(--surface);box-shadow:inset 0 0 0 1px var(--accent);font-weight:600}
+.case.ed-form .case-pt[aria-pressed="false"]{opacity:.65}
+@media (max-width:640px){.case-row{grid-template-columns:minmax(0,1fr) auto}.case-note,.case-pts{grid-column:1/-1}}
+.node .halo{fill:none;stroke:var(--accent);stroke-width:2.5;display:none}
+.node.hit .halo{display:inline}
+.node.hit text{font-weight:600}
+.node.faint{opacity:.45}
+.node.dim{opacity:.18}
+.chip[data-level="no"]{opacity:.5}
+.chip[data-level="yes"]{font-weight:600}
+
 </style>
 
 <div class="lang" role="group" aria-label="Sprache / Language">
@@ -180,6 +210,8 @@ button.danger{border-color:var(--cA)!important;color:var(--cA)!important}
   <div class="bar-in">
     <label for="mapsel" id="l-map">Karte</label>
     <select id="mapsel"></select>
+    <label for="casesel" id="l-case">Fall</label>
+    <select id="casesel"></select>
     <div class="seg" role="group" aria-label="Modus">
       <button type="button" id="m-view" aria-pressed="true">Ansehen</button>
       <button type="button" id="m-edit" aria-pressed="false">Bearbeiten</button>

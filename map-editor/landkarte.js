@@ -118,7 +118,7 @@ const colorOf=k=>`var(--c${k})`;
 function create(root,opts){
   ensureTip();
   const V={data:opts.data,lang:opts.lang||"de",active:null,selected:null,editable:!!opts.editable,
-    onSelect:opts.onSelect||null,onMove:opts.onMove||null,onAdd:opts.onAdd||null,panelRenderer:opts.panelRenderer||null,els:{}};
+    onSelect:opts.onSelect||null,onMove:opts.onMove||null,onAdd:opts.onAdd||null,overlay:null,panelRenderer:opts.panelRenderer||null,els:{}};
   const D=()=>V.data, L=()=>V.lang;
   const tx=o=>(o&&o[L()])||{};
   const ui=()=>tx(D().ui);
@@ -191,6 +191,7 @@ function create(root,opts){
           sec.appendChild(g);addBtn(sec,pth("sections",i,L(),"items"),EL().addSource);if(t.hint||V.editable)sec.appendChild(h("p",{class:"hint","data-path":pth("sections",i,L(),"hint")},t.hint||""));break}
         case "map":{
           sec=h("section",{id:"lk-map-section"});if(t.h)sec.appendChild(h("h2",{style:"margin-bottom:14px","data-path":pth("sections",i,L(),"h")},t.h));
+          if(opts.beforeMap){const bm=opts.beforeMap(V);if(bm){sec.appendChild(bm);V.els.caseBox=bm}}
           V.els.filters=sec.appendChild(h("div",{class:"filters",role:"group"}));
           const atlas=sec.appendChild(h("div",{class:"atlas"}));
           const box=atlas.appendChild(h("div",{class:"mapbox"}));
@@ -250,6 +251,7 @@ function create(root,opts){
       const [cx,cy]=P(e.x,e.y);const left=cx>760;
       const g=el("g",{class:"node",tabindex:0,role:"button","data-id":e.id,"aria-label":stripTags(title(e))});
       g.appendChild(el("circle",{cx,cy,r:8,fill:colorOf(e.k),stroke:"var(--surface)","stroke-width":2}));
+      g.appendChild(el("circle",{cx,cy,r:15,class:"halo"}));
       g.appendChild(el("text",{x:left?cx-14:cx+14,y:cy+5,"text-anchor":left?"end":"start"},stripTags(et(e).label||e.id)));
       g.addEventListener("click",ev=>{if(V.dragged){V.dragged=false;return}select(e.id)});
       g.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();select(e.id)}});
@@ -273,8 +275,8 @@ function create(root,opts){
         moved=true;pt.x=m.clientX;pt.y=m.clientY;const p=pt.matrixTransform(ctm);
         const cl=v=>Math.max(-.98,Math.min(.98,Math.round(v*100)/100));
         e.x=cl((p.x-500)/400);e.y=cl((p.y-500)/400);
-        const [cx,cy]=P(e.x,e.y),left=cx>760,c=g.querySelector("circle"),t=g.querySelector("text");
-        c.setAttribute("cx",cx);c.setAttribute("cy",cy);t.setAttribute("x",left?cx-14:cx+14);t.setAttribute("y",cy+5);t.setAttribute("text-anchor",left?"end":"start");
+        const [cx,cy]=P(e.x,e.y),left=cx>760,t=g.querySelector("text");
+        g.querySelectorAll("circle").forEach(c=>{c.setAttribute("cx",cx);c.setAttribute("cy",cy)});t.setAttribute("x",left?cx-14:cx+14);t.setAttribute("y",cy+5);t.setAttribute("text-anchor",left?"end":"start");
         if(V.onMove)V.onMove(e,false);
       };
       const up=()=>{g.removeEventListener("pointermove",move);g.removeEventListener("pointerup",up);g.removeEventListener("pointercancel",up);
@@ -283,8 +285,14 @@ function create(root,opts){
     });
   }
   function refresh(){
-    if(V.els.svg)V.els.svg.querySelectorAll(".node").forEach(g=>{const e=entries().find(x=>x.id===g.dataset.id);if(!e)return;g.classList.toggle("dim",!!V.active&&e.k!==V.active);g.classList.toggle("sel",e.id===V.selected)});
-    root.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.k===(V.active||"")?"true":"false"));
+    const O=V.overlay,lv=k=>O&&O.levels&&O.levels[k]||"no";
+    if(V.els.svg)V.els.svg.querySelectorAll(".node").forEach(g=>{const e=entries().find(x=>x.id===g.dataset.id);if(!e)return;
+      const hit=!!O&&O.points.has(e.id);
+      g.classList.toggle("dim",(!!V.active&&e.k!==V.active)||(!!O&&!hit&&lv(e.k)==="no"));
+      g.classList.toggle("faint",!!O&&!hit&&lv(e.k)!=="no");
+      g.classList.toggle("hit",hit);
+      g.classList.toggle("sel",e.id===V.selected)});
+    root.querySelectorAll(".chip").forEach(c=>{c.setAttribute("aria-pressed",c.dataset.k===(V.active||"")?"true":"false");if(O&&c.dataset.k)c.dataset.level=lv(c.dataset.k);else delete c.dataset.level});
   }
 
   /* --- lists --- */
@@ -346,10 +354,11 @@ function create(root,opts){
     build();
     if(keepPanel&&V.els.panel){V.els.panel.replaceWith(keepPanel);V.els.panel=keepPanel}
     renderLists();drawMap();
-    for(const n of V.els.wrap.children){if(!n.contains(V.els.panel))enrich(n);else{for(const c of n.querySelectorAll(".hint,h2"))enrich(c)}}
+    for(const n of V.els.wrap.children){if(!n.contains(V.els.panel))enrich(n);else{for(const c of n.querySelectorAll(".hint,h2"))if(!(V.els.caseBox&&V.els.caseBox.contains(c)))enrich(c);if(V.els.caseBox&&!V.editable)enrich(V.els.caseBox)}}
     refresh();window.scrollTo(0,y);
   }
   Object.assign(V,{render,update,select,refresh,drawMap,renderLists,panelView,enrich,
+    setOverlay(o){V.overlay=o;refresh()},
     setLang(l){V.lang=l;render()},setData(d){V.data=d;V.selected=null;V.active=null;render()}});
   return V;
 }

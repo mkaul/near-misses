@@ -1,0 +1,95 @@
+{
+  "format": "landkarte-faelle/1",
+  "id": "faelle",
+  "version": 1,
+  "modified": "2026-11-19",
+  "langs": [
+    "de",
+    "en"
+  ],
+  "cases": [
+    {
+      "id": "dankbarkeit",
+      "de": {
+        "name": "Dankbarkeit als Universalmedizin",
+        "desc": "Dankbarkeit wird empfohlen als Mittel gegen schlechte Stimmung: jeden Abend drei Dinge aufschreiben, für die man dankbar ist; „Sei dankbar für alles.“",
+        "kern": "Dank als Antwort auf etwas tatsächlich Empfangenes öffnet: Er sieht den Geber und das Gegebene. Im Pāli-Kanon gilt der Dankbare (kataññū) als einer der zwei seltenen Menschen (AN 2), im Koran steht Dank (shukr) gegen Undank (kufr, „Zudecken“), „Eucharistie“ heißt Danksagung.",
+        "open": "Färbung: Dankbarkeit als Übung legt eine Stimmung über das, was gerade ist. Das ist ein Hinzufügen, und dafür hat keine Klasse eine eigene Prüffrage; F (Ausweichen) und G (Weglassen) kommen am nächsten. Vielleicht ist Präsenz-Reduktion keine achte Klasse, sondern das, was alle sieben gemeinsam haben."
+      },
+      "en": {
+        "name": "Gratitude as a cure-all",
+        "desc": "Gratitude is recommended as a remedy for low mood: write down three things you are grateful for every evening; “Be grateful for everything.”",
+        "kern": "Thanks as a response to something actually received opens up: it sees the giver and the gift. In the Pali Canon the grateful person (kataññū) is one of the two rare people (AN 2); in the Qur’an thanks (shukr) stands against ingratitude (kufr, “covering up”); “Eucharist” means thanksgiving.",
+        "open": "Colouring: gratitude as an exercise lays a mood over what is happening. That is an addition, and no class has its own test question for it; F (evading) and G (leaving out) come closest. Perhaps reducing presence is not an eighth class but what all seven have in common."
+      },
+      "hits": {
+        "A": {
+          "level": "part",
+          "de": "Nur in der Manifestations-Fassung: „Dankbarkeit zieht Fülle an.“ Dann wird ein Gesetz des Universums gesetzt. Dankbarkeit selbst verdinglicht nichts.",
+          "en": "Only in the manifesting version: “Gratitude attracts abundance.” Then a law of the universe is posited. Gratitude itself reifies nothing."
+        },
+        "B": {
+          "level": "no",
+          "de": "Dankbarkeit verneint weder Welt noch Selbst, eher im Gegenteil.",
+          "en": "Gratitude denies neither world nor self; if anything, the opposite."
+        },
+        "C": {
+          "level": "part",
+          "de": "Wenn „alles ist Geschenk“ dazu dient, Klage, Protest oder Veränderung zu erübrigen. Ein großer Satz deckt dann einen Missstand zu.",
+          "en": "When “everything is a gift” serves to make complaint, protest or change unnecessary. A big sentence then covers up a wrong."
+        },
+        "D": {
+          "level": "yes",
+          "de": "Das Gemachte: Dank wird als Technik eingesetzt, um einen Zustand herzustellen. Die Tür wird für den Raum gehalten. Die Lohnlogik („wer dankt, bekommt mehr“) macht aus einer Verheißung ein Rezept.",
+          "en": "The manufactured: thanks is used as a technique to produce a state. The door is mistaken for the room. Reward logic (“whoever gives thanks gets more”) turns a promise into a recipe."
+        },
+        "E": {
+          "level": "part",
+          "de": "Dank, der sich vergleicht („ich danke dir, dass ich nicht wie die anderen bin“), oder Dankbarkeit als vorgezeigter Ausweis von Reife.",
+          "en": "Thanks that compares itself (“I thank you that I am not like other people”), or gratitude displayed as proof of maturity."
+        },
+        "F": {
+          "level": "yes",
+          "de": "Die Färbung: Unangenehmes wird mit Dank überstrichen statt gefühlt. Prüffrage: Fühle ich, oder weiche ich aus? Das ist die Präsenz-Reduktion.",
+          "en": "The colouring: what is unpleasant is painted over with thanks instead of being felt. Test question: am I feeling, or evading? This is the reduction of presence."
+        },
+        "G": {
+          "level": "yes",
+          "de": "Herausgelöst: Dank ohne Geber und ohne Empfangenes, nur noch als Wellness- und Leistungswerkzeug. Übrig bleibt das angenehme Stück.",
+          "en": "Cut loose: thanks without a giver and without anything received, only a wellness and performance tool. What is left is the pleasant piece."
+        }
+      },
+      "points": {
+        "buddha": [
+          "manifest",
+          "hongaku",
+          "jhana",
+          "spirmat",
+          "bypass",
+          "mcmind"
+        ],
+        "nonduality": [
+          "manifest",
+          "schon",
+          "gipfel",
+          "trophy",
+          "vibes",
+          "wellness"
+        ],
+        "christ": [
+          "schon",
+          "lieferant",
+          "pharisaeer",
+          "kreuz",
+          "wohlfuehl"
+        ],
+        "islam": [
+          "geschrieben",
+          "lieferant",
+          "zustaende",
+          "riya"
+        ]
+      }
+    }
+  ]
+}
