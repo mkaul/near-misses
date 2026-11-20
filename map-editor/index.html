@@ -172,6 +172,8 @@ button.danger{border-color:var(--cA)!important;color:var(--cA)!important}
 
 /* cases laid over the map */
 .cases{display:grid;gap:14px}
+.cases,.case{scroll-margin-top:16px}
+@media (min-width:901px){body.editing .cases,body.editing .case{scroll-margin-top:80px}}
 .cases-intro{max-width:68ch}
 .case-choose{display:flex;flex-wrap:wrap;gap:8px}
 .case-choose .case-new{border-style:dashed;color:var(--muted)}

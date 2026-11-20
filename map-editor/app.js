@@ -460,7 +460,9 @@ $("f-open").addEventListener("change",ev=>{const f=ev.target.files&&ev.target.fi
     if(validateCases(d)){state.cases=d;state.casesDirty=false;setStatus(S().caseL+": "+f.name);setCase((d.cases[0]||{}).id||null);return}
     if(!validate(d)){setStatus(S().badFile);return}
     state.ownName=f.name;state.id="__own";loadIndex().then(()=>{$("mapsel").value="__own"});useData(d)};r.readAsText(f);ev.target.value=""});
-$("casesel").addEventListener("change",()=>{const v=$("casesel").value;if(v==="__new"){newCase();return}setCase(v)});
+function scrollToCase(){requestAnimationFrame(()=>{const t=document.querySelector("#lk-cases .case")||document.getElementById("lk-cases");if(!t)return;
+  const smooth=!matchMedia("(prefers-reduced-motion: reduce)").matches;t.scrollIntoView({behavior:smooth?"smooth":"auto",block:"start"})})}
+$("casesel").addEventListener("change",()=>{const v=$("casesel").value;if(v==="__new")newCase();else setCase(v);scrollToCase()});
 $("mapsel").addEventListener("change",()=>{const v=$("mapsel").value;if(v!=="__own")loadMap(v)});
 window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(h&&h!==state.id&&state.index.some(m=>m.id===h))loadMap(h)});
 window.addEventListener("beforeunload",ev=>{if(state.dirty||state.casesDirty){ev.preventDefault()}});
