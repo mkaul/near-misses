@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+<defs>
+<linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC94A"/><stop offset=".35" stop-color="#F0702C"/><stop offset=".7" stop-color="#C9348A"/><stop offset="1" stop-color="#3B5BDB"/></linearGradient>
+<radialGradient id="tc"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE7B0"/></radialGradient>
+<g id="arr"><line x1="0" y1="0" x2="-118" y2="0" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+<path d="M-104 0 l-18 -11 h10 l14 11 l-14 11 h-10z" fill="currentColor" opacity=".85"/><path d="M8 0 L-6 -7 L-6 7Z" fill="currentColor"/></g>
+</defs>
+<rect width="512" height="512" fill="#FBF8F3"/>
+<g transform="translate(56 56)">
+<circle cx="200" cy="200" r="190" fill="url(#tg)"/>
+<circle cx="200" cy="200" r="150" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>
+<circle cx="200" cy="200" r="110" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3"/>
+<circle cx="200" cy="200" r="70" fill="#fff" fill-opacity=".22"/>
+<circle cx="200" cy="200" r="34" fill="url(#tc)"/>
+<circle cx="200" cy="200" r="12" fill="#1C1828"/>
+<g style="color:#fff"><use href="#arr" transform="translate(166 160) rotate(42)"/></g>
+<g style="color:#1C1828"><use href="#arr" transform="translate(242 176) rotate(150)"/></g>
+<g style="color:#fff"><use href="#arr" transform="translate(226 246) rotate(-128)"/></g>
+<g style="color:#1C1828"><use href="#arr" transform="translate(150 224) rotate(-24)"/></g>
+</g>
+</svg>
