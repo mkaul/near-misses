@@ -1,7 +1,7 @@
 {
   "format": "landkarte-faelle/1",
   "id": "faelle",
-  "version": 2,
+  "version": 3,
   "modified": "2026-11-23",
   "langs": [
     "de",
@@ -95,15 +95,15 @@
       "id": "potenzial",
       "de": {
         "name": "Das unendliche Vielleicht",
-        "desc": "Ungeprüftes Potenzial gilt mehr als eine endliche Wirklichkeit. Solange man nicht alles gibt, bleibt die tröstliche Vorstellung, was möglich wäre. Das zeigt sich selten als Faulheit, sondern als fleißige Ausweichbewegung: endlose Vorbereitung, gebremster Einsatz („ich habe es ja nicht wirklich versucht“), offen gehaltene Optionen. Spirituell gewendet wird das Unendliche selbst zum Polster: das Absolute, die Nondualität, das Nicht-Selbst gegen das endliche Leben, die konkrete Übung, das Feststecken.",
+        "desc": "Ungeprüftes Potenzial gilt mehr als eine endliche Wirklichkeit. Solange man nicht alles gibt, bleibt die tröstliche Vorstellung, was möglich wäre, wenn man es wirklich versuchte. Diese Vorstellung wirkt wie ein Polster: Kein Ergebnis kann sie widerlegen. Das zeigt sich selten als Faulheit, sondern als fleißige Ausweichbewegung: endlose Vorbereitung, gebremster Einsatz, der eine Ausrede bereithält („ich habe es ja nicht wirklich versucht“), und Optionen, die man offen hält, um keine Möglichkeit aufzugeben. Spirituell gewendet wird das Unendliche selbst zum Polster: das Absolute, die Nondualität, das Nicht-Selbst gegen das endliche Leben, die konkrete Übung, das Feststecken.",
         "kern": "Offenheit ist echt. Das Unbegrenzte, die Leerheit, das Nicht-Wissen sind keine Fantasie, und wer sich zu früh festlegt, verengt. Aber das Unendliche zeigt sich nur im Endlichen: „Das Wort ist Fleisch geworden“ (Joh 1,14); Nāgārjuna findet zwischen Nirvāṇa und Saṃsāra keinen Unterschied (MMK 25,19); „Vertraue auf Gott und binde dein Kamel an.“",
-        "open": "Auch das Heilmittel des Textes liegt knapp daneben. „Töte dein Potenzial für echte Daten“ und „iteriere an der Wirklichkeit“ ersetzen das Polster der Möglichkeit durch das Polster der Messbarkeit. Auf der Islam-Karte rückt der Fall damit von „Vertrauen ohne Anbinden“ zu „Anbinden ohne Vertrauen“. Die Mitte wäre, sich dem Endlichen ganz hinzugeben, ohne die Note zu brauchen."
+        "open": "Was ist das Heilmittel? Das naheliegende Gegenmittel, das Potenzial einfach gegen messbare Ergebnisse einzutauschen, liegt selbst knapp daneben: Es ersetzt das Polster der Möglichkeit durch das Polster der Leistung, „Anbinden ohne Vertrauen“. Die Traditionen antworten anders. Islam: anbinden mit Vertrauen, „Vertraue auf Gott und binde dein Kamel an.“ Christentum: in der Wirklichkeit handeln und dabei auf Gott vertrauen, „Wirkt euer Heil mit Furcht und Zittern, denn Gott ist es, der das Wollen und das Vollbringen bewirkt“ (Phil 2,12–13). Buddhismus: Entschlossenheit (adhiṭṭhāna) im Tun, Gleichmut gegenüber dem Ergebnis. Nondualität: Das Unendliche liegt nicht hinter dem Alltag, sondern in ihm: „Vor der Erleuchtung Holz hacken und Wasser tragen, nach der Erleuchtung Holz hacken und Wasser tragen.“ Gemeinsam ist allen: sich dem Endlichen ganz hingeben, ohne vom Ergebnis abhängig zu sein."
       },
       "en": {
         "name": "The infinite maybe",
-        "desc": "Untested potential is valued above a finite reality. As long as you never give everything, you keep the comforting picture of what would be possible. It rarely looks like laziness; it looks like busy evasion: endless preparation, held-back effort (“I wasn’t even really trying”), options kept open. Turned spiritual, the infinite itself becomes the cushion: the Absolute, nonduality, no-self against finite life, concrete practice, being stuck.",
+        "desc": "Untested potential is valued above a finite reality. As long as you never give everything, you keep the comforting picture of what would be possible if you really tried. That picture works like a cushion: no result can disprove it. It rarely looks like laziness; it looks like busy evasion: endless preparation, held-back effort that keeps an excuse ready (“I wasn’t even really trying”), and options kept open so that no possibility has to be given up. Turned spiritual, the infinite itself becomes the cushion: the Absolute, nonduality, no-self against finite life, concrete practice, being stuck.",
         "kern": "Openness is real. The unbounded, emptiness, not-knowing are no fantasy, and committing too early narrows. But the infinite shows itself only in the finite: “The Word became flesh” (John 1:14); Nāgārjuna finds no difference between nirvāṇa and saṃsāra (MMK 25:19); “Trust in God and tie your camel.”",
-        "open": "The text’s own remedy is also a near miss. “Kill your potential in exchange for real-world data” and “iterate on reality” swap the cushion of possibility for the cushion of measurability. On the Islam map the case moves from “trust without tying” to “tying without trust”. The middle would be to give yourself fully to the finite without needing the grade."
+        "open": "What is the remedy? The obvious counter-move, simply trading potential for measurable results, is itself a near miss: it swaps the cushion of possibility for the cushion of performance, “tying without trust”. The traditions answer differently. Islam: tie with trust, “Trust in God and tie your camel.” Christianity: act in reality while trusting God, “Work out your own salvation with fear and trembling, for it is God who works in you to will and to act” (Phil 2:12–13). Buddhism: resolve (adhiṭṭhāna) in the doing, equanimity towards the result. Nonduality: the infinite is not behind everyday life but in it: “Before enlightenment, chop wood, carry water; after enlightenment, chop wood, carry water.” What they share: give yourself fully to the finite without depending on the result."
       },
       "hits": {
         "A": {
@@ -138,8 +138,8 @@
         },
         "G": {
           "level": "part",
-          "de": "Beide Hälften werden getrennt: Vertrauen ohne Anbinden (warten, bis man sich bereit fühlt, „es ist ja alles bestimmt“) oder, beim Heilmittel des Textes, Anbinden ohne Vertrauen (Leistung, Daten, Iteration aus eigener Kraft).",
-          "en": "The two halves are split: trust without tying (waiting until you feel ready, “it is all decreed anyway”) or, in the text’s remedy, tying without trust (performance, data, iteration by your own strength)."
+          "de": "Die zwei Hälften werden getrennt. Entweder Vertrauen ohne Anbinden: warten, bis man sich bereit fühlt, „es ist ja alles bestimmt“. Oder, beim naheliegenden Gegenmittel, Anbinden ohne Vertrauen: Leistung, messbare Ergebnisse, ständiges Nachbessern aus eigener Kraft.",
+          "en": "The two halves are split. Either trust without tying: waiting until you feel ready, “it is all decreed anyway”. Or, in the obvious counter-move, tying without trust: performance, measurable results, constant improvement by your own strength."
         }
       },
       "points": {
