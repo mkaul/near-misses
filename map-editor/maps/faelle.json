@@ -1,8 +1,8 @@
 {
   "format": "landkarte-faelle/1",
   "id": "faelle",
-  "version": 1,
-  "modified": "2026-11-19",
+  "version": 2,
+  "modified": "2026-11-23",
   "langs": [
     "de",
     "en"
@@ -88,6 +88,88 @@
           "lieferant",
           "zustaende",
           "riya"
+        ]
+      }
+    },
+    {
+      "id": "potenzial",
+      "de": {
+        "name": "Das unendliche Vielleicht",
+        "desc": "Ungeprüftes Potenzial gilt mehr als eine endliche Wirklichkeit. Solange man nicht alles gibt, bleibt die tröstliche Vorstellung, was möglich wäre. Das zeigt sich selten als Faulheit, sondern als fleißige Ausweichbewegung: endlose Vorbereitung, gebremster Einsatz („ich habe es ja nicht wirklich versucht“), offen gehaltene Optionen. Spirituell gewendet wird das Unendliche selbst zum Polster: das Absolute, die Nondualität, das Nicht-Selbst gegen das endliche Leben, die konkrete Übung, das Feststecken.",
+        "kern": "Offenheit ist echt. Das Unbegrenzte, die Leerheit, das Nicht-Wissen sind keine Fantasie, und wer sich zu früh festlegt, verengt. Aber das Unendliche zeigt sich nur im Endlichen: „Das Wort ist Fleisch geworden“ (Joh 1,14); Nāgārjuna findet zwischen Nirvāṇa und Saṃsāra keinen Unterschied (MMK 25,19); „Vertraue auf Gott und binde dein Kamel an.“",
+        "open": "Auch das Heilmittel des Textes liegt knapp daneben. „Töte dein Potenzial für echte Daten“ und „iteriere an der Wirklichkeit“ ersetzen das Polster der Möglichkeit durch das Polster der Messbarkeit. Auf der Islam-Karte rückt der Fall damit von „Vertrauen ohne Anbinden“ zu „Anbinden ohne Vertrauen“. Die Mitte wäre, sich dem Endlichen ganz hinzugeben, ohne die Note zu brauchen."
+      },
+      "en": {
+        "name": "The infinite maybe",
+        "desc": "Untested potential is valued above a finite reality. As long as you never give everything, you keep the comforting picture of what would be possible. It rarely looks like laziness; it looks like busy evasion: endless preparation, held-back effort (“I wasn’t even really trying”), options kept open. Turned spiritual, the infinite itself becomes the cushion: the Absolute, nonduality, no-self against finite life, concrete practice, being stuck.",
+        "kern": "Openness is real. The unbounded, emptiness, not-knowing are no fantasy, and committing too early narrows. But the infinite shows itself only in the finite: “The Word became flesh” (John 1:14); Nāgārjuna finds no difference between nirvāṇa and saṃsāra (MMK 25:19); “Trust in God and tie your camel.”",
+        "open": "The text’s own remedy is also a near miss. “Kill your potential in exchange for real-world data” and “iterate on reality” swap the cushion of possibility for the cushion of measurability. On the Islam map the case moves from “trust without tying” to “tying without trust”. The middle would be to give yourself fully to the finite without needing the grade."
+      },
+      "hits": {
+        "A": {
+          "level": "yes",
+          "de": "Das Potenzial ist ein Selbstbild: was ich „eigentlich“ könnte, wenn ich es wirklich versuchte. Es bleibt nur deshalb unberührt, weil es nie geprüft wird. Spirituell: „Ich bin grenzenloses Bewusstsein“, und keine endliche Tat kann das ausdrücken.",
+          "en": "The potential is a self-image: what I “really” could do if I truly tried. It stays untouched only because it is never tested. Spiritually: “I am boundless awareness”, and no finite act could express that."
+        },
+        "B": {
+          "level": "part",
+          "de": "Die Kehrseite: Das Endliche wird abgewertet. Ein unvollkommenes Ergebnis zählt nichts gegen das, was möglich wäre, die Welt ist zu klein für das, was ich bin.",
+          "en": "The flip side: the finite is devalued. An imperfect result counts for nothing against what would be possible; the world is too small for what I am."
+        },
+        "C": {
+          "level": "yes",
+          "de": "Die große Wahrheit als Ausrede: „Es ist schon alles da“, „es gibt niemanden, der etwas tun müsste“. Die letzte Ebene entbindet von Entscheidung, Übung und dem Risiko, gemessen zu werden.",
+          "en": "The big truth as an excuse: “Everything is already here”, “there is no one who has to do anything”. The ultimate level releases you from deciding, practising and the risk of being measured."
+        },
+        "D": {
+          "level": "yes",
+          "de": "Endlose Vorbereitung: noch ein Kurs, noch ein Retreat, noch ein besseres System. Das Werkzeug wird zum Wohnort, damit der Punkt der Umsetzung nie kommt.",
+          "en": "Endless preparation: one more course, one more retreat, one more better system. The tool becomes the dwelling so the point of execution never arrives."
+        },
+        "E": {
+          "level": "yes",
+          "de": "Das Polster schützt das Ego, nicht die Freiheit. Gebremster Einsatz hält eine Ausrede bereit, und wer nur zuschaut, legt sich nie fest und kann nie scheitern.",
+          "en": "The cushion protects the ego, not freedom. Held-back effort keeps an excuse ready, and whoever only watches never commits and can never fail."
+        },
+        "F": {
+          "level": "part",
+          "de": "Optionen offen halten sieht aus wie Nicht-Anhaften. Prüffrage: Lasse ich los, oder lasse ich mich auf nichts ein?",
+          "en": "Keeping options open looks like non-attachment. Test question: am I letting go, or am I not getting involved?"
+        },
+        "G": {
+          "level": "part",
+          "de": "Beide Hälften werden getrennt: Vertrauen ohne Anbinden (warten, bis man sich bereit fühlt, „es ist ja alles bestimmt“) oder, beim Heilmittel des Textes, Anbinden ohne Vertrauen (Leistung, Daten, Iteration aus eigener Kraft).",
+          "en": "The two halves are split: trust without tying (waiting until you feel ready, “it is all decreed anyway”) or, in the text’s remedy, tying without trust (performance, data, iteration by your own strength)."
+        }
+      },
+      "points": {
+        "buddha": [
+          "selbst",
+          "glas",
+          "hongaku",
+          "niemand",
+          "stufen",
+          "zeuge"
+        ],
+        "nonduality": [
+          "selbst",
+          "glas",
+          "schon",
+          "niemand",
+          "sport",
+          "zeuge"
+        ],
+        "christ": [
+          "schon",
+          "huetten",
+          "ruhen",
+          "kraft"
+        ],
+        "islam": [
+          "angekommen",
+          "zustaende",
+          "geschrieben",
+          "kraft"
         ]
       }
     }
