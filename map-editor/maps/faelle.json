@@ -2,7 +2,7 @@
   "format": "landkarte-faelle/1",
   "id": "faelle",
   "version": 3,
-  "modified": "2026-11-23",
+  "modified": "2026-11-24",
   "langs": [
     "de",
     "en"
@@ -118,8 +118,8 @@
         },
         "C": {
           "level": "yes",
-          "de": "Die große Wahrheit als Ausrede: „Es ist schon alles da“, „es gibt niemanden, der etwas tun müsste“. Die letzte Ebene entbindet von Entscheidung, Übung und dem Risiko, gemessen zu werden.",
-          "en": "The big truth as an excuse: “Everything is already here”, “there is no one who has to do anything”. The ultimate level releases you from deciding, practising and the risk of being measured."
+          "de": "Die große Wahrheit als Ausrede: „Es ist schon alles da“, „es gibt niemanden, der etwas tun müsste“. Die letzte Ebene entbindet von Entscheidung, Übung und dem Risiko, gemessen zu werden. Das Brahmajāla nennt das Ausweichen vor jeder Festlegung Aalwinden (DN 1).",
+          "en": "The big truth as an excuse: “Everything is already here”, “there is no one who has to do anything”. The ultimate level releases you from deciding, practising and the risk of being measured. The Brahmajāla calls evading every commitment eel-wriggling (DN 1)."
         },
         "D": {
           "level": "yes",
@@ -149,7 +149,8 @@
           "hongaku",
           "niemand",
           "stufen",
-          "zeuge"
+          "zeuge",
+          "aal"
         ],
         "nonduality": [
           "selbst",
