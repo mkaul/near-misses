@@ -2,7 +2,7 @@
   "format": "landkarte/1",
   "id": "buddha",
   "version": 1,
-  "modified": "2026-11-18",
+  "modified": "2026-11-24",
   "langs": [
     "de",
     "en"
@@ -15,7 +15,7 @@
       "h1": "Landkarte der Fehlformen",
       "intro": [
         "Weltanschauungen, die sich auf den Buddha oder auf Advaita berufen und knapp daneben liegen. Das Zentrum ist der Pāli-Kanon. Jede Position ist nach zwei Achsen verortet, die der Buddha selbst gezogen hat, und einer von sieben Fallstrick-Klassen zugeordnet. Zu jeder Klasse gehört eine Prüffrage, mit der man einen neuen Text einordnen kann.",
-        "Die meisten dieser Positionen sind keine Gegenpositionen, sondern das, was Buddhaghosa „nahe Feinde“ nennt (<span class=\"pali\">āsanna-paccatthika</span>, Vism IX): Sie sehen der echten Einsicht zum Verwechseln ähnlich. Deshalb ist bei jedem Eintrag vermerkt, welche Einsicht er imitiert."
+        "Die meisten dieser Positionen sind keine Gegenpositionen, sondern das, was Buddhaghosa im 5. Jahrhundert „nahe Feinde“ nennt (<span class=\"pali\">āsanna-paccatthika</span>, Vism IX.98): Sie sehen der echten Einsicht zum Verwechseln ähnlich. Deshalb ist bei jedem Eintrag vermerkt, welche Einsicht er imitiert."
       ]
     },
     "en": {
@@ -24,7 +24,7 @@
       "h1": "Map of Near Misses",
       "intro": [
         "Worldviews that invoke the Buddha or Advaita and land just beside the mark. The centre is the Pāli Canon. Each position is placed on two axes the Buddha drew himself and assigned to one of seven classes of pitfall. Each class comes with a test question for placing a new text.",
-        "Most of these positions are not opposites but what Buddhaghosa calls “near enemies” (<span class=\"pali\">āsanna-paccatthika</span>, Vism IX): they look deceptively like the real insight. That is why each entry notes which insight it imitates."
+        "Most of these positions are not opposites but what Buddhaghosa, in the 5th century, calls “near enemies” (<span class=\"pali\">āsanna-paccatthika</span>, Vism IX.98): they look deceptively like the real insight. That is why each entry notes which insight it imitates."
       ]
     }
   },
@@ -36,7 +36,7 @@
         "items": [
           {
             "b": "DN 1 Brahmajāla",
-            "t": "62 Ansichten über Selbst und Welt, geordnet nach Ewigkeits- und Vernichtungsglauben."
+            "t": "62 Ansichten über Selbst und Welt, 18 über die Vergangenheit, 44 über die Zukunft. Darunter Ewigkeits- und Vernichtungsglaube, das Aalwinden und Nibbāna im Hier und Jetzt durch Genuss oder Versenkung. Jede entsteht aus Kontakt und Gefühl."
           },
           {
             "b": "SN 12.15 Kaccānagotta · SN 44.10 Ānanda",
@@ -53,16 +53,20 @@
           {
             "b": "AN 3.61 Titthāyatana",
             "t": "Drei Kausalitätsirrtümer: alles aus früherem Kamma, alles aus Schöpfung, alles ohne Ursache."
+          },
+          {
+            "b": "Vism IX.98–101 · MN 137 · AN 6.13",
+            "t": "Die „nahen Feinde“ stammen nicht aus dem Kanon, sondern von Buddhaghosa (5. Jh., rund 900 Jahre nach dem Buddha): Jedes Brahmavihāra hat einen nahen Feind, der ihm ähnlich sieht, und einen fernen, der sein Gegenteil ist. Den Stoff nimmt er aus dem Kanon: weltliche Freude, Trauer und Gleichmut aus MN 137, die fernen Feinde aus AN 6.13."
           }
         ],
-        "hint": "Die senkrechte Achse ist meine Übertragung: Aus Genuss und Askese von SN 56.11 werden die heutigen Formen „Lassen ohne Übung“ und „Übung ohne Lassen“."
+        "hint": "Die senkrechte Achse ist meine Übertragung: Aus Genuss und Askese von SN 56.11 werden die heutigen Formen „Lassen ohne Übung“ und „Übung ohne Lassen“. Auch der Begriff „naher Feind“ ist eine spätere Zutat, aber eine mit Wurzeln im Kanon."
       },
       "en": {
         "h": "The Buddha began this map himself",
         "items": [
           {
             "b": "DN 1 Brahmajāla",
-            "t": "62 views on self and world, ordered by eternalism and annihilationism."
+            "t": "62 views on self and world, 18 about the past, 44 about the future. Among them eternalism and annihilationism, eel-wriggling, and nibbāna here and now through pleasure or absorption. Each arises from contact and feeling."
           },
           {
             "b": "SN 12.15 Kaccānagotta · SN 44.10 Ānanda",
@@ -79,9 +83,13 @@
           {
             "b": "AN 3.61 Titthāyatana",
             "t": "Three errors about causes: all from past kamma, all from a creator, all without cause."
+          },
+          {
+            "b": "Vism IX.98–101 · MN 137 · AN 6.13",
+            "t": "The “near enemies” do not come from the canon but from Buddhaghosa (5th century, some 900 years after the Buddha): each brahmavihāra has a near enemy that resembles it and a far enemy that is its opposite. He takes the material from the canon: worldly joy, grief and equanimity from MN 137, the far enemies from AN 6.13."
           }
         ],
-        "hint": "The vertical axis is my extrapolation: the pleasure and asceticism of SN 56.11 become today’s forms “letting go without practice” and “practice without letting go”."
+        "hint": "The vertical axis is my extrapolation: the pleasure and asceticism of SN 56.11 become today’s forms “letting go without practice” and “practice without letting go”. The term “near enemy” is a later addition too, but one with roots in the canon."
       }
     },
     {
@@ -101,14 +109,14 @@
         "h": "Sieben Klassen von Fallstricken",
         "p": [
           "Jede Klasse hat drei Teile. Die Prüffrage erkennt die Haltung. Die fehlende Erkenntnis benennt, was die Haltung übersieht. Die Bewegung führt zur Mitte, nicht zum Gegenpol: Wer aus der Verdinglichung in die Vernichtung springt, hat nur das Extrem gewechselt. Die Bewegung erzeugt die Erkenntnis nicht, sie schafft die Bedingungen dafür.",
-          "Die Bewegung hat zwei Komponenten. Die waagrechte kommt aus der Klasse: Was wird verdinglicht, verneint, vermischt? Die senkrechte kommt aus der Lage auf der Karte. Oben ist die Saite zu locker und braucht Einsatz, unten ist sie zu straff und braucht Entspannung (Soṇa, AN 6.55). Neun Einträge haben eine eigene Fassung („eigen“), weil sie eine bestimmte Lehre missverstehen oder, wie abgeschaltetes Fühlen, ein gesundheitliches Risiko bergen."
+          "Die Bewegung hat zwei Komponenten. Die waagrechte kommt aus der Klasse: Was wird verdinglicht, verneint, vermischt? Die senkrechte kommt aus der Lage auf der Karte. Oben ist die Saite zu locker und braucht Einsatz, unten ist sie zu straff und braucht Entspannung (Soṇa, AN 6.55). Zwölf Einträge haben eine eigene Fassung („eigen“), weil sie eine bestimmte Lehre missverstehen oder, wie abgeschaltetes Fühlen, ein gesundheitliches Risiko bergen."
         ]
       },
       "en": {
         "h": "Seven classes of pitfall",
         "p": [
           "Each class has three parts. The test question identifies the attitude. The missing insight names what the attitude overlooks. The movement leads to the middle, not to the opposite pole: whoever jumps from reification into annihilation has only swapped extremes. The movement does not produce the insight; it creates the conditions for it.",
-          "The movement has two components. The horizontal one comes from the class: what is reified, negated, conflated? The vertical one comes from the position on the map. At the top the string is too loose and needs effort; at the bottom it is too tight and needs relaxing (Soṇa, AN 6.55). Nine entries have their own version (“own”) because they misread a specific teaching or, like switched-off feeling, carry a health risk."
+          "The movement has two components. The horizontal one comes from the class: what is reified, negated, conflated? The vertical one comes from the position on the map. At the top the string is too loose and needs effort; at the bottom it is too tight and needs relaxing (Soṇa, AN 6.55). Twelve entries have their own version (“own”) because they misread a specific teaching or, like switched-off feeling, carry a health risk."
         ]
       }
     },
@@ -423,19 +431,19 @@
         "name": "Naher Feind im Herzen",
         "sub": "Affekt verfehlt",
         "q": "Ist es Gleichmut oder Gleichgültigkeit? Wird gefühlt oder umgangen?",
-        "mech": "Stumpfheit oder Umgehung sieht von außen aus wie Gelassenheit.",
+        "mech": "Stumpfheit oder Umgehung sieht von außen aus wie Gelassenheit, Anhänglichkeit wie Güte, Mitleiden wie Mitgefühl.",
         "erk": "Der erste Pfeil wird gefühlt; nur der zweite entfällt. Gleichmut ist warm, Gleichgültigkeit kalt.",
         "bew": "Hineinfühlen statt Abstand nehmen, bis zum Ende fühlen. mettā und karuṇā als Gegengewicht zu einer kühlen Leere.",
-        "kanon": "SN 36.6 · Vism IX"
+        "kanon": "SN 36.6 · MN 137 · Vism IX"
       },
       "en": {
         "name": "Near enemy in the heart",
         "sub": "affect missed",
         "q": "Is it equanimity or indifference? Is it felt or bypassed?",
-        "mech": "Dullness or bypassing looks like composure from the outside.",
+        "mech": "Dullness or bypassing looks like composure from the outside, clinging like kindness, distress like compassion.",
         "erk": "The first arrow is felt; only the second falls away. Equanimity is warm, indifference is cold.",
         "bew": "Feel into it instead of stepping back, and feel it through to the end. mettā and karuṇā as a counterweight to a cool emptiness.",
-        "kanon": "SN 36.6 · Vism IX"
+        "kanon": "SN 36.6 · MN 137 · Vism IX"
       }
     },
     {
@@ -754,6 +762,40 @@
       }
     },
     {
+      "id": "aal",
+      "k": "C",
+      "x": 0.36,
+      "y": -0.63,
+      "de": {
+        "label": "Aalwinden",
+        "name": "Aalwinden: sich auf nichts festlegen",
+        "bezug": "Nicht-Anhaften an Ansichten, Nicht-Wissen",
+        "beh": "Jede Festlegung ist Anhaften. Weise ist, wer offen lässt: nicht so, nicht anders, nicht nicht.",
+        "verf": "Das Brahmajāla kennt vier Aalwinder (amarāvikkhepa): Sie weichen aus aus Angst vor Irrtum, vor Anhaften, vor Befragung oder aus Dumpfheit (DN 1). Auch der Buddha lässt manche Fragen offen, aber weil er gesehen hat, nicht aus Furcht, und er sagt klar, was er sieht: so ist Form, so ihr Entstehen, so ihr Vergehen (MN 72).",
+        "feind": "Nicht-Anhaften an Ansichten.",
+        "kanon": "DN 1, DN 2 (Sañjaya), MN 72 (Aggivacchagotta)",
+        "bsp": "„Alles ist nur Konzept“ als Antwort auf jede Frage; Offenheit, die nie etwas prüft",
+        "own": {
+          "erk": "Nicht-Anhaften heißt, eine Ansicht zu halten, ohne sich mit ihr zu verwechseln, nicht, keine zu haben. Rechte Ansicht steht am Anfang des Pfads (MN 117), und das Floß wird erst am anderen Ufer zurückgelassen (MN 22).",
+          "bew": "Sich festlegen, so weit man sehen kann, und die Festlegung prüfen: Was folgt daraus, wenn ich danach handle? Offen bleiben für Korrektur, nicht für alles."
+        }
+      },
+      "en": {
+        "label": "Eel-wriggling",
+        "name": "Eel-wriggling: committing to nothing",
+        "bezug": "Non-clinging to views, not-knowing",
+        "beh": "Every commitment is clinging. Wise is whoever leaves things open: not so, not otherwise, not not.",
+        "verf": "The Brahmajāla knows four eel-wrigglers (amarāvikkhepa): they evade out of fear of being wrong, of clinging, of being questioned, or out of dullness (DN 1). The Buddha too leaves some questions open, but because he has seen, not out of fear, and he says clearly what he does see: such is form, such its arising, such its passing (MN 72).",
+        "feind": "Non-clinging to views.",
+        "kanon": "DN 1, DN 2 (Sañjaya), MN 72 (Aggivacchagotta)",
+        "bsp": "“It’s all just concepts” as the answer to every question; openness that never tests anything",
+        "own": {
+          "erk": "Non-clinging means holding a view without mistaking oneself for it, not having none. Right view stands at the start of the path (MN 117), and the raft is left behind only on the far shore (MN 22).",
+          "bew": "Commit as far as you can see, and test the commitment: what follows if I act on it? Stay open to correction, not to everything."
+        }
+      }
+    },
+    {
       "id": "bypass",
       "k": "F",
       "x": 0.15,
@@ -922,6 +964,74 @@
         "own": {
           "erk": "Switched-off feeling is a symptom, not a result of insight, and may need treatment (Lindahl and Britton).",
           "bew": "Don’t go deeper; ground yourself instead: body, movement, contact with people, mettā. If it persists, seek professional support."
+        }
+      }
+    },
+    {
+      "id": "bindung",
+      "k": "F",
+      "x": -0.5,
+      "y": -0.3,
+      "de": {
+        "label": "Güte als Anhänglichkeit",
+        "name": "Güte als Anhänglichkeit",
+        "bezug": "mettā",
+        "beh": "Wer liebt, hängt an den Menschen, braucht sie und will sie nicht verlieren. Je stärker die Bindung, desto größer die Güte.",
+        "verf": "Gier sieht wie Güte die guten Seiten eines Menschen und bleibt ihr darum dicht auf den Fersen (Vism IX.98). Güte wünscht dem anderen Wohl, Gier will ihn haben. Buddhaghosa nennt es das Scheitern der Güte, wenn sie selbstsüchtige Zuneigung hervorbringt (Vism IX.93).",
+        "feind": "mettā.",
+        "kanon": "Vism IX.93 und IX.98; Snp 1.8 (Karaṇīyamettā)",
+        "bsp": "Fürsorge, die festhält; Güte, die Gegenliebe erwartet; Mettā-Übung nur für die Menschen, die man braucht",
+        "own": {
+          "erk": "Güte will das Wohl des anderen, auch wenn er mich nicht braucht oder geht. Sie zieht keine Grenze zwischen Nahen und Fremden: Wohlwollen für alle Wesen, so wie eine Mutter ihr einziges Kind schützt (Snp 1.8).",
+          "bew": "Die Probe machen: Bleibt das Wohlwollen, wenn der andere sich entfernt? Die Güte von den Nahen auf Neutrale und Schwierige ausdehnen, wie es die Mettā-Übung vorsieht (Vism IX)."
+        }
+      },
+      "en": {
+        "label": "Kindness as clinging",
+        "name": "Kindness as clinging",
+        "bezug": "mettā",
+        "beh": "Whoever loves clings to people, needs them and does not want to lose them. The stronger the bond, the greater the kindness.",
+        "verf": "Like kindness, greed sees a person’s good qualities, and so it stays close on kindness’s heels (Vism IX.98). Kindness wishes the other well; greed wants to have them. Buddhaghosa calls it the failure of kindness when it produces selfish affection (Vism IX.93).",
+        "feind": "mettā.",
+        "kanon": "Vism IX.93 and IX.98; Snp 1.8 (Karaṇīyamettā)",
+        "bsp": "Care that holds on; kindness that expects love in return; mettā practice only for the people one needs",
+        "own": {
+          "erk": "Kindness wants the other’s welfare, even when they do not need me or leave. It draws no line between those close and strangers: goodwill for all beings, as a mother protects her only child (Snp 1.8).",
+          "bew": "Test it: does the goodwill remain when the other moves away? Extend kindness from those close to neutral and difficult people, as mettā practice prescribes (Vism IX)."
+        }
+      }
+    },
+    {
+      "id": "mitleid",
+      "k": "F",
+      "x": 0.2,
+      "y": 0.38,
+      "de": {
+        "label": "Mitleiden",
+        "name": "Mitgefühl als Mitleiden",
+        "bezug": "karuṇā",
+        "beh": "Wer wirklich mitfühlt, leidet mit. Je mehr mich das Leid der anderen mitnimmt, desto größer ist mein Mitgefühl.",
+        "verf": "Weltlicher Kummer sieht wie Mitgefühl das Unglück des anderen und liegt ihm darum nah (Vism IX.99). Mitgefühl scheitert, wenn es Kummer hervorbringt (Vism IX.94). Wer mitleidet, ist bald mit dem eigenen Schmerz beschäftigt und kann weniger helfen.",
+        "feind": "karuṇā.",
+        "kanon": "Vism IX.94 und IX.99; MN 137 (Saḷāyatanavibhaṅga)",
+        "bsp": "Erschöpfung in helfenden Berufen („Mitgefühlsmüdigkeit“); die Unterscheidung von empathischem Stress und Mitgefühl bei Tania Singer und Olga Klimecki",
+        "own": {
+          "erk": "Mitgefühl kann das Leid des anderen nicht mit ansehen und will es lindern (Vism IX.94). Es richtet sich auf ihn, nicht auf den eigenen Schmerz beim Hinsehen. MN 137 unterscheidet Trauer, die am Weltlichen hängt, von Trauer, die aus der Sehnsucht nach Befreiung kommt.",
+          "bew": "Den eigenen Schmerz beim Mitfühlen bemerken und halten, ohne in ihm zu versinken, dann zum anderen zurückkehren: Was braucht er jetzt? Gleichmut stützt das Mitgefühl, weil er sieht, dass jeder Erbe seiner Taten ist (Vism IX.96)."
+        }
+      },
+      "en": {
+        "label": "Suffering along",
+        "name": "Compassion as suffering along",
+        "bezug": "karuṇā",
+        "beh": "Whoever truly feels for others suffers with them. The more others’ pain gets to me, the greater my compassion.",
+        "verf": "Like compassion, worldly grief sees the other’s misfortune, and so it lies close to it (Vism IX.99). Compassion fails when it produces sorrow (Vism IX.94). Whoever suffers along is soon busy with their own pain and can help less.",
+        "feind": "karuṇā.",
+        "kanon": "Vism IX.94 and IX.99; MN 137 (Saḷāyatanavibhaṅga)",
+        "bsp": "Exhaustion in the helping professions (“compassion fatigue”); the distinction between empathic distress and compassion in Tania Singer and Olga Klimecki",
+        "own": {
+          "erk": "Compassion cannot bear the other’s suffering and wants to ease it (Vism IX.94). It is directed at them, not at one’s own pain in looking. MN 137 distinguishes grief that clings to the worldly from grief that comes from longing for liberation.",
+          "bew": "Notice your own pain as you feel with someone, hold it without sinking into it, then return to the other: what do they need now? Equanimity supports compassion, because it sees that each is heir to their own deeds (Vism IX.96)."
         }
       }
     },
@@ -1160,7 +1270,10 @@
       "Vedānta": "(Skt.) „Ende des Veda“: Philosophie der Upaniṣaden",
       "shushō ittō": "(jap.) Einheit von Übung und Verwirklichung (Dōgen)",
       "hongaku": "(jap.) ursprüngliche Erleuchtung",
-      "Dzogchen": "(tib.) „Große Vollkommenheit“"
+      "Dzogchen": "(tib.) „Große Vollkommenheit“",
+      "amarāvikkhepa": "Aalwinden: ausweichende Antwort, die sich auf nichts festlegt (DN 1)",
+      "muditā": "Mitfreude",
+      "rāga": "Gier, Leidenschaft"
     },
     "en": {
       "majjhimā paṭipadā": "the middle way between the extremes",
@@ -1215,7 +1328,10 @@
       "Vedānta": "(Skt.) “end of the Veda”: the philosophy of the Upaniṣads",
       "shushō ittō": "(Jap.) oneness of practice and realisation (Dōgen)",
       "hongaku": "(Jap.) original enlightenment",
-      "Dzogchen": "(Tib.) “Great Perfection”"
+      "Dzogchen": "(Tib.) “Great Perfection”",
+      "amarāvikkhepa": "eel-wriggling: an evasive answer that commits to nothing (DN 1)",
+      "muditā": "sympathetic joy",
+      "rāga": "greed, passion"
     }
   },
   "linking": {
@@ -1657,6 +1773,16 @@
         "lang": "en",
         "pattern": "(?<![\\p{L}\\d])BĀU (\\d+)(?:\\.(\\d+))?",
         "url": "https://en.wikipedia.org/w/index.php?search=Brihadaranyaka%20Upanishad&go=Go"
+      },
+      {
+        "lang": "de",
+        "pattern": "Tania Singer und Olga Klimecki",
+        "url": "https://de.wikipedia.org/w/index.php?search=Tania%20Singer&go=Go"
+      },
+      {
+        "lang": "en",
+        "pattern": "Tania Singer and Olga Klimecki",
+        "url": "https://en.wikipedia.org/w/index.php?search=Tania%20Singer&go=Go"
       }
     ]
   }
